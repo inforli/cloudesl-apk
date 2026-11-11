@@ -51,9 +51,9 @@ jobs:
           out.append("- 工具：JADX 1.5.1")
           out.append("")
           patterns = [
-              re.compile(r"Bluetooth|BluetoothGatt|BluetoothGattCharacteristic|BluetoothGattService|BluetoothDevice|BluetoothLeScanner|ScanFilter|ScanSettings|writeCharacteristic|setValue\(|onCharacteristicChanged|onCharacteristicWrite|onServicesDiscovered|connectGatt", re.I),
+              re.compile(r"android\\.bluetooth|BluetoothGatt|BluetoothGattCharacteristic|BluetoothGattService|BluetoothDevice|BluetoothLeScanner|ScanFilter|ScanSettings|writeCharacteristic|writeDescriptor|setCharacteristicNotification|onCharacteristicChanged|onCharacteristicWrite|onServicesDiscovered|connectGatt", re.I),
               re.compile(r"0000[0-9a-fA-F]{4}-0000-1000-8000-00805[fF]9[bB]34[fF][bB]|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"),
-              re.compile(r"\bUUID\b|GATT|BLE|esl|价签|蓝牙|特征值|服务发现", re.I),
+              re.compile(r"Bluetooth|GATT|UUID\\.fromString|ParcelUuid|ScanRecord|getService\\(|getCharacteristic\\(|getDescriptor\\(", re.I),
           ]
           hits = 0
           for p in root.rglob("*"):
@@ -74,6 +74,7 @@ jobs:
                       out.append(f"- ... 另有 {len(matched)-250} 条匹配")
                   out.append("")
           out.insert(4, f"- 命中行数（初筛，可能含重复/无关项）: {hits}")
+          out.append("\\n> 注：本报告仅为静态字符串/反编译代码命中，不等同于已确认价签协议。")
           (Path("analysis") / "ble_report.md").write_text("\n".join(out), encoding="utf-8")
           print(f"Wrote report with {hits} matching lines")
           PY
