@@ -28,7 +28,12 @@ jobs:
           unzip -q work/jadx.zip -d work/jadx
           chmod +x work/jadx/bin/jadx
           work/jadx/bin/jadx --version
-          work/jadx/bin/jadx -d work/decompiled work/cloudesl.apk
+          set +e
+          work/jadx/bin/jadx -d work/decompiled work/cloudesl.apk 2>&1 | tee work/jadx.log
+          JADX_EXIT=${PIPESTATUS[0]}
+          set -e
+          echo "JADX_EXIT=$JADX_EXIT" >> "$GITHUB_ENV"
+          echo "JADX returned $JADX_EXIT; retaining partial decompilation output for analysis."
 
       - name: Extract BLE findings
         shell: bash
