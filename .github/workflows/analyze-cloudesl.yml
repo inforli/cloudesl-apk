@@ -35,6 +35,42 @@ jobs:
           echo "JADX_EXIT=$JADX_EXIT" >> "$GITHUB_ENV"
           echo "JADX returned $JADX_EXIT; retaining partial decompilation output for analysis."
 
+      - name: Scan APK native libraries and DEX strings
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p analysis work/native
+          python3 - <<'PY'
+          import zipfile, pathlib, re, subprocess
+          apk=pathlib.Path("work/cloudesl.apk")
+          out=["# CloudESL APK native / DEX 字符串扫描","","用于排查 JADX Java 层未覆盖的 native SDK、动态模块和隐藏 BLE 实现。",""]
+          needles=re.compile(r"bluetooth|BluetoothGatt|BluetoothLeScanner|gatt|DA14585|Dialog Semiconductor|Renesas|\bESL\b|e.?paper|zigbee|gateway|mqtt|characteristic|scanRecord|connectGatt|writeCharacteristic|notifyCharacteristic|cloudesl",re.I)
+          with zipfile.ZipFile(apk) as z:
+              names=z.namelist()
+              so=[n for n in names if n.endswith(".so")]
+              dex=[n for n in names if re.fullmatch(r"classes(?:\d+)?\.dex",n)]
+              out += [f"- APK 内 native 库数量：{len(so)}",f"- DEX 文件数量：{len(dex)}",""]
+              out += ["## Native libraries",""]
+              out += [f"- {n}" for n in so] or ["- 未发现 .so 文件"]
+              out += ["","## Native library strings 命中",""]
+              for n in so:
+                  data=z.read(n)
+                  strings=re.findall(rb"[\x20-\x7e]{5,}",data)
+                  hits=[x.decode("latin1","replace") for x in strings if needles.search(x.decode("latin1","ignore"))]
+                  if hits:
+                      out.append("### "+n)
+                      out.extend("- "+x[:300] for x in hits[:150])
+              out += ["","## DEX 字符串命中",""]
+              for n in dex:
+                  data=z.read(n)
+                  strings=re.findall(rb"[\x20-\x7e]{5,}",data)
+                  hits=[x.decode("latin1","replace") for x in strings if needles.search(x.decode("latin1","ignore"))]
+                  out.append(f"### {n}（命中 {len(hits)}）")
+                  out.extend("- "+x[:300] for x in hits[:250])
+          pathlib.Path("analysis/native_dex_scan.md").write_text("\n".join(out),encoding="utf-8")
+          print("Wrote native/DEX scan")
+          PY
+
       - name: Extract BLE findings
         shell: bash
         run: |
