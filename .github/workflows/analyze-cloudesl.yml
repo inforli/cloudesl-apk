@@ -83,6 +83,31 @@ jobs:
           out.insert(5, f"- 应用自身代码命中行数: {hits}")
           (Path("analysis") / "ble_report.md").write_text("\n".join(out), encoding="utf-8")
           print(f"Wrote report with {hits} matching lines")
+          detail = []
+          detail.append("# CloudESL 云端 API 代码摘录")
+          detail.append("")
+          targets = [
+              root / "sources" / "com" / "aliyun" / "cloudesl" / "android" / "api" / "AliyunOAuth.java"
+          ]
+          sdk = root / "sources" / "com" / "aliyuncs" / "cloudesl" / "model" / "v20200201"
+          if sdk.exists():
+              targets.extend(sorted(sdk.glob("*Esl*Request.java")))
+              targets.extend(sorted(sdk.glob("*Esl*Response.java")))
+              targets.extend(sorted(sdk.glob("*Light*Request.java")))
+              targets.extend(sorted(sdk.glob("*Light*Response.java")))
+          seen = set()
+          for p in targets:
+              if not p.exists() or p in seen:
+                  continue
+              seen.add(p)
+              detail.append(f"## {p.relative_to(root)}")
+              try: lines = p.read_text(errors="ignore").splitlines()
+              except Exception: continue
+              for i, line in enumerate(lines[:500]):
+                  detail.append(f"- L{i+1}: {line[:1000]}")
+              detail.append("")
+          (Path("analysis") / "cloud_api_detail.md").write_text("\\n".join(detail), encoding="utf-8")
+          print(f"Wrote API detail for {len(seen)} source files")
           PY
 
       - name: Commit report
