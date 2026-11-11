@@ -53,7 +53,7 @@ jobs:
           patterns = [
               re.compile(r"android\\.bluetooth|BluetoothGatt|BluetoothGattCharacteristic|BluetoothGattService|BluetoothDevice|BluetoothLeScanner|ScanFilter|ScanSettings|writeCharacteristic|writeDescriptor|setCharacteristicNotification|onCharacteristicChanged|onCharacteristicWrite|onServicesDiscovered|connectGatt", re.I),
               re.compile(r"0000[0-9a-fA-F]{4}-0000-1000-8000-00805[fF]9[bB]34[fF][bB]|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"),
-              re.compile(r"Bluetooth|GATT|UUID\\.fromString|ParcelUuid|ScanRecord|getService\\(|getCharacteristic\\(|getDescriptor\\(", re.I),
+              re.compile(r"BluetoothGatt|BluetoothLeScanner|UUID|GATT", re.I),
           ]
           hits = 0
           for p in root.rglob("*"):
