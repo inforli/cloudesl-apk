@@ -51,29 +51,36 @@ jobs:
           out.append("- 工具：JADX 1.5.1")
           out.append("")
           patterns = [
-              re.compile(r"BluetoothGatt|BluetoothGattCharacteristic|BluetoothGattService|BluetoothDevice|BluetoothLeScanner|ScanFilter|ScanSettings|writeCharacteristic|writeDescriptor|setCharacteristicNotification|onCharacteristicChanged|onCharacteristicWrite|onServicesDiscovered|connectGatt", re.I),
-              re.compile(r"0000[0-9a-fA-F]{4}-0000-1000-8000-00805[fF]9[bB]34[fF][bB]|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"),
+              re.compile(r"bluetooth|\\bble\\b|gatt|esl|价签|蓝牙|gateway|\\bap\\b|uuid|scan|connect|characteristic|write|tag|device|label|display|image|bitmap|商品|货架", re.I),
           ]
           hits = 0
-          for p in root.rglob("*"):
-              if not p.is_file() or p.suffix.lower() not in {".java", ".kt", ".xml", ".json", ".txt"}:
-                  continue
-              try: lines = p.read_text(errors="ignore").splitlines()
-              except Exception: continue
-              matched = []
-              for i, line in enumerate(lines):
-                  if any(rx.search(line) for rx in patterns):
-                      matched.append((i, line.strip()))
-              if matched:
-                  hits += len(matched)
-                  out.append(f"## {p.relative_to(root)}")
-                  for i, line in matched[:250]:
-                      out.append(f"- L{i+1}: {line[:1000]}")
-                  if len(matched) > 250:
-                      out.append(f"- ... 另有 {len(matched)-250} 条匹配")
-                  out.append("")
-          out.insert(4, f"- 命中行数（初筛，可能含重复/无关项）: {hits}")
-          out.append("\\n> 注：本报告仅为静态字符串/反编译代码命中，不等同于已确认价签协议。")
+          files = 0
+          app_root = root / "sources" / "com" / "aliyun" / "cloudesl" / "android"
+          out.append("## Android Manifest 权限与组件")
+          manifest = root / "resources" / "AndroidManifest.xml"
+          if manifest.exists():
+              for i, line in enumerate(manifest.read_text(errors="ignore").splitlines()):
+                  if re.search(r"permission|service|receiver|uses-feature", line, re.I):
+                      out.append(f"- L{i+1}: {line.strip()[:1000]}")
+          out.append("")
+          out.append("## CloudESL 应用自身代码关键词")
+          scan_roots = [app_root] if app_root.exists() else [root / "sources"]
+          for scan_root in scan_roots:
+              for p in scan_root.rglob("*.java"):
+                  try: lines = p.read_text(errors="ignore").splitlines()
+                  except Exception: continue
+                  matched = [(i, line.strip()) for i, line in enumerate(lines) if any(rx.search(line) for rx in patterns)]
+                  if matched:
+                      files += 1
+                      hits += len(matched)
+                      out.append(f"### {p.relative_to(root)}")
+                      for i, line in matched[:60]:
+                          out.append(f"- L{i+1}: {line[:700]}")
+                      if len(matched) > 60:
+                          out.append(f"- ... 另有 {len(matched)-60} 条匹配")
+                      out.append("")
+          out.insert(4, f"- 应用自身代码命中文件数: {files}")
+          out.insert(5, f"- 应用自身代码命中行数: {hits}")
           (Path("analysis") / "ble_report.md").write_text("\n".join(out), encoding="utf-8")
           print(f"Wrote report with {hits} matching lines")
           PY
