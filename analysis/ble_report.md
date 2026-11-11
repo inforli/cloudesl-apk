@@ -2,12 +2,3194 @@
 
 - APK SHA-256: 1ea7f94dfd00ff2faec9b42a61fa1b0dd02c2e8e62650f7b661b73b03d7552f9
 - 工具：JADX 1.5.1
-- 命中行数（初筛，可能含重复/无关项）: 2
+- 应用自身代码命中文件数: 151
+- 应用自身代码命中行数: 3716
 
-## sources/okhttp3/internal/ws/RealWebSocket.java
-- L152: String base64 = ByteString.encodeUtf8(this.key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11").sha1().base64();
+## Android Manifest 权限与组件
+- L13: <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+- L14: <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+- L15: <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+- L16: <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+- L17: <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+- L18: <uses-permission android:name="android.permission.INTERNET"/>
+- L19: <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+- L20: <uses-permission android:name="android.permission.CAMERA"/>
+- L21: <uses-permission android:name="android.permission.VIBRATE"/>
+- L22: <uses-feature android:name="android.hardware.camera"/>
+- L23: <uses-feature android:name="android.hardware.camera.autofocus"/>
+- L24: <uses-permission android:name="android.permission.FLASHLIGHT"/>
+- L25: <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+- L26: <uses-permission android:name="android.permission.VIBRATE"/>
+- L27: <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+- L28: <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+- L67: <service android:name="com.aliyun.cloudesl.android.updateManager.DownloadService"/>
+- L72: android:grantUriPermissions="true">
 
-## sources/okhttp3/internal/ws/WebSocketProtocol.java
-- L8: static final String ACCEPT_MAGIC = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+## CloudESL 应用自身代码关键词
+### sources/com/aliyun/cloudesl/android/BuildConfig.java
+- L1: package com.aliyun.cloudesl.android;
+- L5: public static final String APPLICATION_ID = "com.aliyun.cloudesl.android";
 
-\n> 注：本报告仅为静态字符串/反编译代码命中，不等同于已确认价签协议。
+### sources/com/aliyun/cloudesl/android/R.java
+- L1: package com.aliyun.cloudesl.android;
+- L217: public static final int displayOptions = 0x7f0300b2;
+- L298: public static final int imageButtonStyle = 0x7f030103;
+- L317: public static final int labelVisibilityMode = 0x7f030116;
+- L318: public static final int label_text = 0x7f030117;
+- L319: public static final int label_text_color = 0x7f030118;
+- L320: public static final int label_text_size = 0x7f030119;
+- L410: public static final int maxImageSize = 0x7f030173;
+- L594: public static final int tabInlineLabel = 0x7f03022b;
+- L941: public static final int abc_text_size_display_1_material = 0x7f06003d;
+- L942: public static final int abc_text_size_display_2_material = 0x7f06003e;
+- L943: public static final int abc_text_size_display_3_material = 0x7f06003f;
+- L944: public static final int abc_text_size_display_4_material = 0x7f060040;
+- L982: public static final int design_fab_image_size = 0x7f060066;
+- L1067: public static final int mtrl_textinput_box_label_cutout_padding = 0x7f0600bb;
+- L1273: public static final int price_tag = 0x7f0700b0;
+- L1274: public static final int pricetag = 0x7f0700b1;
+- L1277: public static final int scan = 0x7f0700b4;
+- L1278: public static final int scan2 = 0x7f0700b5;
+- L1279: public static final int scanpage = 0x7f0700b6;
+- L1289: public static final int tagcon = 0x7f0700c0;
+- L1290: public static final int tagconned = 0x7f0700c1;
+- L1330: public static final int BT_OptDevice = 0x7f080006;
+- L1331: public static final int BT_OptDeviceAlps = 0x7f080007;
+- L1332: public static final int BT_OptDeviceCamera = 0x7f080008;
+- L1333: public static final int BT_OptDeviceDongji = 0x7f080009;
+- L1334: public static final int BT_OptDeviceHoneywell = 0x7f08000a;
+- L1335: public static final int BT_OptDeviceIdata = 0x7f08000b;
+- L1336: public static final int BT_OptDeviceOther = 0x7f08000c;
+- L1337: public static final int BT_OptDeviceScan = 0x7f08000d;
+- L1338: public static final int BT_OptDeviceUrovo = 0x7f08000e;
+- L1339: public static final int BT_OptScanType = 0x7f08000f;
+- L1341: public static final int Btn_BingTrack_item_Scan = 0x7f080011;
+- L1345: public static final int Btn_ScanAllFloor_Cancel = 0x7f080015;
+- L1346: public static final int Btn_ScanAllFloor_CkId = 0x7f080016;
+- L1347: public static final int Btn_ScanAllFloor_FloorScan = 0x7f080017;
+- L1348: public static final int Btn_ScanAllFloor_ReScan = 0x7f080018;
+- L1349: public static final int Btn_ScanWithFloor_Cancel = 0x7f080019;
+- L1350: public static final int Btn_ScanWithFloor_FloorScan = 0x7f08001a;
+- L1351: public static final int Btn_ScanWithFloor_ReScan = 0x7f08001b;
+- L1352: public static final int Btn_ShelvesAllInfo_AllScan = 0x7f08001c;
+- L1354: public static final int Btn_ShelvesAllInfo_FloorScan = 0x7f08001e;
+- L1356: public static final int Btn_TagError = 0x7f080020;
+- L1357: public static final int Btn_TagInfo = 0x7f080021;
+- L1362: public static final int Btn_modTag = 0x7f080026;
+- L1365: public static final int Dialog_EdScanInfo_BtnCancel = 0x7f080029;
+- L1366: public static final int Dialog_EdScanInfo_BtnConfirm = 0x7f08002a;
+- L1367: public static final int Dialog_EdScanInfo_BtnScan = 0x7f08002b;
+- L1368: public static final int Dialog_EdScanInfo_EdScan = 0x7f08002c;
+- L1369: public static final int Dialog_EdScanInfo_Title = 0x7f08002d;
+- L1370: public static final int Dialog_EdScanInfo_TvStep1 = 0x7f08002e;
+- L1371: public static final int Dialog_EdScanInfo_TvStep1Content = 0x7f08002f;
+- L1372: public static final int Dialog_EdScanInfo_TvStep2 = 0x7f080030;
+- L1373: public static final int Dialog_EdScan_BtnCancel = 0x7f080031;
+- L1374: public static final int Dialog_EdScan_BtnConfirm = 0x7f080032;
+- L1375: public static final int Dialog_EdScan_BtnScan = 0x7f080033;
+- L1376: public static final int Dialog_EdScan_EdScan = 0x7f080034;
+- L1377: public static final int Dialog_EdScan_Title = 0x7f080035;
+- L1385: public static final int Ed_ScanTagCode = 0x7f08003d;
+- L1386: public static final int Ed_ScanbarCode = 0x7f08003e;
+- ... 另有 120 条匹配
+
+### sources/com/aliyun/cloudesl/android/updateManager/UpdateDialog.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L15: import com.aliyun.cloudesl.android.R;
+- L31: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L35: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L39: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L72: this.ll_BtnConfirm.setTag(0);
+- L76: setOnKeyListener(new DialogInterface.OnKeyListener() { // from class: com.aliyun.cloudesl.android.updateManager.UpdateDialog.1
+- L108: if (((Integer) this.ll_BtnConfirm.getTag()).intValue() == 1119) {
+- L128: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L132: this.ll_BtnConfirm.setTag(1119);
+
+### sources/com/aliyun/cloudesl/android/updateManager/BaseHttpDownloadManager.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/NotificationUtil.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/Constant.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L5: public static final String APK_NAME = "cloudesl.apk";
+- L10: public static final String DEFAULT_CHANNEL_ID = "cloudesl";
+- L11: public static final String DEFAULT_CHANNEL_NAME = "Cloudesl";
+- L13: public static final String THREAD_NAME = "cloudesl thread";
+
+### sources/com/aliyun/cloudesl/android/updateManager/OnButtonClickListener.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/HttpDownloadManager.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L6: import java.net.HttpURLConnection;
+- L24: private Runnable runnable = new Runnable() { // from class: com.aliyun.cloudesl.android.updateManager.HttpDownloadManager.2
+- L38: @Override // com.aliyun.cloudesl.android.updateManager.BaseHttpDownloadManager
+- L43: new ThreadPoolExecutor(1, 1, 0L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new ThreadFactory() { // from class: com.aliyun.cloudesl.android.updateManager.HttpDownloadManager.1
+- L53: @Override // com.aliyun.cloudesl.android.updateManager.BaseHttpDownloadManager
+- L62: HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(this.apkUrl).openConnection();
+- L63: httpURLConnection.setRequestMethod(HttpGet.METHOD_NAME);
+- L64: httpURLConnection.setReadTimeout(Constant.HTTP_TIME_OUT);
+- L65: httpURLConnection.setConnectTimeout(Constant.HTTP_TIME_OUT);
+- L66: httpURLConnection.setRequestProperty(HttpHeaders.ACCEPT_ENCODING, HTTP.IDENTITY_CODING);
+- L67: if (httpURLConnection.getResponseCode() == 200) {
+- L68: InputStream inputStream = httpURLConnection.getInputStream();
+- L69: int contentLength = httpURLConnection.getContentLength();
+- L79: fileOutputStream.write(bArr, 0, read);
+- L93: if (httpURLConnection.getResponseCode() != 301 && httpURLConnection.getResponseCode() != 302) {
+- L94: this.listener.error(new SocketTimeoutException("下载失败：Http ResponseCode = " + httpURLConnection.getResponseCode()));
+- L96: this.apkUrl = httpURLConnection.getHeaderField(HttpHeaders.LOCATION);
+- L97: httpURLConnection.disconnect();
+- L100: httpURLConnection.disconnect();
+
+### sources/com/aliyun/cloudesl/android/updateManager/DownloadService.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L12: import com.aliyun.cloudesl.android.R;
+- L25: private Handler handler = new Handler() { // from class: com.aliyun.cloudesl.android.updateManager.DownloadService.1
+- L130: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L141: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L164: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L176: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L185: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+
+### sources/com/aliyun/cloudesl/android/updateManager/ScreenUtil.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L8: return context.getResources().getDisplayMetrics().widthPixels;
+- L12: return context.getResources().getDisplayMetrics().heightPixels;
+
+### sources/com/aliyun/cloudesl/android/updateManager/OnDownloadListener.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/AppUpdateFileProvider.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/FileUtil.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/ApkUtil.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+
+### sources/com/aliyun/cloudesl/android/updateManager/DownloadManager.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L7: import com.aliyun.cloudesl.android.utils.OtherUtils;
+
+### sources/com/aliyun/cloudesl/android/updateManager/UpdateConfiguration.java
+- L1: package com.aliyun.cloudesl.android.updateManager;
+- L20: private int dialogImage = -1;
+- L97: public UpdateConfiguration setDialogImage(int i) {
+- L98: this.dialogImage = i;
+- L102: public int getDialogImage() {
+- L103: return this.dialogImage;
+
+### sources/com/aliyun/cloudesl/android/api/ScannerInterface.java
+- L1: package com.aliyun.cloudesl.android.api;
+- L7: public class ScannerInterface {
+- L8: public static final String KEY_BARCODE_ENABLE_ACTION = "android.intent.action.BARCODESCAN";
+- L9: public static final String KEY_BARCODE_STARTSCAN_ACTION = "android.intent.action.BARCODESTARTSCAN";
+- L10: public static final String KEY_BARCODE_STOPSCAN_ACTION = "android.intent.action.BARCODESTOPSCAN";
+- L13: public static final String KEY_CONTINUCESCAN_ACTION = "android.intent.action.CONTINUCESCAN";
+- L20: public static final String KEY_LOCK_SCAN_ACTION = "android.intent.action.BARCODELOCKSCANKEY";
+- L27: public static final String KEY_SHOWISCANUI = "com.android.auto.iscan.show_setting_ui";
+- L34: public static final String KEY_UNLOCK_SCAN_ACTION = "android.intent.action.BARCODEUNLOCKSCANKEY";
+- L36: public static final String SCANKEY_CONFIG_ACTION = "android.intent.action.scankeyConfig";
+- L50: private static ScannerInterface androidjni;
+- L53: public ScannerInterface(Context context) {
+- L59: this.mContext.sendBroadcast(new Intent(KEY_SHOWISCANUI));
+- L79: public void scan_start() {
+- L81: this.mContext.sendBroadcast(new Intent(KEY_BARCODE_STARTSCAN_ACTION));
+- L85: public void scan_stop() {
+- L87: this.mContext.sendBroadcast(new Intent(KEY_BARCODE_STOPSCAN_ACTION));
+- L91: public void lockScanKey() {
+- L93: this.mContext.sendBroadcast(new Intent(KEY_LOCK_SCAN_ACTION));
+- L97: public void unlockScanKey() {
+- L99: this.mContext.sendBroadcast(new Intent(KEY_UNLOCK_SCAN_ACTION));
+- L199: public void continceScan(boolean z) {
+- L201: Intent intent = new Intent(KEY_CONTINUCESCAN_ACTION);
+- L202: intent.putExtra(KEY_CONTINUCESCAN_ACTION, z);
+- L223: public void resultScan() {
+
+### sources/com/aliyun/cloudesl/android/api/ScannerResultInterface.java
+- L1: package com.aliyun.cloudesl.android.api;
+- L4: public interface ScannerResultInterface {
+- L5: boolean needScanner();
+- L7: void onScanResultReceived(String str);
+
+### sources/com/aliyun/cloudesl/android/api/AliyunOAuth.java
+- L1: package com.aliyun.cloudesl.android.api;
+- L9: import com.aliyun.cloudesl.android.db.bean.GoodBean;
+- L10: import com.aliyun.cloudesl.android.keystore.KeyStoreHelper;
+- L11: import com.aliyun.cloudesl.android.updateManager.Constant;
+- L12: import com.aliyun.cloudesl.android.utils.MyTost;
+- L13: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L14: import com.aliyun.cloudesl.android.view.base.LoginCallback;
+- L15: import com.aliyun.cloudesl.android.view.base.RefreshTokenCallback;
+- L18: import com.aliyuncs.cloudesl.model.v20200201.AssociatePlanogramRailRequest;
+- L19: import com.aliyuncs.cloudesl.model.v20200201.AssociatePlanogramRailResponse;
+- L20: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceRequest;
+- L21: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceResponse;
+- L22: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersRequest;
+- L23: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersResponse;
+- L24: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageRequest;
+- L25: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+- L26: import com.aliyuncs.cloudesl.model.v20200201.DescribeEslDevicesRequest;
+- L27: import com.aliyuncs.cloudesl.model.v20200201.DescribeEslDevicesResponse;
+- L28: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsRequest;
+- L29: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+- L30: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesRequest;
+- L31: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L32: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsRequest;
+- L33: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L34: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramRailsRequest;
+- L35: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramRailsResponse;
+- L36: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesRequest;
+- L37: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L38: import com.aliyuncs.cloudesl.model.v20200201.DescribeStoresRequest;
+- L39: import com.aliyuncs.cloudesl.model.v20200201.DescribeStoresResponse;
+- L40: import com.aliyuncs.cloudesl.model.v20200201.DissociatePlanogramRailRequest;
+- L41: import com.aliyuncs.cloudesl.model.v20200201.DissociatePlanogramRailResponse;
+- L42: import com.aliyuncs.cloudesl.model.v20200201.UnbindEslDeviceRequest;
+- L43: import com.aliyuncs.cloudesl.model.v20200201.UnbindEslDeviceResponse;
+- L44: import com.aliyuncs.cloudesl.model.v20200201.UpdateEslDeviceLightRequest;
+- L45: import com.aliyuncs.cloudesl.model.v20200201.UpdateEslDeviceLightResponse;
+- L112: DefaultProfile.addEndpoint(Constant.DEFAULT_CHANNEL_ID, "cn-hangzhou", Constant.DEFAULT_CHANNEL_ID, "cloudesl.cn-hangzhou.aliyuncs.com");
+- L137: OkHttpUtil.getDefault().doPostAsync(HttpInfo.Builder().setUrl(ADDRESS).setContentType("application/x-www-form-urlencoded").addParams(hashMap).build(), new Callback() { // from class: com.aliyun.cloudesl.android.api.AliyunOAuth.1
+- L168: OkHttpUtil.getDefault().doGetAsync(HttpInfo.Builder().setUrl(UserInfoUrl).addHead("Authorization", "Bearer " + str).build(), new Callback() { // from class: com.aliyun.cloudesl.android.api.AliyunOAuth.2
+- L240: OkHttpUtil.getDefault().doGetAsync(HttpInfo.Builder().setUrl(RemoveTokenUrl).addParam(KEY_ACCESS_TOKEN, "Bearer " + SPUtils.get(context, KEY_ACCESS_TOKEN, new String())).addParam("Authorization", CLIENT_ID).build(), new Callback() { // from class: com.aliyun.cloudesl.android.api.AliyunOAuth.3
+- L261: OkHttpUtil.getDefault().doPostAsync(HttpInfo.Builder().setUrl(ADDRESS).setContentType("application/x-www-form-urlencoded").addParams(hashMap).build(), new Callback() { // from class: com.aliyun.cloudesl.android.api.AliyunOAuth.4
+- L326: public DescribeEslDevicesResponse getTagItem(String str) {
+- L327: DescribeEslDevicesRequest describeEslDevicesRequest = new DescribeEslDevicesRequest();
+- L328: describeEslDevicesRequest.setMethod(MethodType.POST);
+- L329: describeEslDevicesRequest.setEslBarCode(str);
+- L330: describeEslDevicesRequest.setStoreId(SPUtils.get(context, "storeid", new String()).toString());
+- L331: describeEslDevicesRequest.putQueryParameter("AcceptLanguage", "zh-CN");
+- L332: describeEslDevicesRequest.putQueryParameter("Code", "apiDynamicErrorCode");
+- L334: DescribeEslDevicesResponse describeEslDevicesResponse = (DescribeEslDevicesResponse) getPopClient().getAcsResponse(describeEslDevicesRequest);
+- L335: if (describeEslDevicesResponse.getSuccess().booleanValue()) {
+- L336: System.out.println("==========getTagItemSuccess   " + describeEslDevicesResponse.getRequestId());
+- L338: System.out.println("==========getTagItemFail  " + describeEslDevicesResponse.getMessage());
+- L340: return describeEslDevicesResponse;
+- L343: System.out.println("==========getTagItemException  " + e.getMessage());
+- L345: return getTagItem(str);
+- L347: DescribeEslDevicesResponse describeEslDevicesResponse2 = new DescribeEslDevicesResponse();
+- L348: describeEslDevicesResponse2.setSuccess(false);
+- L350: describeEslDevicesResponse2.setErrorMessage("网络异常");
+- L352: describeEslDevicesResponse2.setErrorMessage(e.getErrorDescription());
+- L354: return describeEslDevicesResponse2;
+- ... 另有 208 条匹配
+
+### sources/com/aliyun/cloudesl/android/api/DongJiBroadcastConfig.java
+- L1: package com.aliyun.cloudesl.android.api;
+- L5: public static final String ACTION_PARAM_SETTINGS = "com.seuic.scanner.action.PARAM_SETTINGS";
+- L7: public static final String BROADCAST_SETTING = "com.android.scanner.service_settings";
+- L8: public static final String CONTINIU_KEY = "scan_continue";
+- L9: public static final String CUSTOM_NAME = "com.aliyun.esl.scan";
+- L11: public static final String SCAN_LIGHT = "com.android.scanner.ENABLED";
+- L12: public static final String SCAN_START = "com.scan.onStartScan";
+- L13: public static final String SCAN_STOP = "com.scan.onEndScan";
+
+### sources/com/aliyun/cloudesl/android/keystore/KeyStoreHelper.java
+- L1: package com.aliyun.cloudesl.android.keystore;
+- L10: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L33: private static final String TAG = "KEYSTORE";
+- L95: Log.d(TAG, Log.getStackTraceString(e));
+- L104: Log.d(TAG, Log.getStackTraceString(e));
+
+### sources/com/aliyun/cloudesl/android/db/OrmDBHelper.java
+- L1: package com.aliyun.cloudesl.android.db;
+- L7: import com.aliyun.cloudesl.android.db.bean.JqGoodsBean;
+- L10: import com.j256.ormlite.support.ConnectionSource;
+- L22: private static final String DB_NAME = "electag.db";
+- L23: private static final String DATABASE_PATH = Environment.getExternalStorageDirectory() + "/ElecTag/DB/" + DB_NAME;
+- L54: File file = new File(Environment.getExternalStorageDirectory() + "/ElecTag");
+- L55: File file2 = new File(Environment.getExternalStorageDirectory() + "/ElecTag/DB");
+- L71: public void onCreate(SQLiteDatabase sQLiteDatabase, ConnectionSource connectionSource) {
+- L73: TableUtils.createTableIfNotExists(connectionSource, JqGoodsBean.class);
+- L82: public void onUpgrade(SQLiteDatabase sQLiteDatabase, ConnectionSource connectionSource, int i, int i2) {
+- L84: TableUtils.createTableIfNotExists(connectionSource, JqGoodsBean.class);
+
+### sources/com/aliyun/cloudesl/android/db/DBCallBackListener.java
+- L1: package com.aliyun.cloudesl.android.db;
+
+### sources/com/aliyun/cloudesl/android/db/GoodsItemDao.java
+- L1: package com.aliyun.cloudesl.android.db;
+- L4: import com.aliyun.cloudesl.android.db.bean.GoodsItemBean;
+
+### sources/com/aliyun/cloudesl/android/db/BaseDaoImpl.java
+- L1: package com.aliyun.cloudesl.android.db;
+- L20: @Override // com.aliyun.cloudesl.android.db.BaseDao
+
+### sources/com/aliyun/cloudesl/android/db/BaseDao.java
+- L1: package com.aliyun.cloudesl.android.db;
+- L10: import com.j256.ormlite.support.DatabaseConnection;
+- L34: DatabaseConnection startThreadConnection;
+- L36: DatabaseConnection databaseConnection = null;
+- L39: startThreadConnection = dao.startThreadConnection();
+- L47: dao.setAutoCommit(startThreadConnection, false);
+- L49: dao.commit(startThreadConnection);
+- L50: dao.endThreadConnection(startThreadConnection);
+- L54: databaseConnection = startThreadConnection;
+- L55: dao.rollBack(databaseConnection);
+- L57: dao.endThreadConnection(databaseConnection);
+- L61: databaseConnection = startThreadConnection;
+- L62: dao.endThreadConnection(databaseConnection);
+- L68: DatabaseConnection databaseConnection;
+- L72: databaseConnection = dao.startThreadConnection();
+- L74: dao.setAutoCommit(databaseConnection, false);
+- L76: dao.commit(databaseConnection);
+- L77: dao.endThreadConnection(databaseConnection);
+- L81: dao.rollBack(databaseConnection);
+- L83: dao.endThreadConnection(databaseConnection);
+- L88: dao.endThreadConnection(null);
+- L93: databaseConnection = null;
+- L96: dao.endThreadConnection(null);
+- L102: DatabaseConnection databaseConnection;
+- L104: DatabaseConnection databaseConnection2 = null;
+- L107: databaseConnection = dao.startThreadConnection();
+- L113: databaseConnection = databaseConnection2;
+- L116: dao.setAutoCommit(databaseConnection, false);
+- L121: dao.commit(databaseConnection);
+- L123: dao.endThreadConnection(databaseConnection);
+- L127: databaseConnection2 = databaseConnection;
+- L128: dao.rollBack(databaseConnection2);
+- L130: dao.endThreadConnection(databaseConnection2);
+- L134: dao.endThreadConnection(databaseConnection);
+- L140: DatabaseConnection databaseConnection;
+- L142: DatabaseConnection databaseConnection2 = null;
+- L145: databaseConnection = dao.startThreadConnection();
+- L151: databaseConnection = databaseConnection2;
+- L154: dao.setAutoCommit(databaseConnection, false);
+- L159: dao.commit(databaseConnection);
+- L162: dao.endThreadConnection(databaseConnection);
+- L166: databaseConnection2 = databaseConnection;
+- L167: dao.rollBack(databaseConnection2);
+- L170: dao.endThreadConnection(databaseConnection2);
+- L174: dao.endThreadConnection(databaseConnection);
+- L180: DatabaseConnection startThreadConnection;
+- L182: DatabaseConnection databaseConnection = null;
+- L185: startThreadConnection = dao.startThreadConnection();
+- L193: dao.setAutoCommit(startThreadConnection, false);
+- L195: dao.commit(startThreadConnection);
+- L196: dao.endThreadConnection(startThreadConnection);
+- L200: databaseConnection = startThreadConnection;
+- L201: dao.rollBack(databaseConnection);
+- L203: dao.endThreadConnection(databaseConnection);
+- L207: databaseConnection = startThreadConnection;
+- L208: dao.endThreadConnection(databaseConnection);
+- L214: DatabaseConnection databaseConnection;
+- L216: DatabaseConnection databaseConnection2 = null;
+- L219: databaseConnection = dao.startThreadConnection();
+- L222: databaseConnection = null;
+- ... 另有 157 条匹配
+
+### sources/com/aliyun/cloudesl/android/utils/ToastUtil.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L5: import android.widget.ImageView;
+- L122: public static void showToastWithImageAndText(Context context, CharSequence charSequence, int i, int i2, int i3, int i4, int i5) {
+- L131: ImageView imageView = new ImageView(context);
+- L132: imageView.setImageResource(i);
+- L133: linearLayout.addView(imageView, 0);
+
+### sources/com/aliyun/cloudesl/android/utils/SPUtils.java
+- L1: package com.aliyun.cloudesl.android.utils;
+
+### sources/com/aliyun/cloudesl/android/utils/AppManager.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L11: private static final String TAG = "AppManager";
+
+### sources/com/aliyun/cloudesl/android/utils/DeviceType.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L4: public class DeviceType {
+
+### sources/com/aliyun/cloudesl/android/utils/StringUtil.java
+- L1: package com.aliyun.cloudesl.android.utils;
+
+### sources/com/aliyun/cloudesl/android/utils/MyTost.java
+- L1: package com.aliyun.cloudesl.android.utils;
+
+### sources/com/aliyun/cloudesl/android/utils/TokenInterceptor.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L5: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L6: import com.aliyun.cloudesl.android.keystore.KeyStoreHelper;
+- L18: private static final String TAG = "TokenInterceptor";
+- L28: Log.d(TAG, "response.code=" + proceed.code());
+- L32: Log.d(TAG, "自动刷新Token,然后重新请求数据");
+- L44: OkHttpUtil.getDefault().doGetAsync(HttpInfo.Builder().setUrl(AliyunOAuth.ADDRESS).addParam("refresh_token", decrypt + "").addParam("client_id", AliyunOAuth.CLIENT_ID).addParam("grant_type", "refresh_token").build(), new Callback() { // from class: com.aliyun.cloudesl.android.utils.TokenInterceptor.1
+
+### sources/com/aliyun/cloudesl/android/utils/HttpInterceptor.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L9: public static ResultInterceptor ResultInterceptor = new ResultInterceptor() { // from class: com.aliyun.cloudesl.android.utils.HttpInterceptor.1
+- L15: public static ExceptionInterceptor ExceptionInterceptor = new ExceptionInterceptor() { // from class: com.aliyun.cloudesl.android.utils.HttpInterceptor.2
+- L111: throw new UnsupportedOperationException("Method not decompiled: com.aliyun.cloudesl.android.utils.HttpInterceptor.AnonymousClass2.intercept(com.okhttplib.HttpInfo):com.okhttplib.HttpInfo");
+
+### sources/com/aliyun/cloudesl/android/utils/ScannerUtil.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L7: import android.device.ScanManager;
+- L8: import android.device.scanner.configuration.PropertyID;
+- L10: import com.aliyun.cloudesl.android.api.ScannerInterface;
+- L15: public class ScannerUtil {
+- L16: private static final String RES_ACTION = "android.intent.action.SCANRESULT";
+- L17: public static BroadcastReceiver scanReceiver;
+- L18: public static ScannerInterface scanner;
+- L20: private static ScanManager urovoScanManager;
+- L22: public static void onScanResultReceived(String str) {
+- L25: public static void keepScanner(Context context) {
+- L26: systemname = SystemUtil.getDeviceBrand();
+- L30: if (systemname.equals(DeviceType.UROVO)) {
+- L31: initUrovoScanManager(context);
+- L33: initScanner(context);
+- L37: private static void initUrovoScanManager(Context context) {
+- L39: urovoScanManager = new ScanManager();
+- L40: urovoScanManager.openScanner();
+- L41: urovoScanManager.switchOutputMode(0);
+- L42: urovoScanManager.unlockTrigger();
+- L43: initParameters(urovoScanManager);
+- L44: initDecodingIntent(urovoScanManager);
+- L46: intentFilter.addAction(ScanManager.ACTION_DECODE);
+- L47: scanReceiver = new UrovoScannerResultReceiver();
+- L48: context.getApplicationContext().registerReceiver(scanReceiver, intentFilter);
+- L53: public static int initParameters(ScanManager scanManager) {
+- L65: return scanManager.setParameterInts(iArr, iArr2);
+- L68: public static boolean initDecodingIntent(ScanManager scanManager) {
+- L69: int[] iArr = {PropertyID.WEDGE_INTENT_ACTION_NAME, PropertyID.WEDGE_INTENT_DATA_STRING_TAG};
+- L70: String[] parameterString = scanManager.getParameterString(iArr);
+- L71: parameterString[0] = ScanManager.ACTION_DECODE;
+- L72: parameterString[1] = ScanManager.BARCODE_STRING_TAG;
+- L73: return scanManager.setParameterString(iArr, parameterString);
+- L76: private static class UrovoScannerResultReceiver extends BroadcastReceiver {
+- L77: private UrovoScannerResultReceiver() {
+- L82: byte[] byteArrayExtra = intent.getByteArrayExtra(ScanManager.DECODE_DATA_TAG);
+- L83: int intExtra = intent.getIntExtra(ScanManager.BARCODE_LENGTH_TAG, 0);
+- L84: intent.getByteExtra(ScanManager.BARCODE_TYPE_TAG, (byte) 0);
+- L89: ScannerUtil.onScanResultReceived(str);
+- L93: private static void initScanner(Context context) {
+- L94: scanner = new ScannerInterface(context);
+- L95: scanner.setOutputMode(1);
+- L96: scanner.enableFailurePlayBeep(true);
+- L97: scanReceiver = new ScannerResultReceiver();
+- L98: context.getApplicationContext().registerReceiver(scanReceiver, new IntentFilter(RES_ACTION));
+- L101: private static class ScannerResultReceiver extends BroadcastReceiver {
+- L102: private ScannerResultReceiver() {
+- L108: System.out.println("onScanResultReceived:" + stringExtra);
+- L109: if (!intent.getAction().equals(ScannerUtil.RES_ACTION) || stringExtra.length() <= 0) {
+- L112: ScannerUtil.onScanResultReceived(stringExtra);
+- L116: public static void CancelScanner(Context context) {
+- L120: if (systemname.equals(DeviceType.UROVO)) {
+- L121: destroyUrovoScanManager(context);
+- L123: finishScanner(context);
+- L127: private static void destroyUrovoScanManager(Context context) {
+- L128: if (urovoScanManager != null) {
+- L129: urovoScanManager.closeScanner();
+- L131: if (scanReceiver != null) {
+- L132: context.unregisterReceiver(scanReceiver);
+- L136: private static void finishScanner(Context context) {
+- ... 另有 6 条匹配
+
+### sources/com/aliyun/cloudesl/android/utils/SystemUtil.java
+- L1: package com.aliyun.cloudesl.android.utils;
+- L24: public static String getDeviceBrand() {
+
+### sources/com/aliyun/cloudesl/android/utils/OtherUtils.java
+- L1: package com.aliyun.cloudesl.android.utils;
+
+### sources/com/aliyun/cloudesl/android/utils/ui/MessageListView.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+
+### sources/com/aliyun/cloudesl/android/utils/ui/HorizontalListView1.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+- L25: private int mDisplayOffset;
+- L55: this.mDisplayOffset = 0;
+- L58: this.mDataObserver = new DataSetObserver() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView1.1
+- L75: this.mOnGesture = new GestureDetector.SimpleOnGestureListener() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView1.3
+- L149: this.mDisplayOffset = 0;
+- L233: post(new Runnable() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView1.2
+- L270: this.mDisplayOffset -= view.getMeasuredWidth();
+- L277: this.mDisplayOffset += childAt.getMeasuredWidth();
+- L294: this.mDisplayOffset += i;
+- L295: int i2 = this.mDisplayOffset;
+
+### sources/com/aliyun/cloudesl/android/utils/ui/HorizontalListView.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+- L27: import com.aliyun.cloudesl.android.R;
+- L49: private int mDisplayOffset;
+- L111: this.mAdapterDataObserver = new DataSetObserver() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView.2
+- L130: this.mDelayedLayout = new Runnable() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView.3
+- L149: setOnTouchListener(new View.OnTouchListener() { // from class: com.aliyun.cloudesl.android.utils.ui.HorizontalListView.1
+- L220: this.mDisplayOffset = 0;
+- L435: this.mDisplayOffset += isLastItemInAdapter(this.mLeftViewAdapterIndex) ? leftmostChild.getMeasuredWidth() : this.mDividerWidth + leftmostChild.getMeasuredWidth();
+- L469: this.mDisplayOffset -= i + i2 == 0 ? view.getMeasuredWidth() : view.getMeasuredWidth() + this.mDividerWidth;
+- L476: this.mDisplayOffset += i;
+- L477: int i2 = this.mDisplayOffset;
+
+### sources/com/aliyun/cloudesl/android/utils/ui/CircleProgressView.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+- L14: import com.aliyun.cloudesl.android.R;
+- L115: this.mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.aliyun.cloudesl.android.utils.ui.CircleProgressView.1
+- L142: return (int) ((f * context.getResources().getDisplayMetrics().density) + 0.5f);
+
+### sources/com/aliyun/cloudesl/android/utils/ui/LoadingDialog.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+- L7: import android.widget.ImageView;
+- L10: import com.aliyun.cloudesl.android.R;
+- L14: private ImageView iv_load_result;
+- L28: this.iv_load_result = (ImageView) findViewById(R.id.iv_load_result);
+- L67: this.iv_load_result.setImageResource(R.mipmap.load_suc_icon);
+- L82: this.iv_load_result.setImageResource(R.mipmap.load_fail_icon);
+
+### sources/com/aliyun/cloudesl/android/utils/ui/MyDialog.java
+- L1: package com.aliyun.cloudesl.android.utils.ui;
+- L9: import android.widget.ImageButton;
+- L10: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L14: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L19: public static int Dialog_EdScan = 2;
+- L20: public static int Dialog_EdScanInfo_OffGoods = 3;
+- L21: public static int Dialog_EdScanInfo_UpdateGoods = 4;
+- L30: LinearLayout dialogEdScanBtnCancel;
+- L31: LinearLayout dialogEdScanBtnConfirm;
+- L32: ImageButton dialogEdScanBtnScan;
+- L33: EditText dialogEdScanEdScan;
+- L34: LinearLayout dialogEdScanInfoBtnCancel;
+- L35: LinearLayout dialogEdScanInfoBtnConfirm;
+- L36: ImageButton dialogEdScanInfoBtnScan;
+- L37: EditText dialogEdScanInfoEdScan;
+- L38: TextView dialogEdScanInfoTitle;
+- L39: TextView dialogEdScanInfoTvStep1;
+- L40: TextView dialogEdScanInfoTvStep1Content;
+- L41: TextView dialogEdScanInfoTvStep2;
+- L42: TextView dialogEdScanTitle;
+- L51: private String edScan;
+- L66: void requestScanCode();
+- L156: public void setEdScanCode(String str) {
+- L158: if (this.dialogEdScanInfoEdScan != null) {
+- L159: this.dialogEdScanInfoEdScan.setText(str);
+- L160: this.dialogEdScanInfoEdScan.setSelection(str.length());
+- L165: if (this.type != 2 || this.dialogEdScanEdScan == null) {
+- L168: this.dialogEdScanEdScan.setText(str);
+- L169: this.dialogEdScanEdScan.setSelection(str.length());
+- L191: this.dialogShowInfoBtnCancel.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.1
+- L206: this.dialogShowWarningBtnConfirm.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.2
+- L213: this.dialogShowWarningBtnCancel.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.3
+- L224: setContentView(R.layout.dialog_edscan_layout);
+- L225: this.dialogEdScanTitle = (TextView) findViewById(R.id.Dialog_EdScan_Title);
+- L226: this.dialogEdScanEdScan = (EditText) findViewById(R.id.Dialog_EdScan_EdScan);
+- L227: this.dialogEdScanBtnScan = (ImageButton) findViewById(R.id.Dialog_EdScan_BtnScan);
+- L228: this.dialogEdScanBtnCancel = (LinearLayout) findViewById(R.id.Dialog_EdScan_BtnCancel);
+- L229: this.dialogEdScanBtnConfirm = (LinearLayout) findViewById(R.id.Dialog_EdScan_BtnConfirm);
+- L230: this.dialogEdScanTitle.setText(this.title);
+- L232: this.dialogEdScanEdScan.setHint(this.edContentHint);
+- L233: this.dialogEdScanBtnScan.setImageResource(R.drawable.right);
+- L235: this.dialogEdScanBtnConfirm.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.4
+- L238: if (MyDialog.this.dialogEdScanEdScan.getText().toString().trim().length() > 0) {
+- L239: MyDialog.this.confirmResultOnclickListener.confirmResultOnClick(MyDialog.this.dialogEdScanEdScan.getText().toString().trim());
+- L244: this.dialogEdScanBtnCancel.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.5
+- L253: this.dialogEdScanBtnScan.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.utils.ui.MyDialog.6
+- L257: MyDialog.this.confirmResultOnclickListener.requestScanCode();
+- L263: setContentView(R.layout.dialog_edscaninfo_layout);
+- L264: this.dialogEdScanInfoTitle = (TextView) findViewById(R.id.Dialog_EdScanInfo_Title);
+- L265: this.dialogEdScanInfoTvStep1 = (TextView) findViewById(R.id.Dialog_EdScanInfo_TvStep1);
+- L266: this.dialogEdScanInfoTvStep1Content = (TextView) findViewById(R.id.Dialog_EdScanInfo_TvStep1Content);
+- L267: this.dialogEdScanInfoTvStep2 = (TextView) findViewById(R.id.Dialog_EdScanInfo_TvStep2);
+- L268: this.dialogEdScanInfoEdScan = (EditText) findViewById(R.id.Dialog_EdScanInfo_EdScan);
+- L269: this.dialogEdScanInfoBtnScan = (ImageButton) findViewById(R.id.Dialog_EdScanInfo_BtnScan);
+- L270: this.dialogEdScanInfoBtnCancel = (LinearLayout) findViewById(R.id.Dialog_EdScanInfo_BtnCancel);
+- L271: this.dialogEdScanInfoBtnConfirm = (LinearLayout) findViewById(R.id.Dialog_EdScanInfo_BtnConfirm);
+- L273: this.dialogEdScanInfoTitle.setText("下架商品");
+- L274: this.dialogEdScanInfoTvStep1.setText("取出货品");
+- L275: this.dialogEdScanInfoTvStep2.setText("解绑价签");
+- ... 另有 44 条匹配
+
+### sources/com/aliyun/cloudesl/android/db/bean/ShelvesBean.java
+- L1: package com.aliyun.cloudesl.android.db.bean;
+- L5: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L10: public static final Parcelable.Creator<ShelvesBean> CREATOR = new Parcelable.Creator<ShelvesBean>() { // from class: com.aliyun.cloudesl.android.db.bean.ShelvesBean.1
+- L60: public void writeToParcel(Parcel parcel, int i) {
+- L61: parcel.writeString(this.Shelf);
+
+### sources/com/aliyun/cloudesl/android/db/bean/GoodBean.java
+- L1: package com.aliyun.cloudesl.android.db.bean;
+- L8: private String eslBarCode;
+- L9: private String eslModel;
+- L10: private String eslcolumn;
+- L11: private String eslitemBarCode;
+- L12: private String eslitemTitle;
+- L13: private Integer esllayer;
+- L19: public String getEslBarCode() {
+- L20: return this.eslBarCode;
+- L23: public void setEslBarCode(String str) {
+- L24: this.eslBarCode = str;
+- L27: public String getEslModel() {
+- L28: return this.eslModel;
+- L31: public void setEslModel(String str) {
+- L32: this.eslModel = str;
+- L35: public String getEslitemBarCode() {
+- L36: return this.eslitemBarCode;
+- L39: public void setEslitemBarCode(String str) {
+- L40: this.eslitemBarCode = str;
+- L43: public String getEslitemTitle() {
+- L44: return this.eslitemTitle;
+- L47: public void setEslitemTitle(String str) {
+- L48: this.eslitemTitle = str;
+- L51: public String getEslcolumn() {
+- L52: return this.eslcolumn;
+- L55: public void setEslcolumn(String str) {
+- L56: this.eslcolumn = str;
+- L59: public Integer getEsllayer() {
+- L60: return this.esllayer;
+- L63: public void setEsllayer(Integer num) {
+- L64: this.esllayer = num;
+
+### sources/com/aliyun/cloudesl/android/db/bean/JqGoodsBean.java
+- L1: package com.aliyun.cloudesl.android.db.bean;
+- L10: private String TagCode;
+- L46: public String getTagCode() {
+- L47: return this.TagCode;
+- L50: public void setTagCode(String str) {
+- L51: this.TagCode = str;
+
+### sources/com/aliyun/cloudesl/android/db/bean/GoodsItemBean.java
+- L1: package com.aliyun.cloudesl.android.db.bean;
+- L3: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ShelvesListActivity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L14: import com.aliyun.cloudesl.android.R;
+- L15: import com.aliyun.cloudesl.android.view.adapter.Adapter_ShelfList;
+- L16: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L17: import com.aliyun.cloudesl.android.view.listmod.impl.ShelvesListImpl;
+- L18: import com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView;
+- L19: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L27: import pl.droidsonroids.gif.GifImageView;
+- L30: public class ShelvesListActivity extends MyBaseActivity<ShelvesListImpl> implements ShelvesListView {
+- L33: ImageView BTBack;
+- L47: @BindView(R.id.image_gif)
+- L48: GifImageView imageGif;
+- L63: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L65: return R.layout.shelveslist_activity_layout;
+- L69: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L70: public ShelvesListImpl initPresenter() {
+- L71: return new ShelvesListImpl(this, this);
+- L74: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L78: this.TlShelType.setOnTabSelectListener(new OnTabSelectListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity.1
+- L85: ShelvesListActivity.this.showShelList(i == 1, false);
+- L88: ((ShelvesListImpl) this.presenter).getShelvesListInfo();
+- L89: this.refreshLayout.setOnRefreshListener(new OnRefreshListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity.2
+- L92: ((ShelvesListImpl) ShelvesListActivity.this.presenter).refresh();
+- L96: this.refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity.3
+- L99: ((ShelvesListImpl) ShelvesListActivity.this.presenter).getShelvesListInfo();
+- L113: this.mAdapter_ShelfList = new Adapter_ShelfList(getBaseContext(), ((ShelvesListImpl) this.presenter).getShelves(this.mShelTypeBinding));
+- L115: this.mAdapter_ShelfList.setOnItemClickListener(new Adapter_ShelfList.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity.4
+- L116: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ShelfList.OnItemClickListener
+- L118: ((ShelvesListImpl) ShelvesListActivity.this.presenter).queryShelves(shelfInfo.getShelf());
+- L133: ((ShelvesListImpl) this.presenter).getShelvesListInfo();
+- L137: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView
+- L145: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView
+- L150: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
+- L158: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView
+- L169: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView
+- L172: GifDrawable gifDrawable = (GifDrawable) this.imageGif.getDrawable();
+- L193: this.imageGif.setImageResource(R.drawable.loadcar2);
+- L202: this.imageGif.setImageResource(R.drawable.loadcarstop);
+- L212: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v4.app.FragmentActivity, android.app.Activity
+- L216: ((ShelvesListImpl) this.presenter).refresh();
+
+### sources/com/aliyun/cloudesl/android/view/listmod/PromotionalshelfActivity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L13: import android.widget.ImageView;
+- L18: import com.aliyun.cloudesl.android.R;
+- L19: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L20: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L21: import com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelveProtional_nfo1;
+- L22: import com.aliyun.cloudesl.android.view.adapter.MyPositionInfo1;
+- L23: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L24: import com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl;
+- L25: import com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView;
+- L26: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L27: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L28: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L42: ImageView BTBack;
+- L45: ImageView BT_Opt;
+- L58: DescribePlanogramEslDevicesResponse mDescribePlanogramEslDevicesResponse;
+- L65: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L70: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L71: public boolean needScanner() {
+- L75: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L80: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L85: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L92: this.BT_Opt.setImageResource(R.mipmap.sync);
+- L118: listPopupWindow.setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.1
+- L132: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L133: public void getShowShelvesInfoSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L134: this.mDescribePlanogramEslDevicesResponse = (DescribePlanogramEslDevicesResponse) pair.first;
+- L136: this.mPositionInfoData = MyPositionInfo1.combinePositionInfo((DescribePlanogramEslDevicesResponse) pair.first, (DescribePlanogramPositionsResponse) pair.second);
+- L145: Collections.sort(this.mLayers, new Comparator<Integer>() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.2
+- L155: adapter_ShowShelveProtional_nfo1.setOnItemClickListener(new Adapter_ShowShelveProtional_nfo1.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.3
+- L156: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelveProtional_nfo1.OnItemClickListener
+- L172: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L177: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L182: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L187: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L192: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L197: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView
+- L202: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L203: public void onScanResultReceived(String str) {
+- L207: this.mMyDialog.setEdScanCode(str);
+- L214: this.mMyDialog = new MyDialog(this.context, MyDialog.Dialog_EdScan, "绑定价签", new MyDialog.ConfirmResultOnclickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.4
+- L215: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L220: ((ShowPromotionImpl) PromotionalshelfActivity.this.presenter).bindingTag(str, PromotionalshelfActivity.this.mShelf, myPositionInfo1.mLayer, myPositionInfo1.mColumn);
+- L223: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L224: public void requestScanCode() {
+- L231: this.mMyDialog = new MyDialog(this.context, MyDialog.Dialog_EdScanInfo_UpdateGoods, "更新商品", "将“" + OtherUtils.SetToString(myPositionInfo1.getDiffEslDeviceItemTitle()) + "”更换为“" + myPositionInfo1.mShelfPositionInfo.getItemTitle() + "”", new MyDialog.ConfirmResultOnclickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.5
+- L232: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L237: ((ShowPromotionImpl) PromotionalshelfActivity.this.presenter).bindingTag(str, PromotionalshelfActivity.this.mShelf, myPositionInfo1.mLayer, myPositionInfo1.mColumn);
+- L240: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L241: public void requestScanCode() {
+- L248: this.mMyDialog = new MyDialog(this.context, MyDialog.Dialog_EdScanInfo_OffGoods, "下架商品", "将“" + OtherUtils.SetToString(myPositionInfo1.getEslDeviceItemTitle()) + "”从货架取出", new MyDialog.ConfirmResultOnclickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity.6
+- L249: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L254: ((ShowPromotionImpl) PromotionalshelfActivity.this.presenter).unbindTag(str, PromotionalshelfActivity.this.mShelf, myPositionInfo1.mLayer, myPositionInfo1.mColumn);
+- L257: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmResultOnclickListener
+- L258: public void requestScanCode() {
+- L267: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
+
+### sources/com/aliyun/cloudesl/android/view/listmod/BindRailActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L29: bindRailActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L31: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.BindRailActivity_ViewBinding.1
+- L39: View findRequiredView2 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId' and method 'onViewClicked'");
+- L40: bindRailActivity.BtnScanAllFloorCkId = (ImageView) Utils.castView(findRequiredView2, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId'", ImageView.class);
+- L42: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.BindRailActivity_ViewBinding.2
+- L48: bindRailActivity.LVScanAllFloor = (ListView) Utils.findRequiredViewAsType(view, R.id.LV_ScanAllFloor, "field 'LVScanAllFloor'", ListView.class);
+- L62: bindRailActivity.BtnScanAllFloorCkId = null;
+- L63: bindRailActivity.LVScanAllFloor = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ShowShelves_All_Info_Activity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L14: import com.aliyun.cloudesl.android.R;
+- L35: showShelves_All_Info_Activity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L37: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.1
+- L45: showShelves_All_Info_Activity.BtnShelvesAllInfoCkId = (ImageView) Utils.findRequiredViewAsType(view, R.id.Btn_ShelvesAllInfo_CkId, "field 'BtnShelvesAllInfoCkId'", ImageView.class);
+- L47: View findRequiredView2 = Utils.findRequiredView(view, R.id.Btn_ShelvesAllInfo_FloorScan, "field 'BtnShelvesAllInfoFloorScan' and method 'onViewClicked'");
+- L48: showShelves_All_Info_Activity.BtnShelvesAllInfoFloorScan = (Button) Utils.castView(findRequiredView2, R.id.Btn_ShelvesAllInfo_FloorScan, "field 'BtnShelvesAllInfoFloorScan'", Button.class);
+- L50: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.2
+- L56: View findRequiredView3 = Utils.findRequiredView(view, R.id.Btn_ShelvesAllInfo_AllScan, "field 'BtnShelvesAllInfoAllScan' and method 'onViewClicked'");
+- L57: showShelves_All_Info_Activity.BtnShelvesAllInfoAllScan = (Button) Utils.castView(findRequiredView3, R.id.Btn_ShelvesAllInfo_AllScan, "field 'BtnShelvesAllInfoAllScan'", Button.class);
+- L59: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.3
+- L65: showShelves_All_Info_Activity.LayoutScanFloor = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.Layout_ScanFloor, "field 'LayoutScanFloor'", LinearLayout.class);
+- L69: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.4
+- L82: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.5
+- L89: showShelves_All_Info_Activity.BT_Opt = (ImageView) Utils.castView(findRequiredView6, R.id.BT_Opt, "field 'BT_Opt'", ImageView.class);
+- L91: findRequiredView6.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity_ViewBinding.6
+- L112: showShelves_All_Info_Activity.BtnShelvesAllInfoFloorScan = null;
+- L113: showShelves_All_Info_Activity.BtnShelvesAllInfoAllScan = null;
+- L114: showShelves_All_Info_Activity.LayoutScanFloor = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/BindRailActivity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L5: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock;
+- L13: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L14: import com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl;
+- L15: import com.aliyun.cloudesl.android.view.listmod.view.BindRailView;
+- L16: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L22: ImageView BTBack;
+- L24: @BindView(R.id.Btn_ScanAllFloor_CkId)
+- L25: ImageView BtnScanAllFloorCkId;
+- L27: @BindView(R.id.LV_ScanAllFloor)
+- L28: ListView LVScanAllFloor;
+- L38: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L43: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L44: public boolean needScanner() {
+- L49: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L54: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L62: @OnClick({R.id.BT_Back, R.id.Btn_ScanAllFloor_CkId})
+- L70: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
+- L78: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L79: public void onScanResultReceived(String str) {
+- L80: super.onScanResultReceived(str);
+- L89: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+- L91: this.adapter = new Adapter_BindStrock(describePlanogramPositionsResponse, this, new Adapter_BindStrock.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.BindRailActivity.1
+- L92: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.OnItemClickListener
+- L97: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.OnItemClickListener
+- L102: this.LVScanAllFloor.setAdapter((ListAdapter) this.adapter);
+- L106: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+- L111: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+- L116: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+- L121: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+- L126: @Override // com.aliyun.cloudesl.android.view.listmod.view.BindRailView
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanAllFloor1Activity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L13: import com.aliyun.cloudesl.android.utils.ui.MessageListView;
+- L16: public class ScanAllFloor1Activity_ViewBinding implements Unbinder {
+- L17: private ScanAllFloor1Activity target;
+- L25: public ScanAllFloor1Activity_ViewBinding(ScanAllFloor1Activity scanAllFloor1Activity) {
+- L26: this(scanAllFloor1Activity, scanAllFloor1Activity.getWindow().getDecorView());
+- L30: public ScanAllFloor1Activity_ViewBinding(final ScanAllFloor1Activity scanAllFloor1Activity, View view) {
+- L31: this.target = scanAllFloor1Activity;
+- L33: scanAllFloor1Activity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L35: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity_ViewBinding.1
+- L38: scanAllFloor1Activity.onViewClicked(view2);
+- L41: scanAllFloor1Activity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L42: scanAllFloor1Activity.TVScanAllFloorShelvesID = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_ScanAllFloor_ShelvesID, "field 'TVScanAllFloorShelvesID'", TextView.class);
+- L43: View findRequiredView2 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId' and method 'onViewClicked'");
+- L44: scanAllFloor1Activity.BtnScanAllFloorCkId = (ImageView) Utils.castView(findRequiredView2, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId'", ImageView.class);
+- L46: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity_ViewBinding.2
+- L49: scanAllFloor1Activity.onViewClicked(view2);
+- L52: scanAllFloor1Activity.LVScanAllFloor = (MessageListView) Utils.findRequiredViewAsType(view, R.id.LV_ScanAllFloor, "field 'LVScanAllFloor'", MessageListView.class);
+- L53: View findRequiredView3 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_FloorScan, "field 'BtnScanAllFloorFloorScan' and method 'onViewClicked'");
+- L54: scanAllFloor1Activity.BtnScanAllFloorFloorScan = (Button) Utils.castView(findRequiredView3, R.id.Btn_ScanAllFloor_FloorScan, "field 'BtnScanAllFloorFloorScan'", Button.class);
+- L56: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity_ViewBinding.3
+- L59: scanAllFloor1Activity.onViewClicked(view2);
+- L62: View findRequiredView4 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_ReScan, "field 'BtnScanAllFloorReScan' and method 'onViewClicked'");
+- L63: scanAllFloor1Activity.BtnScanAllFloorReScan = (Button) Utils.castView(findRequiredView4, R.id.Btn_ScanAllFloor_ReScan, "field 'BtnScanAllFloorReScan'", Button.class);
+- L65: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity_ViewBinding.4
+- L68: scanAllFloor1Activity.onViewClicked(view2);
+- L71: View findRequiredView5 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_Cancel, "field 'BtnScanAllFloorCancel' and method 'onViewClicked'");
+- L72: scanAllFloor1Activity.BtnScanAllFloorCancel = (Button) Utils.castView(findRequiredView5, R.id.Btn_ScanAllFloor_Cancel, "field 'BtnScanAllFloorCancel'", Button.class);
+- L74: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity_ViewBinding.5
+- L77: scanAllFloor1Activity.onViewClicked(view2);
+- L80: scanAllFloor1Activity.tv_layer = (TextView) Utils.findRequiredViewAsType(view, R.id.tv_layer, "field 'tv_layer'", TextView.class);
+- L81: scanAllFloor1Activity.tv_num = (TextView) Utils.findRequiredViewAsType(view, R.id.tv_num, "field 'tv_num'", TextView.class);
+- L82: scanAllFloor1Activity.tv_has_bind = (TextView) Utils.findRequiredViewAsType(view, R.id.tv_has_bind, "field 'tv_has_bind'", TextView.class);
+- L83: scanAllFloor1Activity.tv_residue = (TextView) Utils.findRequiredViewAsType(view, R.id.tv_residue, "field 'tv_residue'", TextView.class);
+- L89: ScanAllFloor1Activity scanAllFloor1Activity = this.target;
+- L90: if (scanAllFloor1Activity == null) {
+- L94: scanAllFloor1Activity.BTBack = null;
+- L95: scanAllFloor1Activity.TVTitle = null;
+- L96: scanAllFloor1Activity.TVScanAllFloorShelvesID = null;
+- L97: scanAllFloor1Activity.BtnScanAllFloorCkId = null;
+- L98: scanAllFloor1Activity.LVScanAllFloor = null;
+- L99: scanAllFloor1Activity.BtnScanAllFloorFloorScan = null;
+- L100: scanAllFloor1Activity.BtnScanAllFloorReScan = null;
+- L101: scanAllFloor1Activity.BtnScanAllFloorCancel = null;
+- L102: scanAllFloor1Activity.tv_layer = null;
+- L103: scanAllFloor1Activity.tv_num = null;
+- L104: scanAllFloor1Activity.tv_has_bind = null;
+- L105: scanAllFloor1Activity.tv_residue = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanAllFloor1Activity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L14: import com.aliyun.cloudesl.android.utils.MyTost;
+- L15: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L16: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L17: import com.aliyun.cloudesl.android.utils.ui.MessageListView;
+- L18: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanAllFloor2;
+- L19: import com.aliyun.cloudesl.android.view.adapter.MyPositionInfo;
+- L20: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L21: import com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl;
+- L22: import com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView;
+- L23: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L24: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L34: public class ScanAllFloor1Activity extends MyBaseActivity<ScanWithFloorImpl> implements ScanWithFloorView {
+- L41: ImageView BTBack;
+- L43: @BindView(R.id.Btn_ScanAllFloor_Cancel)
+- L44: Button BtnScanAllFloorCancel;
+- L46: @BindView(R.id.Btn_ScanAllFloor_CkId)
+- L47: ImageView BtnScanAllFloorCkId;
+- L49: @BindView(R.id.Btn_ScanAllFloor_FloorScan)
+- L50: Button BtnScanAllFloorFloorScan;
+- L52: @BindView(R.id.Btn_ScanAllFloor_ReScan)
+- L53: Button BtnScanAllFloorReScan;
+- L55: @BindView(R.id.LV_ScanAllFloor)
+- L56: MessageListView LVScanAllFloor;
+- L58: @BindView(R.id.TV_ScanAllFloor_ShelvesID)
+- L59: TextView TVScanAllFloorShelvesID;
+- L63: Adapter_ScanAllFloor2 adapterScanALLFloor;
+- L78: Map<Integer, Map<String, String>> mTempBindEslBarCodes = new HashMap();
+- L83: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L85: return R.layout.scanallfloor_activity_layout1;
+- L88: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L89: public boolean needScanner() {
+- L94: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L95: public ScanWithFloorImpl initPresenter() {
+- L96: return new ScanWithFloorImpl(this, this);
+- L99: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L124: this.TVScanAllFloorShelvesID.setText(mShelf);
+- L131: if (myPositionInfo.mEslDevicePositionInfo != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos() != null) {
+- L132: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().clear();
+- L137: this.adapterScanALLFloor = new Adapter_ScanAllFloor2(mData, mLayers, this.mTempBindEslBarCodes, this, this.isfrist);
+- L138: this.LVScanAllFloor.setAdapter((ListAdapter) this.adapterScanALLFloor);
+- L142: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L143: public void onScanResultReceived(String str) {
+- L144: super.onScanResultReceived(str);
+- L145: if (this.adapterScanALLFloor.hasBindEslBarCode(str)) {
+- L146: Toast.makeText(this.context, "价签已扫描", 0).show();
+- L149: this.LVScanAllFloor.post(new Runnable() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloor1Activity.1
+- L152: ScanAllFloor1Activity.this.LVScanAllFloor.smoothScrollToPosition(ScanAllFloor1Activity.this.adapterScanALLFloor.getSelectionRow());
+- L155: MyPositionInfo selectItem = this.adapterScanALLFloor.getSelectItem(this.adapterScanALLFloor.getSelectionRow(), this.adapterScanALLFloor.getSelectionColumn());
+- L157: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(selectItem.mLayer));
+- L160: this.mTempBindEslBarCodes.put(Integer.valueOf(selectItem.mLayer), map);
+- L164: Pair<Integer, Integer> nextUnbindIndex = this.adapterScanALLFloor.getNextUnbindIndex();
+- L165: this.adapterScanALLFloor.setSelectionIndex(nextUnbindIndex);
+- L166: this.adapterScanALLFloor.setfrist();
+- L172: Iterator<Integer> it = this.mTempBindEslBarCodes.keySet().iterator();
+- L174: Map<String, String> map2 = this.mTempBindEslBarCodes.get(Integer.valueOf(it.next().intValue()));
+- L184: this.adapterScanALLFloor.notifyDataSetChanged();
+- L187: Toast.makeText(this.context, "请扫描价签条码", 0).show();
+- ... 另有 26 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ShelvesListActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L6: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L16: import pl.droidsonroids.gif.GifImageView;
+- L19: public class ShelvesListActivity_ViewBinding implements Unbinder {
+- L20: private ShelvesListActivity target;
+- L25: public ShelvesListActivity_ViewBinding(ShelvesListActivity shelvesListActivity) {
+- L26: this(shelvesListActivity, shelvesListActivity.getWindow().getDecorView());
+- L30: public ShelvesListActivity_ViewBinding(final ShelvesListActivity shelvesListActivity, View view) {
+- L31: this.target = shelvesListActivity;
+- L33: shelvesListActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L35: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity_ViewBinding.1
+- L38: shelvesListActivity.onViewClicked(view2);
+- L41: shelvesListActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L43: shelvesListActivity.LayoutLoading = (LinearLayout) Utils.castView(findRequiredView2, R.id.Layout_Loading, "field 'LayoutLoading'", LinearLayout.class);
+- L45: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity_ViewBinding.2
+- L48: shelvesListActivity.onViewClicked(view2);
+- L51: shelvesListActivity.LVShelvesID = (ListView) Utils.findRequiredViewAsType(view, R.id.LV_ShelvesID, "field 'LVShelvesID'", ListView.class);
+- L52: shelvesListActivity.imageGif = (GifImageView) Utils.findRequiredViewAsType(view, R.id.image_gif, "field 'imageGif'", GifImageView.class);
+- L53: shelvesListActivity.text1 = (TextView) Utils.findRequiredViewAsType(view, R.id.text1, "field 'text1'", TextView.class);
+- L54: shelvesListActivity.text2 = (TextView) Utils.findRequiredViewAsType(view, R.id.text2, "field 'text2'", TextView.class);
+- L55: shelvesListActivity.TlShelType = (SegmentTabLayout) Utils.findRequiredViewAsType(view, R.id.Tl_shelType, "field 'TlShelType'", SegmentTabLayout.class);
+- L56: shelvesListActivity.refreshLayout = (RefreshLayout) Utils.findRequiredViewAsType(view, R.id.smart_refresh_layout, "field 'refreshLayout'", RefreshLayout.class);
+- L62: ShelvesListActivity shelvesListActivity = this.target;
+- L63: if (shelvesListActivity == null) {
+- L67: shelvesListActivity.BTBack = null;
+- L68: shelvesListActivity.TVTitle = null;
+- L69: shelvesListActivity.LayoutLoading = null;
+- L70: shelvesListActivity.LVShelvesID = null;
+- L71: shelvesListActivity.imageGif = null;
+- L72: shelvesListActivity.text1 = null;
+- L73: shelvesListActivity.text2 = null;
+- L74: shelvesListActivity.TlShelType = null;
+- L75: shelvesListActivity.refreshLayout = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanAllFloorActivity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L14: import com.aliyun.cloudesl.android.utils.MyTost;
+- L15: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L16: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L17: import com.aliyun.cloudesl.android.utils.ui.MessageListView;
+- L18: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanALLFloor;
+- L19: import com.aliyun.cloudesl.android.view.adapter.MyPositionInfo;
+- L20: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L21: import com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl;
+- L22: import com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView;
+- L23: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L24: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L34: public class ScanAllFloorActivity extends MyBaseActivity<ScanWithFloorImpl> implements ScanWithFloorView {
+- L41: ImageView BTBack;
+- L43: @BindView(R.id.Btn_ScanAllFloor_Cancel)
+- L44: Button BtnScanAllFloorCancel;
+- L46: @BindView(R.id.Btn_ScanAllFloor_CkId)
+- L47: ImageView BtnScanAllFloorCkId;
+- L49: @BindView(R.id.Btn_ScanAllFloor_FloorScan)
+- L50: Button BtnScanAllFloorFloorScan;
+- L52: @BindView(R.id.Btn_ScanAllFloor_ReScan)
+- L53: Button BtnScanAllFloorReScan;
+- L55: @BindView(R.id.LV_ScanAllFloor)
+- L56: MessageListView LVScanAllFloor;
+- L58: @BindView(R.id.TV_ScanAllFloor_ShelvesID)
+- L59: TextView TVScanAllFloorShelvesID;
+- L63: Adapter_ScanALLFloor adapterScanALLFloor;
+- L64: Map<Integer, Map<String, String>> mTempBindEslBarCodes = new HashMap();
+- L67: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L69: return R.layout.scanallfloor_activity_layout;
+- L72: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L73: public boolean needScanner() {
+- L78: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L79: public ScanWithFloorImpl initPresenter() {
+- L80: return new ScanWithFloorImpl(this, this);
+- L83: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L95: this.TVScanAllFloorShelvesID.setText(mShelf);
+- L96: this.adapterScanALLFloor = new Adapter_ScanALLFloor(mData, mLayers, this.mTempBindEslBarCodes, this);
+- L97: this.LVScanAllFloor.setAdapter((ListAdapter) this.adapterScanALLFloor);
+- L101: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L102: public void onScanResultReceived(String str) {
+- L103: super.onScanResultReceived(str);
+- L104: if (this.adapterScanALLFloor.hasBindEslBarCode(str)) {
+- L105: Toast.makeText(this.context, "价签已扫描", 0).show();
+- L108: this.LVScanAllFloor.post(new Runnable() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity.1
+- L111: ScanAllFloorActivity.this.LVScanAllFloor.smoothScrollToPosition(ScanAllFloorActivity.this.adapterScanALLFloor.getSelectionRow());
+- L114: MyPositionInfo selectItem = this.adapterScanALLFloor.getSelectItem(this.adapterScanALLFloor.getSelectionRow(), this.adapterScanALLFloor.getSelectionColumn());
+- L116: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(selectItem.mLayer));
+- L119: this.mTempBindEslBarCodes.put(Integer.valueOf(selectItem.mLayer), map);
+- L123: this.adapterScanALLFloor.setSelectionIndex(this.adapterScanALLFloor.getNextUnbindIndex());
+- L124: this.adapterScanALLFloor.notifyDataSetChanged();
+- L127: Toast.makeText(this.context, "请扫描价签条码", 0).show();
+- L130: MyTost.mTosat(getApplicationContext(), "请选择商品");
+- L133: @OnClick({R.id.BT_Back, R.id.Btn_ScanAllFloor_CkId, R.id.Btn_ScanAllFloor_FloorScan, R.id.Btn_ScanAllFloor_ReScan, R.id.Btn_ScanAllFloor_Cancel})
+- L142: case R.id.Btn_ScanAllFloor_Cancel /* 2131230741 */:
+- L145: case R.id.Btn_ScanAllFloor_FloorScan /* 2131230743 */:
+- L155: if (this.mTempBindEslBarCodes.size() > 0) {
+- L156: Iterator<Integer> it2 = this.mTempBindEslBarCodes.keySet().iterator();
+- ... 另有 20 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanWithFloorActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L13: import com.aliyun.cloudesl.android.utils.ui.HorizontalListView;
+- L16: public class ScanWithFloorActivity_ViewBinding implements Unbinder {
+- L17: private ScanWithFloorActivity target;
+- L25: public ScanWithFloorActivity_ViewBinding(ScanWithFloorActivity scanWithFloorActivity) {
+- L26: this(scanWithFloorActivity, scanWithFloorActivity.getWindow().getDecorView());
+- L30: public ScanWithFloorActivity_ViewBinding(final ScanWithFloorActivity scanWithFloorActivity, View view) {
+- L31: this.target = scanWithFloorActivity;
+- L33: scanWithFloorActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L35: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanWithFloorActivity_ViewBinding.1
+- L38: scanWithFloorActivity.onViewClicked(view2);
+- L41: scanWithFloorActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L42: scanWithFloorActivity.TVShelvesAllInfoID = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_ShelvesAllInfo_ID, "field 'TVShelvesAllInfoID'", TextView.class);
+- L44: scanWithFloorActivity.BtnShelvesAllInfoCkId = (ImageView) Utils.castView(findRequiredView2, R.id.Btn_ShelvesAllInfo_CkId, "field 'BtnShelvesAllInfoCkId'", ImageView.class);
+- L46: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanWithFloorActivity_ViewBinding.2
+- L49: scanWithFloorActivity.onViewClicked(view2);
+- L52: scanWithFloorActivity.TVScanwithFloorFloor = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_ScanwithFloor_Floor, "field 'TVScanwithFloorFloor'", TextView.class);
+- L53: scanWithFloorActivity.TVNeedBindNums = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_NeedBindNums, "field 'TVNeedBindNums'", TextView.class);
+- L54: scanWithFloorActivity.LVHScanWithFloor = (HorizontalListView) Utils.findRequiredViewAsType(view, R.id.LVH_ScanWithFloor, "field 'LVHScanWithFloor'", HorizontalListView.class);
+- L55: View findRequiredView3 = Utils.findRequiredView(view, R.id.Btn_ScanWithFloor_FloorScan, "field 'BtnScanWithFloorFloorScan' and method 'onViewClicked'");
+- L56: scanWithFloorActivity.BtnScanWithFloorFloorScan = (Button) Utils.castView(findRequiredView3, R.id.Btn_ScanWithFloor_FloorScan, "field 'BtnScanWithFloorFloorScan'", Button.class);
+- L58: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanWithFloorActivity_ViewBinding.3
+- L61: scanWithFloorActivity.onViewClicked(view2);
+- L64: View findRequiredView4 = Utils.findRequiredView(view, R.id.Btn_ScanWithFloor_ReScan, "field 'BtnScanWithFloorReScan' and method 'onViewClicked'");
+- L65: scanWithFloorActivity.BtnScanWithFloorReScan = (Button) Utils.castView(findRequiredView4, R.id.Btn_ScanWithFloor_ReScan, "field 'BtnScanWithFloorReScan'", Button.class);
+- L67: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanWithFloorActivity_ViewBinding.4
+- L70: scanWithFloorActivity.onViewClicked(view2);
+- L73: View findRequiredView5 = Utils.findRequiredView(view, R.id.Btn_ScanWithFloor_Cancel, "field 'BtnScanWithFloorCancel' and method 'onViewClicked'");
+- L74: scanWithFloorActivity.BtnScanWithFloorCancel = (Button) Utils.castView(findRequiredView5, R.id.Btn_ScanWithFloor_Cancel, "field 'BtnScanWithFloorCancel'", Button.class);
+- L76: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanWithFloorActivity_ViewBinding.5
+- L79: scanWithFloorActivity.onViewClicked(view2);
+- L87: ScanWithFloorActivity scanWithFloorActivity = this.target;
+- L88: if (scanWithFloorActivity == null) {
+- L92: scanWithFloorActivity.BTBack = null;
+- L93: scanWithFloorActivity.TVTitle = null;
+- L94: scanWithFloorActivity.TVShelvesAllInfoID = null;
+- L95: scanWithFloorActivity.BtnShelvesAllInfoCkId = null;
+- L96: scanWithFloorActivity.TVScanwithFloorFloor = null;
+- L97: scanWithFloorActivity.TVNeedBindNums = null;
+- L98: scanWithFloorActivity.LVHScanWithFloor = null;
+- L99: scanWithFloorActivity.BtnScanWithFloorFloorScan = null;
+- L100: scanWithFloorActivity.BtnScanWithFloorReScan = null;
+- L101: scanWithFloorActivity.BtnScanWithFloorCancel = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanWithFloorActivity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L14: import com.aliyun.cloudesl.android.utils.MyTost;
+- L15: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L16: import com.aliyun.cloudesl.android.utils.ui.HorizontalListView;
+- L17: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L18: import com.aliyun.cloudesl.android.view.adapter.MyPositionInfo;
+- L19: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L20: import com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl;
+- L21: import com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView;
+- L22: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L23: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L30: public class ScanWithFloorActivity extends MyBaseActivity<ScanWithFloorImpl> implements ScanWithFloorView {
+- L36: ImageView BTBack;
+- L38: @BindView(R.id.Btn_ScanWithFloor_Cancel)
+- L39: Button BtnScanWithFloorCancel;
+- L41: @BindView(R.id.Btn_ScanWithFloor_FloorScan)
+- L42: Button BtnScanWithFloorFloorScan;
+- L44: @BindView(R.id.Btn_ScanWithFloor_ReScan)
+- L45: Button BtnScanWithFloorReScan;
+- L48: ImageView BtnShelvesAllInfoCkId;
+- L50: @BindView(R.id.LVH_ScanWithFloor)
+- L51: HorizontalListView LVHScanWithFloor;
+- L56: @BindView(R.id.TV_ScanwithFloor_Floor)
+- L57: TextView TVScanwithFloorFloor;
+- L64: Adapter_ScanWithFloor_item adapter;
+- L65: Map<String, String> mTempBindEslBarCodes = new HashMap();
+- L67: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L69: return R.layout.scanwithfloor_activity_layout;
+- L72: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L73: public boolean needScanner() {
+- L78: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L79: public ScanWithFloorImpl initPresenter() {
+- L80: return new ScanWithFloorImpl(this, this);
+- L83: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L91: this.adapter = new Adapter_ScanWithFloor_item(mData, mLayer, this.mTempBindEslBarCodes, this);
+- L92: this.LVHScanWithFloor.setAdapter((ListAdapter) this.adapter);
+- L95: TextView textView = this.TVScanwithFloorFloor;
+- L102: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L103: public void onScanResultReceived(String str) {
+- L104: super.onScanResultReceived(str);
+- L106: if (this.adapter.hasBindEslBarCode(str)) {
+- L107: Toast.makeText(this.context, "价签已扫描", 0).show();
+- L110: this.mTempBindEslBarCodes.put(((MyPositionInfo) this.adapter.getItem(this.adapter.getSelectIndex())).mColumn, str);
+- L116: @OnClick({R.id.BT_Back, R.id.Btn_ShelvesAllInfo_CkId, R.id.Btn_ScanWithFloor_FloorScan, R.id.Btn_ScanWithFloor_ReScan, R.id.Btn_ScanWithFloor_Cancel})
+- L124: case R.id.Btn_ScanWithFloor_Cancel /* 2131230745 */:
+- L127: case R.id.Btn_ScanWithFloor_FloorScan /* 2131230746 */:
+- L128: if (this.adapter.getCount() == this.mTempBindEslBarCodes.size()) {
+- L129: if (this.mTempBindEslBarCodes.size() > 0) {
+- L131: for (String str : this.mTempBindEslBarCodes.keySet()) {
+- L132: arrayList.add(new ScanWithFloorImpl.BindParam(this.mTempBindEslBarCodes.get(str), mShelf, mLayer, str));
+- L134: ((ScanWithFloorImpl) this.presenter).bindingTag(arrayList);
+- L142: case R.id.Btn_ScanWithFloor_ReScan /* 2131230747 */:
+- L143: this.mTempBindEslBarCodes.clear();
+- L152: @Override // com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView
+- L153: public void updateDataSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L154: this.mTempBindEslBarCodes.clear();
+- L156: Map<Integer, List<MyPositionInfo>> combinePositionInfo = MyPositionInfo.combinePositionInfo((DescribePlanogramEslDevicesResponse) pair.first, (DescribePlanogramPositionsResponse) pair.second);
+- L165: @Override // com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView
+- ... 另有 2 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ScanAllFloorActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L13: import com.aliyun.cloudesl.android.utils.ui.MessageListView;
+- L16: public class ScanAllFloorActivity_ViewBinding implements Unbinder {
+- L17: private ScanAllFloorActivity target;
+- L25: public ScanAllFloorActivity_ViewBinding(ScanAllFloorActivity scanAllFloorActivity) {
+- L26: this(scanAllFloorActivity, scanAllFloorActivity.getWindow().getDecorView());
+- L30: public ScanAllFloorActivity_ViewBinding(final ScanAllFloorActivity scanAllFloorActivity, View view) {
+- L31: this.target = scanAllFloorActivity;
+- L33: scanAllFloorActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L35: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity_ViewBinding.1
+- L38: scanAllFloorActivity.onViewClicked(view2);
+- L41: scanAllFloorActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L42: scanAllFloorActivity.TVScanAllFloorShelvesID = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_ScanAllFloor_ShelvesID, "field 'TVScanAllFloorShelvesID'", TextView.class);
+- L43: View findRequiredView2 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId' and method 'onViewClicked'");
+- L44: scanAllFloorActivity.BtnScanAllFloorCkId = (ImageView) Utils.castView(findRequiredView2, R.id.Btn_ScanAllFloor_CkId, "field 'BtnScanAllFloorCkId'", ImageView.class);
+- L46: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity_ViewBinding.2
+- L49: scanAllFloorActivity.onViewClicked(view2);
+- L52: scanAllFloorActivity.LVScanAllFloor = (MessageListView) Utils.findRequiredViewAsType(view, R.id.LV_ScanAllFloor, "field 'LVScanAllFloor'", MessageListView.class);
+- L53: View findRequiredView3 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_FloorScan, "field 'BtnScanAllFloorFloorScan' and method 'onViewClicked'");
+- L54: scanAllFloorActivity.BtnScanAllFloorFloorScan = (Button) Utils.castView(findRequiredView3, R.id.Btn_ScanAllFloor_FloorScan, "field 'BtnScanAllFloorFloorScan'", Button.class);
+- L56: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity_ViewBinding.3
+- L59: scanAllFloorActivity.onViewClicked(view2);
+- L62: View findRequiredView4 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_ReScan, "field 'BtnScanAllFloorReScan' and method 'onViewClicked'");
+- L63: scanAllFloorActivity.BtnScanAllFloorReScan = (Button) Utils.castView(findRequiredView4, R.id.Btn_ScanAllFloor_ReScan, "field 'BtnScanAllFloorReScan'", Button.class);
+- L65: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity_ViewBinding.4
+- L68: scanAllFloorActivity.onViewClicked(view2);
+- L71: View findRequiredView5 = Utils.findRequiredView(view, R.id.Btn_ScanAllFloor_Cancel, "field 'BtnScanAllFloorCancel' and method 'onViewClicked'");
+- L72: scanAllFloorActivity.BtnScanAllFloorCancel = (Button) Utils.castView(findRequiredView5, R.id.Btn_ScanAllFloor_Cancel, "field 'BtnScanAllFloorCancel'", Button.class);
+- L74: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ScanAllFloorActivity_ViewBinding.5
+- L77: scanAllFloorActivity.onViewClicked(view2);
+- L85: ScanAllFloorActivity scanAllFloorActivity = this.target;
+- L86: if (scanAllFloorActivity == null) {
+- L90: scanAllFloorActivity.BTBack = null;
+- L91: scanAllFloorActivity.TVTitle = null;
+- L92: scanAllFloorActivity.TVScanAllFloorShelvesID = null;
+- L93: scanAllFloorActivity.BtnScanAllFloorCkId = null;
+- L94: scanAllFloorActivity.LVScanAllFloor = null;
+- L95: scanAllFloorActivity.BtnScanAllFloorFloorScan = null;
+- L96: scanAllFloorActivity.BtnScanAllFloorReScan = null;
+- L97: scanAllFloorActivity.BtnScanAllFloorCancel = null;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/PromotionalshelfActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L7: import android.widget.ImageView;
+- L13: import com.aliyun.cloudesl.android.R;
+- L31: promotionalshelfActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L33: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity_ViewBinding.1
+- L43: promotionalshelfActivity.BT_Opt = (ImageView) Utils.castView(findRequiredView2, R.id.BT_Opt, "field 'BT_Opt'", ImageView.class);
+- L45: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity_ViewBinding.2
+- L54: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity_ViewBinding.3
+
+### sources/com/aliyun/cloudesl/android/view/listmod/ShowShelves_All_Info_Activity.java
+- L1: package com.aliyun.cloudesl.android.view.listmod;
+- L13: import android.widget.ImageView;
+- L20: import com.aliyun.cloudesl.android.R;
+- L21: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L22: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L23: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L24: import com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelvesAll_nfo;
+- L25: import com.aliyun.cloudesl.android.view.adapter.MyPositionInfo;
+- L26: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L27: import com.aliyun.cloudesl.android.view.listmod.impl.ShowShelvesAllInfoImpl;
+- L28: import com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView;
+- L29: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L30: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L31: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L45: ImageView BTBack;
+- L48: ImageView BT_Opt;
+- L50: @BindView(R.id.Btn_ShelvesAllInfo_AllScan)
+- L51: Button BtnShelvesAllInfoAllScan;
+- L57: ImageView BtnShelvesAllInfoCkId;
+- L59: @BindView(R.id.Btn_ShelvesAllInfo_FloorScan)
+- L60: Button BtnShelvesAllInfoFloorScan;
+- L65: @BindView(R.id.Layout_ScanFloor)
+- L66: LinearLayout LayoutScanFloor;
+- L89: DescribePlanogramEslDevicesResponse mDescribePlanogramEslDevicesResponse;
+- L96: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L101: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L102: public boolean needScanner() {
+- L107: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L112: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L119: this.BT_Opt.setImageResource(R.mipmap.sync);
+- L122: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v4.app.FragmentActivity, android.app.Activity
+- L128: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L129: public void getShowShelvesInfoSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L130: this.mDescribePlanogramEslDevicesResponse = (DescribePlanogramEslDevicesResponse) pair.first;
+- L132: this.mPositionInfoData = MyPositionInfo.combinePositionInfo((DescribePlanogramEslDevicesResponse) pair.first, (DescribePlanogramPositionsResponse) pair.second);
+- L141: Collections.sort(this.mLayers, new Comparator<Integer>() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity.1
+- L147: this.LVShelvesAllInfo.setAdapter((ListAdapter) new Adapter_ShowShelvesAll_nfo(this.mPositionInfoData, this, new Adapter_ShowShelvesAll_nfo.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity.2
+- L148: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelvesAll_nfo.OnItemClickListener
+- L173: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L178: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L181: this.LayoutScanFloor.setVisibility(0);
+- L184: this.LayoutScanFloor.setVisibility(8);
+- L189: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L190: public void onScanResultReceived(String str) {
+- L194: this.mMyDialog.setEdScanCode(str);
+- L197: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L202: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L207: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L212: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L217: @Override // com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView
+- L222: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
+- L231: @OnClick({R.id.BT_Opt, R.id.BT_Back, R.id.ll_shelf_select, R.id.Btn_ShelvesAllInfo_FloorScan, R.id.Btn_ShelvesAllInfo_AllScan, R.id.Btn_ShelvesAllInfo_bindTrack})
+- L241: case R.id.Btn_ShelvesAllInfo_AllScan /* 2131230748 */:
+- L247: new MyDialog(this.context, MyDialog.Dialog_ShowInfo, "批量操作说明", "您的货品中存在需下架或更新的商品，暂时无法进行批量操作。请点击相应商品，并按提示进行处理", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity.4
+- L248: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+- L256: ScanAllFloor1Activity.mShelf = this.mShelf;
+- L257: ScanAllFloor1Activity.mData = this.mPositionInfoData;
+- L258: startActivity(new Intent(this.context, (Class<?>) ScanAllFloor1Activity.class));
+- L260: case R.id.Btn_ShelvesAllInfo_FloorScan /* 2131230750 */:
+- L268: if (list.get(i) != null && list.get(i).mEslDevicePositionInfo != null && list.get(i).mEslDevicePositionInfo.getEslDevicePlanogramInfos() != null) {
+- ... 另有 18 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/UnBindActivity.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L6: import android.widget.ImageView;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L12: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L13: import com.aliyun.cloudesl.android.view.tagmod.impl.UnBindTagPresenterImpl;
+- L14: import com.aliyun.cloudesl.android.view.tagmod.view.UnBindTagView;
+- L17: public class UnBindActivity extends MyBaseActivity<UnBindTagPresenterImpl> implements UnBindTagView {
+- L20: ImageView BTBack;
+- L22: @BindView(R.id.Ed_ScanTagCode)
+- L23: EditText EdScanTagCode;
+- L28: @BindView(R.id.bt_Scan)
+- L29: ImageView btScan;
+- L30: private View.OnKeyListener onKeyListener = new View.OnKeyListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.UnBindActivity.2
+- L33: String trim = UnBindActivity.this.EdScanTagCode.getText().toString().trim();
+- L34: if (!UnBindActivity.this.beScanKey(i) || !StringUtil.isNotBlank(trim)) {
+- L38: ((UnBindTagPresenterImpl) UnBindActivity.this.presenter).unbindTag(trim);
+- L44: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L49: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L50: public boolean needScanner() {
+- L55: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L56: public UnBindTagPresenterImpl initPresenter() {
+- L57: return new UnBindTagPresenterImpl(this, this);
+- L60: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L63: this.EdScanTagCode.setOnKeyListener(this.onKeyListener);
+- L64: this.btScan.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.UnBindActivity.1
+- L67: UnBindActivity.this.requestForQrcode(UnBindActivity.this.EdScanTagCode);
+- L70: this.EdScanTagCode.requestFocus();
+- L73: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L74: public void onScanResultReceived(String str) {
+- L75: this.EdScanTagCode.setText(str);
+- L76: this.EdScanTagCode.setSelection(str.length());
+- L77: this.onKeyListener.onKey(this.EdScanTagCode, scanKeyEvent, null);
+- L85: @Override // com.aliyun.cloudesl.android.view.tagmod.view.UnBindTagView
+- L87: this.EdScanTagCode.setText("");
+- L88: this.EdScanTagCode.requestFocus();
+- L92: @Override // com.aliyun.cloudesl.android.view.tagmod.view.UnBindTagView
+- L94: this.EdScanTagCode.setSelection(this.EdScanTagCode.getText().length());
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/BindOrUnBingActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L30: bindOrUnBingActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L32: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindOrUnBingActivity_ViewBinding.1
+- L42: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindOrUnBingActivity_ViewBinding.2
+- L51: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindOrUnBingActivity_ViewBinding.3
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/BindingTagActivity.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L12: import android.widget.ImageView;
+- L19: import com.aliyun.cloudesl.android.R;
+- L20: import com.aliyun.cloudesl.android.utils.MyTost;
+- L21: import com.aliyun.cloudesl.android.view.adapter.Adapter_BangingTag_goods;
+- L22: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L23: import com.aliyun.cloudesl.android.view.tagmod.impl.BindingTagPresenterImpl;
+- L24: import com.aliyun.cloudesl.android.view.tagmod.presenter.BindingTagPresenter;
+- L25: import com.aliyun.cloudesl.android.view.tagmod.view.BindingTagView;
+- L26: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+- L35: public class BindingTagActivity extends MyBaseActivity<BindingTagPresenter> implements BindingTagView {
+- L41: ImageView BTBack;
+- L43: @BindView(R.id.Ed_ScanbarCode)
+- L44: EditText EdScanbarCode;
+- L46: @BindView(R.id.Ed_TagCode)
+- L47: EditText EdTagCode;
+- L60: Adapter_BangingTag_goods adapter;
+- L62: @BindView(R.id.image_state)
+- L63: ImageView imageState;
+- L65: @BindView(R.id.ll_ScanbarCode)
+- L66: LinearLayout ll_ScanbarCode;
+- L71: @BindView(R.id.ll_scan_barcode)
+- L72: LinearLayout ll_scan_barcode;
+- L74: @BindView(R.id.ll_scan_tagcode)
+- L75: LinearLayout ll_scan_tagcode;
+- L81: private View.OnKeyListener onKeyListener = new View.OnKeyListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindingTagActivity.5
+- L84: String trim = BindingTagActivity.this.EdScanbarCode.getText().toString().trim();
+- L85: String trim2 = BindingTagActivity.this.EdTagCode.getText().toString().trim();
+- L90: if (!BindingTagActivity.this.beScanKey(i)) {
+- L94: if (id == BindingTagActivity.this.EdScanbarCode.getId()) {
+- L95: BindingTagActivity.this.mItemBarCode = null;
+- L96: BindingTagActivity.this.imageState.setVisibility(0);
+- L97: if (BindingTagActivity.this.mGoodsType == 1) {
+- L98: ((BindingTagPresenter) BindingTagActivity.this.presenter).getGoodsItems(null, trim, null);
+- L99: } else if (BindingTagActivity.this.mGoodsType == 2) {
+- L100: ((BindingTagPresenter) BindingTagActivity.this.presenter).getGoodsItems(null, null, trim);
+- L102: ((BindingTagPresenter) BindingTagActivity.this.presenter).getGoodsItems(trim, null, null);
+- L104: BindingTagActivity.this.mItemBarCode = trim;
+- L108: if (id == BindingTagActivity.this.EdTagCode.getId()) {
+- L109: if (TextUtils.isEmpty(BindingTagActivity.this.mItemBarCode)) {
+- L110: BindingTagActivity.this.showShortToast("无效的商品条码");
+- L114: ((BindingTagPresenter) BindingTagActivity.this.presenter).bindingTag(BindingTagActivity.this.mItemBarCode, trim2);
+- L121: TextWatcher mTextWatcher = new TextWatcher() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindingTagActivity.6
+- L132: String obj = BindingTagActivity.this.EdScanbarCode.getText().toString();
+- L133: String stringFilter = BindingTagActivity.stringFilter(obj.toString());
+- L137: BindingTagActivity.this.EdScanbarCode.setText(stringFilter);
+- L138: BindingTagActivity.this.EdScanbarCode.setSelection(stringFilter.length());
+- L142: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L144: return R.layout.bindingtag_activity_layout;
+- L147: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L148: public boolean needScanner() {
+- L153: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L154: public BindingTagPresenter initPresenter() {
+- L155: return new BindingTagPresenterImpl(this, this);
+- L158: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L161: this.EdScanbarCode.setOnKeyListener(this.onKeyListener);
+- L162: this.EdTagCode.setOnKeyListener(this.onKeyListener);
+- L163: this.EdScanbarCode.requestFocus();
+- L165: this.TlGoodsType.setOnTabSelectListener(new OnTabSelectListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindingTagActivity.1
+- L172: BindingTagActivity.this.setGoodsType(i);
+- ... 另有 62 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/UnBindActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L28: unBindActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L30: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.UnBindActivity_ViewBinding.1
+- L37: unBindActivity.btScan = (ImageView) Utils.findRequiredViewAsType(view, R.id.bt_Scan, "field 'btScan'", ImageView.class);
+- L38: unBindActivity.EdScanTagCode = (EditText) Utils.findRequiredViewAsType(view, R.id.Ed_ScanTagCode, "field 'EdScanTagCode'", EditText.class);
+- L51: unBindActivity.btScan = null;
+- L52: unBindActivity.EdScanTagCode = null;
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/BindingTagActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L7: import android.widget.ImageView;
+- L14: import com.aliyun.cloudesl.android.R;
+- L18: public class BindingTagActivity_ViewBinding implements Unbinder {
+- L19: private BindingTagActivity target;
+- L23: public BindingTagActivity_ViewBinding(BindingTagActivity bindingTagActivity) {
+- L24: this(bindingTagActivity, bindingTagActivity.getWindow().getDecorView());
+- L28: public BindingTagActivity_ViewBinding(final BindingTagActivity bindingTagActivity, View view) {
+- L29: this.target = bindingTagActivity;
+- L31: bindingTagActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L33: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.tagmod.BindingTagActivity_ViewBinding.1
+- L36: bindingTagActivity.onViewClicked();
+- L39: bindingTagActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L40: bindingTagActivity.imageState = (ImageView) Utils.findRequiredViewAsType(view, R.id.image_state, "field 'imageState'", ImageView.class);
+- L41: bindingTagActivity.TVGoodsName = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_GoodsName, "field 'TVGoodsName'", TextView.class);
+- L42: bindingTagActivity.EdScanbarCode = (EditText) Utils.findRequiredViewAsType(view, R.id.Ed_ScanbarCode, "field 'EdScanbarCode'", EditText.class);
+- L43: bindingTagActivity.EdTagCode = (EditText) Utils.findRequiredViewAsType(view, R.id.Ed_TagCode, "field 'EdTagCode'", EditText.class);
+- L44: bindingTagActivity.TvGoodsType = (TextView) Utils.findRequiredViewAsType(view, R.id.Tv_Goods_Type, "field 'TvGoodsType'", TextView.class);
+- L45: bindingTagActivity.TlGoodsType = (SegmentTabLayout) Utils.findRequiredViewAsType(view, R.id.Tl_GoodsType, "field 'TlGoodsType'", SegmentTabLayout.class);
+- L46: bindingTagActivity.lv_googds_list = (ListView) Utils.findRequiredViewAsType(view, R.id.lv_googds_list, "field 'lv_googds_list'", ListView.class);
+- L47: bindingTagActivity.ll_line = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.ll_line, "field 'll_line'", LinearLayout.class);
+- L48: bindingTagActivity.ll_ScanbarCode = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.ll_ScanbarCode, "field 'll_ScanbarCode'", LinearLayout.class);
+- L49: bindingTagActivity.ll_scan_barcode = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.ll_scan_barcode, "field 'll_scan_barcode'", LinearLayout.class);
+- L50: bindingTagActivity.ll_scan_tagcode = (LinearLayout) Utils.findRequiredViewAsType(view, R.id.ll_scan_tagcode, "field 'll_scan_tagcode'", LinearLayout.class);
+- L56: BindingTagActivity bindingTagActivity = this.target;
+- L57: if (bindingTagActivity == null) {
+- L61: bindingTagActivity.BTBack = null;
+- L62: bindingTagActivity.TVTitle = null;
+- L63: bindingTagActivity.imageState = null;
+- L64: bindingTagActivity.TVGoodsName = null;
+- L65: bindingTagActivity.EdScanbarCode = null;
+- L66: bindingTagActivity.EdTagCode = null;
+- L67: bindingTagActivity.TvGoodsType = null;
+- L68: bindingTagActivity.TlGoodsType = null;
+- L69: bindingTagActivity.lv_googds_list = null;
+- L70: bindingTagActivity.ll_line = null;
+- L71: bindingTagActivity.ll_ScanbarCode = null;
+- L72: bindingTagActivity.ll_scan_barcode = null;
+- L73: bindingTagActivity.ll_scan_tagcode = null;
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/BindOrUnBingActivity.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod;
+- L5: import android.widget.ImageView;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L12: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L18: ImageView BTBack;
+- L29: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L34: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L39: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L41: this.TVTitle.setText("价签模式");
+- L55: startActivity(new Intent(this, (Class<?>) BindingTagActivity.class));
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanALLFloor_item.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.db.bean.JqGoodsBean;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L15: public class Adapter_ScanALLFloor_item extends BaseAdapter {
+- L25: public Adapter_ScanALLFloor_item(DescribePlanogramPositionsResponse.LayerInfo layerInfo, Context context) {
+- L47: view2 = this.inflater.inflate(R.layout.scanallfloor_activity_item_item, (ViewGroup) null);
+- L48: viewHolder.tv_item_GoodName = (TextView) view2.findViewById(R.id.TV_ScanAllfloor_item_item_GoodName);
+- L49: viewHolder.tV_item_GoodUn = (TextView) view2.findViewById(R.id.TV_ScanAllfloor_item_item_GoodUn);
+- L50: viewHolder.tV__item_TagCode = (TextView) view2.findViewById(R.id.TV_ScanAllfloor_item_item_TagCode);
+- L51: viewHolder.layout_item_BackGround = (LinearLayout) view2.findViewById(R.id.Layout_ScanAllfloor_item_item_BackGround);
+- L52: viewHolder.layout_Scanfloor_item_isBind = (LinearLayout) view2.findViewById(R.id.Layout_ScanAllfloor_item_item_isBind);
+- L53: view2.setTag(viewHolder);
+- L56: viewHolder = (ViewHolder) view.getTag();
+- L64: LinearLayout layout_Scanfloor_item_isBind;
+- L66: TextView tV__item_TagCode;
+- L75: if (jqGoodsBean.getTagCode() == null) {
+- L77: viewHolder.layout_Scanfloor_item_isBind.setVisibility(4);
+- L80: viewHolder.layout_Scanfloor_item_isBind.setVisibility(0);
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ShelfList.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L8: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L19: private Adapter_ScanALLFloor_item adapter;
+- L59: this.vh.iv_promotionalshelf = (ImageView) view.findViewById(R.id.iv_promotionalshelf);
+- L61: view.setTag(this.vh);
+- L63: this.vh = (ViewHolder) view.getTag();
+- L71: this.vh.rl_shelf_title.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ShelfList.1
+- L85: ImageView iv_promotionalshelf;
+
+### sources/com/aliyun/cloudesl/android/view/adapter/RefreshDatasListener.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L3: import com.aliyun.cloudesl.android.db.bean.JqGoodsBean;
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ShowShelvesAll_nfo_item1.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelveProtional_nfo1;
+- L38: myViewHolder.layout_item_BackGround.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelvesAll_nfo_item1.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ShowShelvesAll_nfo_item.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelvesAll_nfo;
+- L53: view2.setTag(viewHolder);
+- L56: viewHolder = (ViewHolder) view.getTag();
+- L62: viewHolder.layout_item_BackGround.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelvesAll_nfo_item.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ShowShelvesAll_nfo.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.ui.HorizontalListView1;
+- L84: view2.setTag(viewHolder);
+- L87: viewHolder = (ViewHolder) view.getTag();
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanWithFloor_item.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L16: public class Adapter_ScanWithFloor_item extends BaseAdapter {
+- L23: private Map<String, String> mTempBindEslBarCodes;
+- L34: public Adapter_ScanWithFloor_item(Map<Integer, List<MyPositionInfo>> map, int i, Map<String, String> map2, Context context) {
+- L38: this.mTempBindEslBarCodes = map2;
+- L63: View inflate = this.inflater.inflate(R.layout.scanfloor_item_layout, (ViewGroup) null);
+- L64: viewHolder2.tv_item_GoodName = (TextView) inflate.findViewById(R.id.TV_Scanfloor_item_GoodName);
+- L65: viewHolder2.tV_item_GoodUn = (TextView) inflate.findViewById(R.id.TV_Scanfloor_item_GoodUn);
+- L66: viewHolder2.tV__item_TagCode = (TextView) inflate.findViewById(R.id.TV_Scanfloor_item_TagCode);
+- L67: viewHolder2.layout_item_BackGround = (LinearLayout) inflate.findViewById(R.id.Layout_Scanfloor_item_BackGround);
+- L68: viewHolder2.layout_Scanfloor_item_isBind = (LinearLayout) inflate.findViewById(R.id.Layout_Scanfloor_item_isBind);
+- L69: inflate.setTag(viewHolder2);
+- L73: viewHolder = (ViewHolder) view.getTag();
+- L78: str = myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode();
+- L79: } else if (this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L80: str = this.mTempBindEslBarCodes.get(myPositionInfo.mColumn);
+- L81: } else if (myPositionInfo.getStatus() == 3 && this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L82: str = this.mTempBindEslBarCodes.get(myPositionInfo.mColumn);
+- L83: if (myPositionInfo.mEslDevicePositionInfo != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos() != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size() > 0) {
+- L84: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).setEslBarCode(str);
+- L87: setBackGround(viewHolder, myPositionInfo.getStatus() == 3 || this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn), this.mSelectIndex == i);
+- L90: viewHolder.tV__item_TagCode.setText(str);
+- L91: viewHolder.layout_item_BackGround.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item.1
+- L103: if (myPositionInfo.getStatus() != 3 && !this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L112: if (!this.mTempBindEslBarCodes.containsKey(((MyPositionInfo) getItem(i)).mColumn)) {
+- L122: public boolean hasBindEslBarCode(String str) {
+- L125: if (myPositionInfo.getStatus() == 3 && str.equals(myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode())) {
+- L129: return this.mTempBindEslBarCodes.containsValue(str);
+- L142: LinearLayout layout_Scanfloor_item_isBind;
+- L144: TextView tV__item_TagCode;
+- L155: viewHolder.layout_Scanfloor_item_isBind.setVisibility(4);
+- L158: viewHolder.layout_Scanfloor_item_isBind.setVisibility(0);
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanALLFloor.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L13: import com.aliyun.cloudesl.android.utils.ui.HorizontalListView1;
+- L14: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L15: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L22: public class Adapter_ScanALLFloor extends BaseAdapter {
+- L27: Map<Integer, Map<String, String>> mTempBindEslBarCodes;
+- L29: Map<Integer, Adapter_ScanWithFloor_item> mAdapters = new HashMap();
+- L31: List<DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo.EslDevicePlanogramInfo> putlist = new ArrayList();
+- L43: public Adapter_ScanALLFloor(Map<Integer, List<MyPositionInfo>> map, List<Integer> list, Map<Integer, Map<String, String>> map2, Context context) {
+- L47: this.mTempBindEslBarCodes = map2;
+- L61: this.mTempBindEslBarCodes = map;
+- L73: view = this.inflater.inflate(R.layout.scanallfloor_activity_item, (ViewGroup) null);
+- L74: this.vh.tv_Floor = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_Floor);
+- L75: this.vh.tv_unBind = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_NeedBindNums);
+- L76: this.vh.lv_H = (HorizontalListView1) view.findViewById(R.id.LVH_ScanAllFloor);
+- L77: view.setTag(this.vh);
+- L79: this.vh = (ViewHolder) view.getTag();
+- L83: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+- L86: this.mTempBindEslBarCodes.put(Integer.valueOf(intValue), map);
+- L88: this.mAdapters.put(Integer.valueOf(intValue), new Adapter_ScanWithFloor_item(this.mData, intValue, map, this.context));
+- L97: this.mAdapters.get(Integer.valueOf(intValue)).setOnItemClickListener(new Adapter_ScanWithFloor_item.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ScanALLFloor.1
+- L98: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item.OnItemClickListener
+- L122: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(i));
+- L132: public boolean hasBindEslBarCode(String str) {
+- L135: Map<String, String> map = this.mTempBindEslBarCodes.get(num);
+- L139: if (myPositionInfo.getStatus() == 3 && str.equals(myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode())) {
+- L140: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().clear();
+- L156: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+
+### sources/com/aliyun/cloudesl/android/view/adapter/MyPositionInfo.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L4: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L5: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L6: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L24: public DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo mEslDevicePositionInfo;
+- L32: if (this.mEslDevicePositionInfo != null && this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size() > 0) {
+- L33: str = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getItemBarCode();
+- L38: if (!TextUtils.isEmpty(column) && TextUtils.isEmpty(this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().toString())) {
+- L41: if (TextUtils.isEmpty(itemBarCode) || TextUtils.isEmpty(str) || (itemBarCode.equals(str) && getDiffEslDeviceItemBarCode().size() <= 0)) {
+- L51: public Set<String> getEslDeviceItemBarCode() {
+- L53: if (this.mEslDevicePositionInfo != null) {
+- L54: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L55: String itemBarCode = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemBarCode();
+- L64: public Set<String> getEslDeviceItemTitle() {
+- L66: if (this.mEslDevicePositionInfo != null) {
+- L67: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L68: String itemTitle = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemTitle();
+- L77: public Set<String> getDiffEslDeviceItemBarCode() {
+- L79: Set<String> eslDeviceItemBarCode = getEslDeviceItemBarCode();
+- L80: if (this.mEslDevicePositionInfo != null && !TextUtils.isEmpty(itemBarCode) && eslDeviceItemBarCode.contains(itemBarCode)) {
+- L81: eslDeviceItemBarCode.remove(itemBarCode);
+- L83: return eslDeviceItemBarCode;
+- L86: public Set<String> getDiffEslDeviceItemTitle() {
+- L89: if (this.mEslDevicePositionInfo != null) {
+- L90: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L91: String itemBarCode2 = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemBarCode();
+- L92: String itemTitle = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemTitle();
+- L101: public static Map<Integer, List<MyPositionInfo>> combinePositionInfo(DescribePlanogramEslDevicesResponse describePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse describePlanogramPositionsResponse) {
+- L105: if (describePlanogramEslDevicesResponse == null || describePlanogramPositionsResponse == null) {
+- L124: for (DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo eslDeviceLayerInfo : describePlanogramEslDevicesResponse.getEslDeviceLayerInfos()) {
+- L125: if (hashMap.containsKey(eslDeviceLayerInfo.getLayer())) {
+- L126: arrayList = (List) hashMap.get(eslDeviceLayerInfo.getLayer());
+- L129: hashMap.put(eslDeviceLayerInfo.getLayer(), arrayList);
+- L131: for (DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo eslDevicePositionInfo : eslDeviceLayerInfo.getEslDevicePositionInfos()) {
+- L139: if (myPositionInfo.mColumn.equals(eslDevicePositionInfo.getColumn())) {
+- L145: myPositionInfo.mLayer = eslDeviceLayerInfo.getLayer().intValue();
+- L146: myPositionInfo.mColumn = eslDevicePositionInfo.getColumn();
+- L149: myPositionInfo.mEslDevicePositionInfo = eslDevicePositionInfo;
+- L157: boolean z2 = myPositionInfo3.getEslDeviceItemBarCode().size() > 0;
+- L163: String SetToString = OtherUtils.SetToString(myPositionInfo3.getEslDeviceItemTitle());
+- L164: String SetToString2 = OtherUtils.SetToString(myPositionInfo3.getEslDeviceItemBarCode());
+- L165: System.out.println("qiank Layer[" + myPositionInfo3.mLayer + "],column[" + myPositionInfo3.mColumn + "],shelfItemTitle[" + itemTitle + "],shelfItemBarCode[" + itemBarCode + "],eslDeviceItemTitle[" + SetToString + "],eslDeviceItemBarCode[" + SetToString2 + "]");
+- L178: Collections.sort((List) it3.next(), new Comparator<MyPositionInfo>() { // from class: com.aliyun.cloudesl.android.view.adapter.MyPositionInfo.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanWithFloor_item1.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L12: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L17: public class Adapter_ScanWithFloor_item1 extends RecyclerView.Adapter<MyViewHolder> {
+- L21: Adapter_ScanWithFloor_item.OnItemClickListener mOnItemClickListener;
+- L23: private Map<String, String> mTempBindEslBarCodes;
+- L38: public Adapter_ScanWithFloor_item1(Map<Integer, List<MyPositionInfo>> map, int i, Map<String, String> map2, Context context) {
+- L41: this.mTempBindEslBarCodes = map2;
+- L48: return new MyViewHolder(View.inflate(this.context, R.layout.scanfloor_item1_layout, null));
+- L71: myViewHolder.layout_Scanfloor_item_isBind.setVisibility(4);
+- L74: myViewHolder.layout_Scanfloor_item_isBind.setVisibility(0);
+- L78: public void setOnItemClickListener(Adapter_ScanWithFloor_item.OnItemClickListener onItemClickListener) {
+- L87: LinearLayout layout_Scanfloor_item_isBind;
+- L89: TextView tV__item_TagCode;
+- L95: this.tv_item_GoodName = (TextView) view.findViewById(R.id.TV_Scanfloor_item_GoodName);
+- L96: this.tV_item_GoodUn = (TextView) view.findViewById(R.id.TV_Scanfloor_item_GoodUn);
+- L97: this.tV__item_TagCode = (TextView) view.findViewById(R.id.TV_Scanfloor_item_TagCode);
+- L98: this.layout_item_BackGround = (LinearLayout) view.findViewById(R.id.Layout_Scanfloor_item_BackGround);
+- L99: this.layout_Scanfloor_item_isBind = (LinearLayout) view.findViewById(R.id.Layout_Scanfloor_item_isBind);
+
+### sources/com/aliyun/cloudesl/android/view/adapter/MyPositionInfo1.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L4: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L5: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L6: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L24: public DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo mEslDevicePositionInfo;
+- L36: if (this.mEslDevicePositionInfo != null && this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size() > 0) {
+- L37: str = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getItemBarCode();
+- L46: public Set<String> getEslDeviceItemBarCode() {
+- L48: if (this.mEslDevicePositionInfo != null) {
+- L49: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L50: String itemBarCode = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemBarCode();
+- L59: public Set<String> getEslDeviceItemTitle() {
+- L61: if (this.mEslDevicePositionInfo != null) {
+- L62: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L63: String itemTitle = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemTitle();
+- L72: public Set<String> getDiffEslDeviceItemBarCode() {
+- L74: Set<String> eslDeviceItemBarCode = getEslDeviceItemBarCode();
+- L75: if (this.mEslDevicePositionInfo != null && !TextUtils.isEmpty(itemBarCode) && eslDeviceItemBarCode.contains(itemBarCode)) {
+- L76: eslDeviceItemBarCode.remove(itemBarCode);
+- L78: return eslDeviceItemBarCode;
+- L81: public Set<String> getDiffEslDeviceItemTitle() {
+- L84: if (this.mEslDevicePositionInfo != null) {
+- L85: for (int i = 0; i < this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size(); i++) {
+- L86: String itemBarCode2 = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemBarCode();
+- L87: String itemTitle = this.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(i).getItemTitle();
+- L96: public static Map<Integer, List<MyPositionInfo1>> combinePositionInfo(DescribePlanogramEslDevicesResponse describePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse describePlanogramPositionsResponse) {
+- L100: if (describePlanogramEslDevicesResponse == null || describePlanogramPositionsResponse == null) {
+- L119: for (DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo eslDeviceLayerInfo : describePlanogramEslDevicesResponse.getEslDeviceLayerInfos()) {
+- L120: if (hashMap.containsKey(eslDeviceLayerInfo.getLayer())) {
+- L121: arrayList = (List) hashMap.get(eslDeviceLayerInfo.getLayer());
+- L124: hashMap.put(eslDeviceLayerInfo.getLayer(), arrayList);
+- L126: for (DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo eslDevicePositionInfo : eslDeviceLayerInfo.getEslDevicePositionInfos()) {
+- L134: if (myPositionInfo1.mColumn.equals(eslDevicePositionInfo.getColumn())) {
+- L140: myPositionInfo1.mLayer = eslDeviceLayerInfo.getLayer().intValue();
+- L141: myPositionInfo1.mColumn = eslDevicePositionInfo.getColumn();
+- L144: myPositionInfo1.mEslDevicePositionInfo = eslDevicePositionInfo;
+- L152: boolean z2 = myPositionInfo13.getEslDeviceItemBarCode().size() > 0;
+- L158: String SetToString = OtherUtils.SetToString(myPositionInfo13.getEslDeviceItemTitle());
+- L159: String SetToString2 = OtherUtils.SetToString(myPositionInfo13.getEslDeviceItemBarCode());
+- L160: System.out.println("qiank Layer[" + myPositionInfo13.mLayer + "],column[" + myPositionInfo13.mColumn + "],shelfItemTitle[" + itemTitle + "],shelfItemBarCode[" + itemBarCode + "],eslDeviceItemTitle[" + SetToString + "],eslDeviceItemBarCode[" + SetToString2 + "]");
+- L173: Collections.sort((List) it3.next(), new Comparator<MyPositionInfo1>() { // from class: com.aliyun.cloudesl.android.view.adapter.MyPositionInfo1.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ShowShelveProtional_nfo1.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L24: List<MyPositionInfo1> mEslDevicePositionInfos = new ArrayList();
+- L35: this.mEslDevicePositionInfos.clear();
+- L44: if (list.get(i).mEslDevicePositionInfo != null) {
+- L45: this.mEslDevicePositionInfos.add(list.get(i));
+- L51: if (this.mShelfPositionInfos.size() > 0 && this.mEslDevicePositionInfos.size() > 0) {
+- L53: for (int i3 = 0; i3 < this.mEslDevicePositionInfos.size(); i3++) {
+- L54: if (this.mShelfPositionInfos.get(i2).mShelfPositionInfo.getItemBarCode().equals(this.mEslDevicePositionInfos.get(i3).mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getItemBarCode())) {
+- L55: if (this.mShelfPositionInfos.get(i2).mEslDevicePositionInfo == null) {
+- L56: this.mShelfPositionInfos.get(i2).mEslDevicePositionInfo = new DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo();
+- L58: this.mShelfPositionInfos.get(i2).mEslDevicePositionInfo.setEslDevicePlanogramInfos(this.mEslDevicePositionInfos.get(i3).mEslDevicePositionInfo.getEslDevicePlanogramInfos());
+- L59: this.mShelfPositionInfos.get(i2).mEslDevicePositionInfo.setColumn(this.mEslDevicePositionInfos.get(i3).mEslDevicePositionInfo.getColumn());
+- L81: myViewHolder.layout_item_BackGround.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ShowShelveProtional_nfo1.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_BindStrock.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L8: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L13: import com.aliyun.cloudesl.android.utils.ui.HorizontalListView;
+- L14: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L21: private Adapter_ScanALLFloor_item adapter;
+- L46: Collections.sort(this.mLayerInfos, new Comparator<DescribePlanogramPositionsResponse.LayerInfo>() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.1
+- L60: Collections.sort(this.mLayerInfos, new Comparator<DescribePlanogramPositionsResponse.LayerInfo>() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.2
+- L83: this.vh.TVScanAllFloorItemFloor = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_Floor);
+- L88: this.vh.BtnBingTrackItemScan = (ImageView) view.findViewById(R.id.Btn_BingTrack_item_Scan);
+- L92: view.setTag(this.vh);
+- L94: this.vh = (ViewHolder) view.getTag();
+- L98: this.vh.TVScanAllFloorItemFloor.setText(intValue + "层");
+- L99: this.adapter = new Adapter_ScanALLFloor_item(layerInfo, this.context);
+- L116: this.vh.ll_item.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.3
+- L122: this.vh.ll_title.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.4
+- L128: this.vh.LVHTrackFloor.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.5
+- L134: this.vh.BtnBingTrackItemUnBind.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.6
+- L140: this.vh.BtnBingTrackItemScan.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_BindStrock.7
+- L170: ImageView BtnBingTrackItemScan;
+- L176: TextView TVScanAllFloorItemFloor;
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanWithFloor_item2.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L9: import com.aliyun.cloudesl.android.R;
+- L10: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L11: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L16: public class Adapter_ScanWithFloor_item2 extends BaseAdapter {
+- L22: Adapter_ScanWithFloor_item.OnItemClickListener mOnItemClickListener;
+- L24: private Map<String, String> mTempBindEslBarCodes;
+- L35: public Adapter_ScanWithFloor_item2(Map<Integer, List<MyPositionInfo>> map, int i, Map<String, String> map2, Context context, boolean z) {
+- L39: this.mTempBindEslBarCodes = map2;
+- L70: View inflate = this.inflater.inflate(R.layout.scanfloor_item1_layout, (ViewGroup) null);
+- L71: viewHolder2.layout_item_BackGround = (LinearLayout) inflate.findViewById(R.id.Layout_Scanfloor_item_BackGround);
+- L72: inflate.setTag(viewHolder2);
+- L76: viewHolder = (ViewHolder) view.getTag();
+- L80: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode();
+- L81: } else if (this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L82: this.mTempBindEslBarCodes.get(myPositionInfo.mColumn);
+- L83: } else if (myPositionInfo.getStatus() == 3 && this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L84: String str = this.mTempBindEslBarCodes.get(myPositionInfo.mColumn);
+- L85: if (myPositionInfo.mEslDevicePositionInfo != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos() != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().size() > 0) {
+- L86: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).setEslBarCode(str);
+- L89: setBackGround(viewHolder, myPositionInfo.getStatus() == 3 || this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn), this.mSelectIndex == i);
+- L97: if (myPositionInfo.getStatus() != 3 && !this.mTempBindEslBarCodes.containsKey(myPositionInfo.mColumn)) {
+- L106: if (!this.mTempBindEslBarCodes.containsKey(((MyPositionInfo) getItem(i)).mColumn)) {
+- L116: public boolean hasBindEslBarCode(String str) {
+- L119: if (myPositionInfo.getStatus() == 3 && str.equals(myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode())) {
+- L123: return this.mTempBindEslBarCodes.containsValue(str);
+- L150: public void setOnItemClickListener(Adapter_ScanWithFloor_item.OnItemClickListener onItemClickListener) {
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanAllFloor2.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L13: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L14: import com.aliyun.cloudesl.android.view.zmod.view.NoScrollGridView;
+- L15: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L23: public class Adapter_ScanAllFloor2 extends BaseAdapter {
+- L24: Adapter_ScanWithFloor_item2 adapter;
+- L30: Map<Integer, Map<String, String>> mTempBindEslBarCodes;
+- L32: Map<Integer, Adapter_ScanWithFloor_item2> mAdapters = new HashMap();
+- L34: List<DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo.EslDevicePlanogramInfo> putlist = new ArrayList();
+- L47: public Adapter_ScanAllFloor2(Map<Integer, List<MyPositionInfo>> map, List<Integer> list, Map<Integer, Map<String, String>> map2, Context context, boolean z) {
+- L51: this.mTempBindEslBarCodes = map2;
+- L60: if (myPositionInfo.mEslDevicePositionInfo != null && myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos() != null) {
+- L61: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().clear();
+- L78: this.mTempBindEslBarCodes = map;
+- L90: view = this.inflater.inflate(R.layout.scanallfloor_activity_item1, (ViewGroup) null);
+- L91: this.vh.tv_Floor = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_Floor);
+- L92: this.vh.lv_H = (NoScrollGridView) view.findViewById(R.id.LVH_ScanAllFloor);
+- L93: view.setTag(this.vh);
+- L95: this.vh = (ViewHolder) view.getTag();
+- L99: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+- L102: this.mTempBindEslBarCodes.put(Integer.valueOf(intValue), map);
+- L104: this.adapter = new Adapter_ScanWithFloor_item2(this.mData, intValue, map, this.context, this.isfrist);
+- L114: this.mAdapters.get(Integer.valueOf(intValue)).setOnItemClickListener(new Adapter_ScanWithFloor_item.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ScanAllFloor2.1
+- L115: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item.OnItemClickListener
+- L137: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(i));
+- L147: public boolean hasBindEslBarCode(String str) {
+- L150: Map<String, String> map = this.mTempBindEslBarCodes.get(num);
+- L154: if (myPositionInfo.getStatus() == 3 && str.equals(myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode())) {
+- L155: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().clear();
+- L171: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_ScanAllFloor1.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item;
+- L13: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L20: public class Adapter_ScanAllFloor1 extends RecyclerView.Adapter<MyViewHolder> {
+- L25: Map<Integer, Map<String, String>> mTempBindEslBarCodes;
+- L26: Map<Integer, Adapter_ScanWithFloor_item1> mAdapters = new HashMap();
+- L28: List<DescribePlanogramEslDevicesResponse.EslDeviceLayerInfo.EslDevicePositionInfo.EslDevicePlanogramInfo> putlist = new ArrayList();
+- L45: public Adapter_ScanAllFloor1(Map<Integer, List<MyPositionInfo>> map, List<Integer> list, Map<Integer, Map<String, String>> map2, Context context) {
+- L49: this.mTempBindEslBarCodes = map2;
+- L58: this.mTempBindEslBarCodes = map;
+- L71: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+- L74: this.mTempBindEslBarCodes.put(Integer.valueOf(intValue), map);
+- L76: this.mAdapters.put(Integer.valueOf(intValue), new Adapter_ScanWithFloor_item1(this.mData, intValue, map, this.context));
+- L85: this.mAdapters.get(Integer.valueOf(intValue)).setOnItemClickListener(new Adapter_ScanWithFloor_item.OnItemClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_ScanAllFloor1.1
+- L86: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_ScanWithFloor_item.OnItemClickListener
+- L94: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(i));
+- L104: public boolean hasBindEslBarCode(String str) {
+- L107: Map<String, String> map = this.mTempBindEslBarCodes.get(num);
+- L111: if (myPositionInfo.getStatus() == 3 && str.equals(myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().get(0).getEslBarCode())) {
+- L112: myPositionInfo.mEslDevicePositionInfo.getEslDevicePlanogramInfos().clear();
+- L128: Map<String, String> map = this.mTempBindEslBarCodes.get(Integer.valueOf(intValue));
+- L174: this.tv_Floor = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_Floor);
+- L175: this.tv_unBind = (TextView) view.findViewById(R.id.TV_ScanAllFloor_item_NeedBindNums);
+- L176: this.lv_H = (RecyclerView) view.findViewById(R.id.LVH_ScanAllFloor);
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_SelectStroe.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L9: import com.aliyun.cloudesl.android.R;
+- L10: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DescribeStoresResponse;
+- L58: view2.setTag(viewHolder);
+- L61: viewHolder = (ViewHolder) view.getTag();
+- L71: viewHolder.rb.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.adapter.Adapter_SelectStroe.1
+
+### sources/com/aliyun/cloudesl/android/view/adapter/Adapter_BangingTag_goods.java
+- L1: package com.aliyun.cloudesl.android.view.adapter;
+- L8: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+- L12: public class Adapter_BangingTag_goods extends BaseAdapter {
+- L35: public Adapter_BangingTag_goods(List<DescribeItemsResponse.ItemInfo> list, Context context) {
+- L41: public Adapter_BangingTag_goods(List<DescribeItemsResponse.ItemInfo> list, Context context, OnItemClickListener onItemClickListener) {
+- L73: throw new UnsupportedOperationException("Method not decompiled: com.aliyun.cloudesl.android.view.adapter.Adapter_BangingTag_goods.getView(int, android.view.View, android.view.ViewGroup):android.view.View");
+
+### sources/com/aliyun/cloudesl/android/view/base/BaseScanPresenterImpl.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+- L7: import com.aliyun.cloudesl.android.api.ScannerInterface;
+- L8: import com.aliyun.cloudesl.android.view.base.IBaseView;
+- L11: public abstract class BaseScanPresenterImpl<T extends IBaseView> extends BasePresenter<T> {
+- L12: private static final String TAG = "BindingPresenterImpl";
+- L13: private BaseScanPresenterImpl<T>.ScanResultReceiver receiver;
+- L14: private ScannerInterface scannerInterface;
+- L16: protected abstract void onScanResultReceived(String str);
+- L18: public BaseScanPresenterImpl(Context context, T t) {
+- L22: @Override // com.aliyun.cloudesl.android.view.base.BasePresenter, com.aliyun.cloudesl.android.view.base.IBasePresenter
+- L25: initScannerInterface();
+- L26: initScanResultReceiver();
+- L29: @Override // com.aliyun.cloudesl.android.view.base.BasePresenter, com.aliyun.cloudesl.android.view.base.IBasePresenter
+- L32: resetScanResultReceiver();
+- L33: resetScannerInterface();
+- L36: private void resetScanResultReceiver() {
+- L40: private void resetScannerInterface() {
+- L41: this.scannerInterface.resultScan();
+- L44: private void initScanResultReceiver() {
+- L45: this.receiver = new ScanResultReceiver();
+- L46: this.context.registerReceiver(this.receiver, new IntentFilter("android.intent.action.SCANRESULT"));
+- L49: public void setScannerOutput(int i) {
+- L50: if (this.scannerInterface != null) {
+- L51: this.scannerInterface.setOutputMode(i);
+- L53: this.scannerInterface = new ScannerInterface(this.context);
+- L54: this.scannerInterface.setOutputMode(i);
+- L58: private void initScannerInterface() {
+- L59: this.scannerInterface = new ScannerInterface(this.context);
+- L60: this.scannerInterface.enableFailurePlayBeep(false);
+- L61: this.scannerInterface.continceScan(false);
+- L62: this.scannerInterface.setOutputMode(0);
+- L63: this.scannerInterface.lockScanKey();
+- L66: private class ScanResultReceiver extends BroadcastReceiver {
+- L67: private ScanResultReceiver() {
+- L72: BaseScanPresenterImpl.this.onScanResultReceived(intent.getStringExtra("value"));
+
+### sources/com/aliyun/cloudesl/android/view/base/LoginCallback.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+
+### sources/com/aliyun/cloudesl/android/view/base/BasePresenter.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+- L4: import com.aliyun.cloudesl.android.view.base.IBaseView;
+- L12: @Override // com.aliyun.cloudesl.android.view.base.IBasePresenter
+- L16: @Override // com.aliyun.cloudesl.android.view.base.IBasePresenter
+- L25: @Override // com.aliyun.cloudesl.android.view.base.IBasePresenter
+
+### sources/com/aliyun/cloudesl/android/view/base/MyBaseActivity.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+- L8: import android.device.ScanManager;
+- L9: import android.device.scanner.configuration.PropertyID;
+- L21: import android.widget.ImageView;
+- L25: import com.aliyun.cloudesl.android.R;
+- L26: import com.aliyun.cloudesl.android.api.DongJiBroadcastConfig;
+- L27: import com.aliyun.cloudesl.android.api.ScannerInterface;
+- L28: import com.aliyun.cloudesl.android.api.ScannerResultInterface;
+- L29: import com.aliyun.cloudesl.android.utils.AppManager;
+- L30: import com.aliyun.cloudesl.android.utils.DeviceType;
+- L31: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L32: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L33: import com.aliyun.cloudesl.android.utils.SystemUtil;
+- L34: import com.aliyun.cloudesl.android.utils.ToastUtil;
+- L35: import com.aliyun.cloudesl.android.utils.ui.LoadingDialog;
+- L36: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L43: public abstract class MyBaseActivity<T extends IBasePresenter> extends AppCompatActivity implements IBaseActivity, ScannerResultInterface {
+- L44: private static final String ALPS_ACTION = "android.scanservice.action.UPLOAD_BARCODE_DATA";
+- L46: private static final String RES_ACTION = "android.intent.action.SCANRESULT";
+- L47: public static int scanKeyEvent = 66;
+- L50: public ScannerInterface idataScanner;
+- L53: BroadcastReceiver scanReceiver;
+- L56: public ScanManager urovoScanManager;
+- L57: public boolean mScanCamera = false;
+- L58: private boolean mScanning = false;
+- L61: private void destroyAlpsScanner() {
+- L64: private void destroyDongjiScanner() {
+- L67: private void destroyHoneywellScanner() {
+- L70: private void destroyIdataScanner() {
+- L73: private void destroyUrovoScanner() {
+- L76: public boolean beScanKey(int i) {
+- L86: @Override // com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L87: public boolean needScanner() {
+- L91: @Override // com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L92: public void onScanResultReceived(String str) {
+- L100: this.mScanCamera = "摄像头".equals(SPUtils.get(this, "scan", ""));
+- L101: this.brandName = SystemUtil.getDeviceBrand();
+- L104: if (DeviceType.UROVO.equalsIgnoreCase(this.brandName)) {
+- L105: this.setBrandName = DeviceType.UROVO;
+- L106: } else if (DeviceType.DONGJI.equalsIgnoreCase(this.brandName)) {
+- L107: this.setBrandName = DeviceType.DONGJI;
+- L108: } else if (DeviceType.IDATA.equalsIgnoreCase(this.brandName)) {
+- L109: this.setBrandName = DeviceType.IDATA;
+- L110: } else if (DeviceType.HONEYWELL.equalsIgnoreCase(this.brandName)) {
+- L111: this.setBrandName = DeviceType.HONEYWELL;
+- L112: } else if (DeviceType.ALPS.equalsIgnoreCase(this.brandName)) {
+- L113: this.setBrandName = DeviceType.ALPS;
+- L115: this.setBrandName = DeviceType.OTHER;
+- L118: if (needScanner()) {
+- L119: createScanner(this.setBrandName);
+- L128: protected void createScanner(String str) {
+- L129: if (DeviceType.UROVO.equalsIgnoreCase(str)) {
+- L130: initUrovoScanManager();
+- L133: if (DeviceType.DONGJI.equalsIgnoreCase(str)) {
+- L137: if (DeviceType.IDATA.equalsIgnoreCase(str)) {
+- L138: initIdataScanner();
+- L139: } else if (DeviceType.HONEYWELL.equalsIgnoreCase(str)) {
+- L140: initHoneywellScanner();
+- L141: } else if (DeviceType.ALPS.equalsIgnoreCase(str)) {
+- L142: initAlpsScanner();
+- ... 另有 81 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/base/IBasePresenter.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+
+### sources/com/aliyun/cloudesl/android/view/base/MyApplication.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+- L6: import com.aliyun.cloudesl.android.utils.HttpInterceptor;
+- L7: import com.aliyun.cloudesl.android.utils.TokenInterceptor;
+- L34: OkHttpUtil.init(context).setConnectTimeout(30).setWriteTimeout(30).setReadTimeout(30).setMaxCacheSize(10485760).setCacheType(1).setHttpLogTAG("HttpLog").setIsGzip(false).setShowHttpLog(true).setShowLifecycleLog(true).setRetryOnConnectionFailure(false).setCachedDir(new File(str2)).setDownloadFileDir(str).setResponseEncoding("UTF-8").setRequestEncoding("UTF-8").addResultInterceptor(HttpInterceptor.ResultInterceptor).addExceptionInterceptor(HttpInterceptor.ExceptionInterceptor).setInterceptors(arrayList).build();
+
+### sources/com/aliyun/cloudesl/android/view/base/BaseActivity.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+- L8: import android.device.ScanManager;
+- L9: import android.device.scanner.configuration.PropertyID;
+- L12: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L13: import com.aliyun.cloudesl.android.api.DongJiBroadcastConfig;
+- L14: import com.aliyun.cloudesl.android.api.ScannerInterface;
+- L15: import com.aliyun.cloudesl.android.api.ScannerResultInterface;
+- L16: import com.aliyun.cloudesl.android.updateManager.Constant;
+- L17: import com.aliyun.cloudesl.android.utils.DeviceType;
+- L18: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L19: import com.aliyun.cloudesl.android.utils.SystemUtil;
+- L20: import com.aliyun.cloudesl.android.utils.ui.LoadingDialog;
+- L31: public class BaseActivity extends Activity implements ScannerResultInterface {
+- L32: private static final String RES_ACTION = "android.intent.action.SCANRESULT";
+- L35: public ScannerInterface chendaScanner;
+- L38: BroadcastReceiver scanReceiver;
+- L39: private ScanManager urovoScanManager;
+- L41: private void destroyUrovoScanManager() {
+- L44: @Override // com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L45: public boolean needScanner() {
+- L49: @Override // com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L50: public void onScanResultReceived(String str) {
+- L57: this.brandName = SystemUtil.getDeviceBrand();
+- L58: initToScanner();
+- L63: protected void initToScanner() {
+- L64: if (this.brandName.equals(DeviceType.UROVO)) {
+- L65: initUrovoScanManager();
+- L66: } else if (this.brandName.equals(DeviceType.DONGJI)) {
+- L69: initChendaScanner();
+- L73: private void initChendaScanner() {
+- L74: this.chendaScanner = new ScannerInterface(this);
+- L75: this.chendaScanner.setOutputMode(1);
+- L76: this.chendaScanner.enableFailurePlayBeep(true);
+- L77: this.scanReceiver = new ChendaScannerResultReceiver();
+- L78: registerReceiver(this.scanReceiver, new IntentFilter(RES_ACTION));
+- L81: private class ChendaScannerResultReceiver extends BroadcastReceiver {
+- L82: private ChendaScannerResultReceiver() {
+- L91: BaseActivity.this.onScanResultReceived(stringExtra);
+- L103: this.scanReceiver = new DongjiScannerResultReceiver();
+- L104: registerReceiver(this.scanReceiver, new IntentFilter(DongJiBroadcastConfig.CUSTOM_NAME));
+- L107: private class DongjiScannerResultReceiver extends BroadcastReceiver {
+- L108: private DongjiScannerResultReceiver() {
+- L113: byte[] byteArrayExtra = intent.getByteArrayExtra(ScanManager.DECODE_DATA_TAG);
+- L114: int intExtra = intent.getIntExtra(ScanManager.BARCODE_LENGTH_TAG, 0);
+- L115: intent.getByteExtra(ScanManager.BARCODE_TYPE_TAG, (byte) 0);
+- L120: BaseActivity.this.onScanResultReceived(str);
+- L124: private void initUrovoScanManager() {
+- L126: this.urovoScanManager = new ScanManager();
+- L127: this.urovoScanManager.openScanner();
+- L128: this.urovoScanManager.switchOutputMode(0);
+- L129: this.urovoScanManager.unlockTrigger();
+- L130: initParameters(this.urovoScanManager);
+- L131: initDecodingIntent(this.urovoScanManager);
+- L132: this.scanReceiver = new UrovoScannerResultReceiver();
+- L134: intentFilter.addAction(ScanManager.ACTION_DECODE);
+- L135: registerReceiver(this.scanReceiver, intentFilter);
+- L140: public int initParameters(ScanManager scanManager) {
+- L152: return scanManager.setParameterInts(iArr, iArr2);
+- L155: public boolean initDecodingIntent(ScanManager scanManager) {
+- L156: int[] iArr = {PropertyID.WEDGE_INTENT_ACTION_NAME, PropertyID.WEDGE_INTENT_DATA_STRING_TAG};
+- ... 另有 25 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/base/IBaseView.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+
+### sources/com/aliyun/cloudesl/android/view/base/IBaseActivity.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+
+### sources/com/aliyun/cloudesl/android/view/base/RefreshTokenCallback.java
+- L1: package com.aliyun.cloudesl.android.view.base;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/TagInfoActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L15: public class TagInfoActivity_ViewBinding implements Unbinder {
+- L16: private TagInfoActivity target;
+- L22: public TagInfoActivity_ViewBinding(TagInfoActivity tagInfoActivity) {
+- L23: this(tagInfoActivity, tagInfoActivity.getWindow().getDecorView());
+- L27: public TagInfoActivity_ViewBinding(final TagInfoActivity tagInfoActivity, View view) {
+- L28: this.target = tagInfoActivity;
+- L30: tagInfoActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L32: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity_ViewBinding.1
+- L35: tagInfoActivity.onViewClicked(view2);
+- L38: tagInfoActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L39: tagInfoActivity.TVTagBarCode = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_TagBarCode, "field 'TVTagBarCode'", TextView.class);
+- L40: tagInfoActivity.TVTagBarCode2 = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_TagBarCode2, "field 'TVTagBarCode2'", TextView.class);
+- L41: tagInfoActivity.TVTagUN = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_TagUN, "field 'TVTagUN'", TextView.class);
+- L42: tagInfoActivity.TVTagElc = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_TagElc, "field 'TVTagElc'", TextView.class);
+- L43: tagInfoActivity.TVTagLastTime = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_TagLastTime, "field 'TVTagLastTime'", TextView.class);
+- L44: tagInfoActivity.TVGoodsBarCode = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_GoodsBarCode, "field 'TVGoodsBarCode'", TextView.class);
+- L45: tagInfoActivity.TVGoodsName = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_GoodsName, "field 'TVGoodsName'", TextView.class);
+- L46: tagInfoActivity.TVGoodsPrice = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_GoodsPrice, "field 'TVGoodsPrice'", TextView.class);
+- L48: tagInfoActivity.BtnCloseLight = (Button) Utils.castView(findRequiredView2, R.id.Btn_closeLight, "field 'BtnCloseLight'", Button.class);
+- L50: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity_ViewBinding.2
+- L53: tagInfoActivity.onViewClicked(view2);
+- L57: tagInfoActivity.BtnSetTemplates = (Button) Utils.castView(findRequiredView3, R.id.Btn_setTemplates, "field 'BtnSetTemplates'", Button.class);
+- L59: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity_ViewBinding.3
+- L62: tagInfoActivity.onViewClicked(view2);
+- L70: TagInfoActivity tagInfoActivity = this.target;
+- L71: if (tagInfoActivity == null) {
+- L75: tagInfoActivity.BTBack = null;
+- L76: tagInfoActivity.TVTitle = null;
+- L77: tagInfoActivity.TVTagBarCode = null;
+- L78: tagInfoActivity.TVTagBarCode2 = null;
+- L79: tagInfoActivity.TVTagUN = null;
+- L80: tagInfoActivity.TVTagElc = null;
+- L81: tagInfoActivity.TVTagLastTime = null;
+- L82: tagInfoActivity.TVGoodsBarCode = null;
+- L83: tagInfoActivity.TVGoodsName = null;
+- L84: tagInfoActivity.TVGoodsPrice = null;
+- L85: tagInfoActivity.BtnCloseLight = null;
+- L86: tagInfoActivity.BtnSetTemplates = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/CampaignMangageActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L29: campaignMangageActivity.iv_back = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'iv_back'", ImageView.class);
+- L31: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.CampaignMangageActivity_ViewBinding.1
+- L39: campaignMangageActivity.et_scantagcode = (EditText) Utils.findRequiredViewAsType(view, R.id.Ed_ScanTagCode, "field 'et_scantagcode'", EditText.class);
+- L40: campaignMangageActivity.iv_scan = (ImageView) Utils.findRequiredViewAsType(view, R.id.bt_Scan, "field 'iv_scan'", ImageView.class);
+- L54: campaignMangageActivity.et_scantagcode = null;
+- L55: campaignMangageActivity.iv_scan = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/TagScanActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L7: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L15: public class TagScanActivity_ViewBinding implements Unbinder {
+- L16: private TagScanActivity target;
+- L20: public TagScanActivity_ViewBinding(TagScanActivity tagScanActivity) {
+- L21: this(tagScanActivity, tagScanActivity.getWindow().getDecorView());
+- L25: public TagScanActivity_ViewBinding(final TagScanActivity tagScanActivity, View view) {
+- L26: this.target = tagScanActivity;
+- L28: tagScanActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L30: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagScanActivity_ViewBinding.1
+- L33: tagScanActivity.onViewClicked();
+- L36: tagScanActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L37: tagScanActivity.btScan = (ImageView) Utils.findRequiredViewAsType(view, R.id.bt_Scan, "field 'btScan'", ImageView.class);
+- L38: tagScanActivity.EdScanTagCode = (EditText) Utils.findRequiredViewAsType(view, R.id.Ed_ScanTagCode, "field 'EdScanTagCode'", EditText.class);
+- L44: TagScanActivity tagScanActivity = this.target;
+- L45: if (tagScanActivity == null) {
+- L49: tagScanActivity.BTBack = null;
+- L50: tagScanActivity.TVTitle = null;
+- L51: tagScanActivity.btScan = null;
+- L52: tagScanActivity.EdScanTagCode = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectModelActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L33: selectModelActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L35: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.1
+- L42: View findRequiredView2 = Utils.findRequiredView(view, R.id.Btn_modTag, "field 'BtnModTag' and method 'onViewClicked'");
+- L43: selectModelActivity.BtnModTag = (LinearLayout) Utils.castView(findRequiredView2, R.id.Btn_modTag, "field 'BtnModTag'", LinearLayout.class);
+- L45: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.2
+- L54: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.3
+- L60: View findRequiredView4 = Utils.findRequiredView(view, R.id.Btn_TagInfo, "field 'BtnTagInfo' and method 'onViewClicked'");
+- L61: selectModelActivity.BtnTagInfo = (LinearLayout) Utils.castView(findRequiredView4, R.id.Btn_TagInfo, "field 'BtnTagInfo'", LinearLayout.class);
+- L63: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.4
+- L69: View findRequiredView5 = Utils.findRequiredView(view, R.id.Btn_TagError, "field 'BtnTagError' and method 'onViewClicked'");
+- L70: selectModelActivity.BtnTagError = (LinearLayout) Utils.castView(findRequiredView5, R.id.Btn_TagError, "field 'BtnTagError'", LinearLayout.class);
+- L72: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.5
+- L80: selectModelActivity.BTOpt = (ImageView) Utils.castView(findRequiredView6, R.id.BT_Opt, "field 'BTOpt'", ImageView.class);
+- L82: findRequiredView6.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity_ViewBinding.6
+- L100: selectModelActivity.BtnModTag = null;
+- L102: selectModelActivity.BtnTagInfo = null;
+- L103: selectModelActivity.BtnTagError = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectStoreActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L12: import com.aliyun.cloudesl.android.updateManager.Constant;
+- L13: import com.aliyun.cloudesl.android.updateManager.DownloadManager;
+- L14: import com.aliyun.cloudesl.android.updateManager.FileUtil;
+- L15: import com.aliyun.cloudesl.android.updateManager.OnDownloadListener;
+- L16: import com.aliyun.cloudesl.android.utils.AppManager;
+- L17: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L18: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L19: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L20: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L21: import com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl;
+- L22: import com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView;
+- L23: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+- L35: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L39: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L43: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L47: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L51: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L56: @Override // com.aliyun.cloudesl.android.updateManager.OnDownloadListener
+- L60: @Override // com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView
+- L65: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L70: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L85: @Override // com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView
+- L90: @Override // com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView
+- L95: @Override // com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView
+- L100: @Override // com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView
+- L122: new MyDialog(this, MyDialog.Dialog_ShowWarning, "提示", "是否退出程序", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectStoreActivity.1
+- L123: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+
+### sources/com/aliyun/cloudesl/android/view/zmod/LoginActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L8: import com.aliyun.cloudesl.android.R;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptionActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L32: optionActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L34: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptionActivity_ViewBinding.1
+- L44: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptionActivity_ViewBinding.2
+- L50: optionActivity.TVOptDeviceName = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_OptDeviceName, "field 'TVOptDeviceName'", TextView.class);
+- L51: View findRequiredView3 = Utils.findRequiredView(view, R.id.BT_OptDevice, "field 'BTOptDevice' and method 'onViewClicked'");
+- L52: optionActivity.BTOptDevice = (LinearLayout) Utils.castView(findRequiredView3, R.id.BT_OptDevice, "field 'BTOptDevice'", LinearLayout.class);
+- L54: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptionActivity_ViewBinding.3
+- L60: optionActivity.TVOptScanTypeName = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_OptScanTypeName, "field 'TVOptScanTypeName'", TextView.class);
+- L61: View findRequiredView4 = Utils.findRequiredView(view, R.id.BT_OptScanType, "field 'BTOptScanType' and method 'onViewClicked'");
+- L62: optionActivity.BTOptScanType = (LinearLayout) Utils.castView(findRequiredView4, R.id.BT_OptScanType, "field 'BTOptScanType'", LinearLayout.class);
+- L64: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptionActivity_ViewBinding.4
+- L71: optionActivity.iv_user = (ImageView) Utils.findRequiredViewAsType(view, R.id.iv_user, "field 'iv_user'", ImageView.class);
+- L76: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptionActivity_ViewBinding.5
+- L95: optionActivity.TVOptDeviceName = null;
+- L96: optionActivity.BTOptDevice = null;
+- L97: optionActivity.TVOptScanTypeName = null;
+- L98: optionActivity.BTOptScanType = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/TagInfoActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L3: import android.graphics.drawable.BitmapDrawable;
+- L9: import android.widget.ImageView;
+- L15: import com.aliyun.cloudesl.android.R;
+- L16: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L17: import com.aliyun.cloudesl.android.view.tagmod.view.TagInfoView;
+- L18: import com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl;
+- L19: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersResponse;
+- L20: import com.aliyuncs.cloudesl.model.v20200201.DescribeEslDevicesResponse;
+- L27: public class TagInfoActivity extends MyBaseActivity<TagInfoPresenterImpl> implements TagInfoView {
+- L30: ImageView BTBack;
+- L47: @BindView(R.id.TV_TagBarCode)
+- L48: TextView TVTagBarCode;
+- L50: @BindView(R.id.TV_TagBarCode2)
+- L51: TextView TVTagBarCode2;
+- L53: @BindView(R.id.TV_TagElc)
+- L54: TextView TVTagElc;
+- L56: @BindView(R.id.TV_TagLastTime)
+- L57: TextView TVTagLastTime;
+- L59: @BindView(R.id.TV_TagUN)
+- L60: TextView TVTagUN;
+- L64: private DescribeBindersResponse.EslItemBindInfo mEslItemBindInfo;
+- L65: private String mTagCode;
+- L67: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L69: return R.layout.taginfo_activity_layout;
+- L73: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L74: public TagInfoPresenterImpl initPresenter() {
+- L75: return new TagInfoPresenterImpl(this, this);
+- L78: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L80: this.mTagCode = getIntent().getStringExtra("tagCode");
+- L81: if (TextUtils.isEmpty(this.mTagCode)) {
+- L84: this.TVTitle.setText(this.mTagCode);
+- L85: ((TagInfoPresenterImpl) this.presenter).queryTagInfo(this.mTagCode);
+- L95: ((TagInfoPresenterImpl) this.presenter).closeLight(this.mTagCode);
+- L107: inflate.findViewById(R.id.iv_close).setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.1
+- L113: inflate.findViewById(R.id.tv_template_normal).setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.2
+- L116: ((TagInfoPresenterImpl) TagInfoActivity.this.presenter).setTemplates(TagInfoActivity.this.mEslItemBindInfo, 0);
+- L120: inflate.findViewById(R.id.tv_template_outofstock).setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.3
+- L123: ((TagInfoPresenterImpl) TagInfoActivity.this.presenter).setTemplates(TagInfoActivity.this.mEslItemBindInfo, 1);
+- L127: inflate.findViewById(R.id.tv_template_promotion).setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.4
+- L130: ((TagInfoPresenterImpl) TagInfoActivity.this.presenter).setTemplates(TagInfoActivity.this.mEslItemBindInfo, 2);
+- L134: inflate.findViewById(R.id.tv_template_other).setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.5
+- L137: ((TagInfoPresenterImpl) TagInfoActivity.this.presenter).setTemplates(TagInfoActivity.this.mEslItemBindInfo, 3);
+- L143: popupWindow.setBackgroundDrawable(new BitmapDrawable());
+- L145: popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagInfoActivity.6
+- L148: TagInfoActivity.this.setBackgroundAlpha(1.0f);
+- L159: @Override // com.aliyun.cloudesl.android.view.tagmod.view.TagInfoView
+- L160: public void queryTagSuccess(DescribeEslDevicesResponse describeEslDevicesResponse) {
+- L161: this.TVTagBarCode.setText(describeEslDevicesResponse.getEslDevices().get(0).getEslBarCode());
+- L162: this.TVTagBarCode2.setText(describeEslDevicesResponse.getEslDevices().get(0).getEslBarCode());
+- L163: this.TVTagUN.setText(describeEslDevicesResponse.getEslDevices().get(0).getModel());
+- L164: this.TVTagElc.setText(describeEslDevicesResponse.getEslDevices().get(0).getBatteryLevel() + "%");
+- L165: String lastCommunicateTime = describeEslDevicesResponse.getEslDevices().get(0).getLastCommunicateTime();
+- L173: this.TVTagLastTime.setText(simpleDateFormat.format(parse));
+- L177: this.TVTagLastTime.setText(lastCommunicateTime);
+- L181: @Override // com.aliyun.cloudesl.android.view.tagmod.view.TagInfoView
+- L182: public void queryTagEroor(String str) {
+- L186: @Override // com.aliyun.cloudesl.android.view.tagmod.view.TagInfoView
+- L187: public void queryTagGoodsSuccess(DescribeBindersResponse describeBindersResponse) {
+- L188: this.mEslItemBindInfo = describeBindersResponse.getEslItemBindInfos().get(0);
+- ... 另有 11 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/zmod/TagScanActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L7: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.utils.StringUtil;
+- L13: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L14: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L17: public class TagScanActivity extends MyBaseActivity {
+- L20: ImageView BTBack;
+- L22: @BindView(R.id.Ed_ScanTagCode)
+- L23: EditText EdScanTagCode;
+- L28: @BindView(R.id.bt_Scan)
+- L29: ImageView btScan;
+- L30: private View.OnKeyListener onKeyListener = new View.OnKeyListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagScanActivity.2
+- L33: String trim = TagScanActivity.this.EdScanTagCode.getText().toString().trim();
+- L34: if (!TagScanActivity.this.beScanKey(i) || !StringUtil.isNotBlank(trim)) {
+- L39: bundle.putString("tagCode", trim);
+- L40: TagScanActivity.this.startActivity(TagInfoActivity.class, bundle);
+- L46: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L48: return R.layout.tag_scan_activity_layout;
+- L51: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L56: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L57: public boolean needScanner() {
+- L61: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L63: this.TVTitle.setText("价签详情");
+- L64: this.EdScanTagCode.setOnKeyListener(this.onKeyListener);
+- L65: this.btScan.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.TagScanActivity.1
+- L68: TagScanActivity.this.requestForQrcode(TagScanActivity.this.EdScanTagCode);
+- L71: this.EdScanTagCode.requestFocus();
+- L74: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L75: public void onScanResultReceived(String str) {
+- L76: this.EdScanTagCode.setText(str);
+- L77: this.EdScanTagCode.setSelection(str.length());
+- L78: this.onKeyListener.onKey(this.EdScanTagCode, scanKeyEvent, null);
+
+### sources/com/aliyun/cloudesl/android/view/zmod/CampaignMangageActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L7: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L13: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L23: @BindView(R.id.Ed_ScanTagCode)
+- L24: EditText et_scantagcode;
+- L27: ImageView iv_back;
+- L29: @BindView(R.id.bt_Scan)
+- L30: ImageView iv_scan;
+- L32: private View.OnKeyListener onKeyListener = new View.OnKeyListener() { // from class: com.aliyun.cloudesl.android.view.zmod.CampaignMangageActivity.3
+- L35: String trim = CampaignMangageActivity.this.et_scantagcode.getText().toString().trim();
+- L37: if (!CampaignMangageActivity.this.beScanKey(i)) {
+- L40: if ((keyEvent != null && (keyEvent.getAction() != 1 || keyEvent.getEventTime() <= 0)) || id != CampaignMangageActivity.this.et_scantagcode.getId()) {
+- L45: bundle.putString("tagCode", trim);
+- L46: CampaignMangageActivity.this.startActivity(TagInfoActivity.class, bundle);
+- L58: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L63: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L68: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L69: public boolean needScanner() {
+- L73: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L77: this.sl_goodstype.setOnTabSelectListener(new OnTabSelectListener() { // from class: com.aliyun.cloudesl.android.view.zmod.CampaignMangageActivity.1
+- L87: this.et_scantagcode.setOnKeyListener(this.onKeyListener);
+- L88: this.iv_scan.setOnClickListener(new View.OnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.CampaignMangageActivity.2
+- L91: CampaignMangageActivity.this.requestForQrcode(CampaignMangageActivity.this.et_scantagcode);
+- L112: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, com.aliyun.cloudesl.android.api.ScannerResultInterface
+- L113: public void onScanResultReceived(String str) {
+- L114: this.et_scantagcode.setText(str);
+- L115: this.et_scantagcode.setSelection(str.length());
+- L116: this.onKeyListener.onKey(this.et_scantagcode, scanKeyEvent, null);
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptScanTypeActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L5: import android.widget.ImageView;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L12: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L13: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L16: public class OptScanTypeActivity extends MyBaseActivity {
+- L19: ImageView BTBack;
+- L21: @BindView(R.id.BT_OptDeviceCamera)
+- L22: LinearLayout BTOptDeviceCamera;
+- L24: @BindView(R.id.BT_OptDeviceScan)
+- L25: LinearLayout BTOptDeviceScan;
+- L27: @BindView(R.id.Image_OptDeviceCamera)
+- L28: ImageView ImageOptDeviceCamera;
+- L30: @BindView(R.id.Image_OptDeviceScan)
+- L31: ImageView ImageOptDeviceScan;
+- L36: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L38: return R.layout.optscantype_activity_layout;
+- L41: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L46: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L50: String str = SPUtils.get(this, "scan", new String()) + "";
+- L65: this.ImageOptDeviceScan.setVisibility(0);
+- L66: this.ImageOptDeviceCamera.setVisibility(4);
+- L69: this.ImageOptDeviceScan.setVisibility(4);
+- L70: this.ImageOptDeviceCamera.setVisibility(0);
+- L75: @OnClick({R.id.BT_Back, R.id.BT_OptDeviceScan, R.id.BT_OptDeviceCamera})
+- L82: if (id == R.id.BT_OptDeviceCamera) {
+- L83: SPUtils.put((Context) this, "scan", "摄像头");
+- L84: this.ImageOptDeviceScan.setVisibility(4);
+- L85: this.ImageOptDeviceCamera.setVisibility(0);
+- L87: if (id != R.id.BT_OptDeviceScan) {
+- L90: SPUtils.put((Context) this, "scan", "扫描枪");
+- L91: this.ImageOptDeviceScan.setVisibility(0);
+- L92: this.ImageOptDeviceCamera.setVisibility(4);
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectModelNewActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L13: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L14: import com.aliyun.cloudesl.android.utils.AppManager;
+- L15: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L16: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L17: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L18: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L19: import com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity;
+- L20: import com.aliyun.cloudesl.android.view.tagmod.BindingTagActivity;
+- L21: import com.aliyun.cloudesl.android.view.tagmod.UnBindActivity;
+- L27: ImageView BTBack;
+- L30: ImageView BTOpt;
+- L47: @BindView(R.id.ll_tag_detail)
+- L48: LinearLayout ll_tag_detail;
+- L54: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L59: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L64: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L66: this.BTBack.setImageResource(R.drawable.menu);
+- L69: this.TVTitle.setText("价签管理");
+- L74: @OnClick({R.id.BT_Back, R.id.BT_Opt, R.id.ll_shoping_bind, R.id.ll_shef_bind, R.id.ll_manage, R.id.ll_unbind, R.id.ll_tag_detail})
+- L93: startActivity(ShelvesListActivity.class);
+- L101: startActivity(new Intent(this, (Class<?>) BindingTagActivity.class));
+- L104: case R.id.ll_tag_detail /* 2131230995 */:
+- L109: startActivity(TagScanActivity.class);
+- L129: new MyDialog(this, MyDialog.Dialog_ShowWarning, "提示", "是否退出程序", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity.1
+- L130: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+- L139: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.support.v4.app.FragmentActivity, android.app.Activity
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptDevActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L5: import android.widget.ImageView;
+- L10: import com.aliyun.cloudesl.android.R;
+- L11: import com.aliyun.cloudesl.android.utils.DeviceType;
+- L12: import com.aliyun.cloudesl.android.utils.MyTost;
+- L13: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L14: import com.aliyun.cloudesl.android.utils.SystemUtil;
+- L15: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L16: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L22: ImageView BTBack;
+- L24: @BindView(R.id.BT_OptDeviceAlps)
+- L25: LinearLayout BTOptDeviceAlps;
+- L27: @BindView(R.id.BT_OptDeviceDongji)
+- L28: LinearLayout BTOptDeviceDongji;
+- L30: @BindView(R.id.BT_OptDeviceHoneywell)
+- L31: LinearLayout BTOptDeviceHoneywell;
+- L33: @BindView(R.id.BT_OptDeviceIdata)
+- L34: LinearLayout BTOptDeviceIdata;
+- L36: @BindView(R.id.BT_OptDeviceOther)
+- L37: LinearLayout BTOptDeviceOther;
+- L39: @BindView(R.id.BT_OptDeviceUrovo)
+- L40: LinearLayout BTOptDeviceUrovo;
+- L42: @BindView(R.id.Image_OptDeviceAlps)
+- L43: ImageView ImageOptDeviceAlps;
+- L45: @BindView(R.id.Image_OptDeviceDongji)
+- L46: ImageView ImageOptDeviceDongji;
+- L48: @BindView(R.id.Image_OptDeviceHoneywell)
+- L49: ImageView ImageOptDeviceHoneywell;
+- L51: @BindView(R.id.Image_OptDeviceIdata)
+- L52: ImageView ImageOptDeviceIdata;
+- L54: @BindView(R.id.Image_OptDeviceOther)
+- L55: ImageView ImageOptDeviceOther;
+- L57: @BindView(R.id.Image_OptDeviceUrovo)
+- L58: ImageView ImageOptDeviceUrovo;
+- L63: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L68: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L74: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L77: this.brandName = SystemUtil.getDeviceBrand();
+- L79: MyTost.mTosat(this.context, SystemUtil.getDeviceBrand() + "-" + SystemUtil.getSystemModel());
+- L86: if (sb2.equals(DeviceType.DONGJI)) {
+- L93: if (sb2.equals(DeviceType.HONEYWELL)) {
+- L100: if (sb2.equals(DeviceType.ALPS)) {
+- L107: if (sb2.equals(DeviceType.IDATA)) {
+- L114: if (sb2.equals(DeviceType.OTHER)) {
+- L121: if (sb2.equals(DeviceType.UROVO)) {
+- L133: this.ImageOptDeviceUrovo.setVisibility(0);
+- L134: this.ImageOptDeviceIdata.setVisibility(4);
+- L135: this.ImageOptDeviceDongji.setVisibility(4);
+- L136: this.ImageOptDeviceHoneywell.setVisibility(4);
+- L137: this.ImageOptDeviceAlps.setVisibility(4);
+- L138: this.ImageOptDeviceOther.setVisibility(4);
+- L141: this.ImageOptDeviceUrovo.setVisibility(4);
+- L142: this.ImageOptDeviceIdata.setVisibility(0);
+- L143: this.ImageOptDeviceDongji.setVisibility(4);
+- L144: this.ImageOptDeviceHoneywell.setVisibility(4);
+- L145: this.ImageOptDeviceAlps.setVisibility(4);
+- L146: this.ImageOptDeviceOther.setVisibility(4);
+- L149: this.ImageOptDeviceUrovo.setVisibility(4);
+- L150: this.ImageOptDeviceIdata.setVisibility(4);
+- L151: this.ImageOptDeviceDongji.setVisibility(0);
+- ... 另有 70 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptDevActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L34: optDevActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L36: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.1
+- L43: optDevActivity.ImageOptDeviceUrovo = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceUrovo, "field 'ImageOptDeviceUrovo'", ImageView.class);
+- L44: View findRequiredView2 = Utils.findRequiredView(view, R.id.BT_OptDeviceUrovo, "field 'BTOptDeviceUrovo' and method 'onViewClicked'");
+- L45: optDevActivity.BTOptDeviceUrovo = (LinearLayout) Utils.castView(findRequiredView2, R.id.BT_OptDeviceUrovo, "field 'BTOptDeviceUrovo'", LinearLayout.class);
+- L47: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.2
+- L53: optDevActivity.ImageOptDeviceIdata = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceIdata, "field 'ImageOptDeviceIdata'", ImageView.class);
+- L54: View findRequiredView3 = Utils.findRequiredView(view, R.id.BT_OptDeviceIdata, "field 'BTOptDeviceIdata' and method 'onViewClicked'");
+- L55: optDevActivity.BTOptDeviceIdata = (LinearLayout) Utils.castView(findRequiredView3, R.id.BT_OptDeviceIdata, "field 'BTOptDeviceIdata'", LinearLayout.class);
+- L57: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.3
+- L63: optDevActivity.ImageOptDeviceDongji = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceDongji, "field 'ImageOptDeviceDongji'", ImageView.class);
+- L64: View findRequiredView4 = Utils.findRequiredView(view, R.id.BT_OptDeviceDongji, "field 'BTOptDeviceDongji' and method 'onViewClicked'");
+- L65: optDevActivity.BTOptDeviceDongji = (LinearLayout) Utils.castView(findRequiredView4, R.id.BT_OptDeviceDongji, "field 'BTOptDeviceDongji'", LinearLayout.class);
+- L67: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.4
+- L73: optDevActivity.ImageOptDeviceHoneywell = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceHoneywell, "field 'ImageOptDeviceHoneywell'", ImageView.class);
+- L74: View findRequiredView5 = Utils.findRequiredView(view, R.id.BT_OptDeviceHoneywell, "field 'BTOptDeviceHoneywell' and method 'onViewClicked'");
+- L75: optDevActivity.BTOptDeviceHoneywell = (LinearLayout) Utils.castView(findRequiredView5, R.id.BT_OptDeviceHoneywell, "field 'BTOptDeviceHoneywell'", LinearLayout.class);
+- L77: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.5
+- L83: optDevActivity.ImageOptDeviceAlps = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceAlps, "field 'ImageOptDeviceAlps'", ImageView.class);
+- L84: View findRequiredView6 = Utils.findRequiredView(view, R.id.BT_OptDeviceAlps, "field 'BTOptDeviceAlps' and method 'onViewClicked'");
+- L85: optDevActivity.BTOptDeviceAlps = (LinearLayout) Utils.castView(findRequiredView6, R.id.BT_OptDeviceAlps, "field 'BTOptDeviceAlps'", LinearLayout.class);
+- L87: findRequiredView6.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.6
+- L93: optDevActivity.ImageOptDeviceOther = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceOther, "field 'ImageOptDeviceOther'", ImageView.class);
+- L94: View findRequiredView7 = Utils.findRequiredView(view, R.id.BT_OptDeviceOther, "field 'BTOptDeviceOther' and method 'onViewClicked'");
+- L95: optDevActivity.BTOptDeviceOther = (LinearLayout) Utils.castView(findRequiredView7, R.id.BT_OptDeviceOther, "field 'BTOptDeviceOther'", LinearLayout.class);
+- L97: findRequiredView7.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptDevActivity_ViewBinding.7
+- L115: optDevActivity.ImageOptDeviceUrovo = null;
+- L116: optDevActivity.BTOptDeviceUrovo = null;
+- L117: optDevActivity.ImageOptDeviceIdata = null;
+- L118: optDevActivity.BTOptDeviceIdata = null;
+- L119: optDevActivity.ImageOptDeviceDongji = null;
+- L120: optDevActivity.BTOptDeviceDongji = null;
+- L121: optDevActivity.ImageOptDeviceHoneywell = null;
+- L122: optDevActivity.BTOptDeviceHoneywell = null;
+- L123: optDevActivity.ImageOptDeviceAlps = null;
+- L124: optDevActivity.BTOptDeviceAlps = null;
+- L125: optDevActivity.ImageOptDeviceOther = null;
+- L126: optDevActivity.BTOptDeviceOther = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptScanTypeActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L15: public class OptScanTypeActivity_ViewBinding implements Unbinder {
+- L16: private OptScanTypeActivity target;
+- L22: public OptScanTypeActivity_ViewBinding(OptScanTypeActivity optScanTypeActivity) {
+- L23: this(optScanTypeActivity, optScanTypeActivity.getWindow().getDecorView());
+- L27: public OptScanTypeActivity_ViewBinding(final OptScanTypeActivity optScanTypeActivity, View view) {
+- L28: this.target = optScanTypeActivity;
+- L30: optScanTypeActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L32: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptScanTypeActivity_ViewBinding.1
+- L35: optScanTypeActivity.onViewClicked(view2);
+- L38: optScanTypeActivity.TVTitle = (TextView) Utils.findRequiredViewAsType(view, R.id.TV_Title, "field 'TVTitle'", TextView.class);
+- L39: optScanTypeActivity.ImageOptDeviceScan = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceScan, "field 'ImageOptDeviceScan'", ImageView.class);
+- L40: View findRequiredView2 = Utils.findRequiredView(view, R.id.BT_OptDeviceScan, "field 'BTOptDeviceScan' and method 'onViewClicked'");
+- L41: optScanTypeActivity.BTOptDeviceScan = (LinearLayout) Utils.castView(findRequiredView2, R.id.BT_OptDeviceScan, "field 'BTOptDeviceScan'", LinearLayout.class);
+- L43: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptScanTypeActivity_ViewBinding.2
+- L46: optScanTypeActivity.onViewClicked(view2);
+- L49: optScanTypeActivity.ImageOptDeviceCamera = (ImageView) Utils.findRequiredViewAsType(view, R.id.Image_OptDeviceCamera, "field 'ImageOptDeviceCamera'", ImageView.class);
+- L50: View findRequiredView3 = Utils.findRequiredView(view, R.id.BT_OptDeviceCamera, "field 'BTOptDeviceCamera' and method 'onViewClicked'");
+- L51: optScanTypeActivity.BTOptDeviceCamera = (LinearLayout) Utils.castView(findRequiredView3, R.id.BT_OptDeviceCamera, "field 'BTOptDeviceCamera'", LinearLayout.class);
+- L53: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.OptScanTypeActivity_ViewBinding.3
+- L56: optScanTypeActivity.onViewClicked(view2);
+- L64: OptScanTypeActivity optScanTypeActivity = this.target;
+- L65: if (optScanTypeActivity == null) {
+- L69: optScanTypeActivity.BTBack = null;
+- L70: optScanTypeActivity.TVTitle = null;
+- L71: optScanTypeActivity.ImageOptDeviceScan = null;
+- L72: optScanTypeActivity.BTOptDeviceScan = null;
+- L73: optScanTypeActivity.ImageOptDeviceCamera = null;
+- L74: optScanTypeActivity.BTOptDeviceCamera = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/UserInfoActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L30: userInfoActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L32: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.UserInfoActivity_ViewBinding.1
+- L44: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.UserInfoActivity_ViewBinding.2
+- L51: userInfoActivity.iv_user = (ImageView) Utils.castView(findRequiredView3, R.id.iv_user, "field 'iv_user'", ImageView.class);
+- L53: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.UserInfoActivity_ViewBinding.3
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectStoreActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L11: import com.aliyun.cloudesl.android.R;
+- L30: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectStoreActivity_ViewBinding.1
+
+### sources/com/aliyun/cloudesl/android/view/zmod/LoginActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L5: import com.aliyun.cloudesl.android.R;
+- L6: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L7: import com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl;
+- L8: import com.aliyun.cloudesl.android.view.zmod.presenter.LoginPresenter;
+- L9: import com.aliyun.cloudesl.android.view.zmod.view.LoginView;
+- L22: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L27: @Override // com.aliyun.cloudesl.android.view.zmod.view.LoginView
+- L32: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L37: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L42: @Override // com.aliyun.cloudesl.android.view.zmod.view.LoginView
+- L48: @Override // com.aliyun.cloudesl.android.view.zmod.view.LoginView
+- L53: @Override // com.aliyun.cloudesl.android.view.zmod.view.LoginView
+
+### sources/com/aliyun/cloudesl/android/view/zmod/OptionActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L5: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.updateManager.Constant;
+- L13: import com.aliyun.cloudesl.android.updateManager.DownloadManager;
+- L14: import com.aliyun.cloudesl.android.updateManager.FileUtil;
+- L15: import com.aliyun.cloudesl.android.updateManager.UpdateConfiguration;
+- L16: import com.aliyun.cloudesl.android.utils.OtherUtils;
+- L17: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L18: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L19: import com.aliyun.cloudesl.android.view.listmod.impl.UpdateVersionImpl;
+- L20: import com.aliyun.cloudesl.android.view.listmod.view.UpdateVersionView;
+- L21: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+- L28: ImageView BTBack;
+- L30: @BindView(R.id.BT_OptDevice)
+- L31: LinearLayout BTOptDevice;
+- L33: @BindView(R.id.BT_OptScanType)
+- L34: LinearLayout BTOptScanType;
+- L39: @BindView(R.id.TV_OptDeviceName)
+- L40: TextView TVOptDeviceName;
+- L42: @BindView(R.id.TV_OptScanTypeName)
+- L43: TextView TVOptScanTypeName;
+- L52: ImageView iv_user;
+- L62: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L67: @Override // com.aliyun.cloudesl.android.view.listmod.view.UpdateVersionView
+- L72: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L77: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L88: this.iv_user.setImageResource(((Integer) arrayList.get(SPUtils.getInt(this, "userPhoto", 1))).intValue());
+- L91: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v4.app.FragmentActivity, android.app.Activity
+- L94: this.TVOptDeviceName.setText(this.setBrandName);
+- L95: this.TVOptScanTypeName.setText("扫描枪");
+- L102: this.iv_user.setImageResource(((Integer) arrayList.get(SPUtils.getInt(this, "userPhoto", 1))).intValue());
+- L105: @OnClick({R.id.BT_Back, R.id.BT_OptUser, R.id.BT_OptDevice, R.id.BT_OptScanType, R.id.ll_version})
+- L111: case R.id.BT_OptDevice /* 2131230726 */:
+- L114: case R.id.BT_OptScanType /* 2131230735 */:
+- L115: startActivity(OptScanTypeActivity.class);
+- L126: @Override // com.aliyun.cloudesl.android.view.listmod.view.UpdateVersionView
+
+### sources/com/aliyun/cloudesl/android/view/zmod/UserInfoActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L13: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L14: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L15: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L16: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L25: ImageView BTBack;
+- L40: ImageView iv_user;
+- L42: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L47: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L52: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L63: this.iv_user.setImageResource(((Integer) arrayList.get(SPUtils.getInt(this, "userPhoto", 1))).intValue());
+- L72: new MyDialog(this, MyDialog.Dialog_ShowWarning, "提示", "是否退出账号", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.UserInfoActivity.2
+- L73: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+- L96: new MyDialog(this, MyDialog.Dialog_UserPhoto, "选择头像", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.UserInfoActivity.1
+- L97: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+- L105: UserInfoActivity.this.iv_user.setImageResource(((Integer) arrayList.get(SPUtils.getInt(UserInfoActivity.this, "userPhoto", 1))).intValue());
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectModelActivity.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L11: import com.aliyun.cloudesl.android.R;
+- L12: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L13: import com.aliyun.cloudesl.android.utils.AppManager;
+- L14: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L15: import com.aliyun.cloudesl.android.utils.ui.MyDialog;
+- L16: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L17: import com.aliyun.cloudesl.android.view.base.MyBaseActivity;
+- L18: import com.aliyun.cloudesl.android.view.listmod.ShelvesListActivity;
+- L19: import com.aliyun.cloudesl.android.view.tagmod.BindOrUnBingActivity;
+- L25: ImageView BTBack;
+- L28: ImageView BTOpt;
+- L33: @BindView(R.id.Btn_modTag)
+- L34: LinearLayout BtnModTag;
+- L36: @BindView(R.id.Btn_TagError)
+- L37: LinearLayout BtnTagError;
+- L39: @BindView(R.id.Btn_TagInfo)
+- L40: LinearLayout BtnTagInfo;
+- L49: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L54: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L59: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity
+- L61: this.BTBack.setImageResource(R.drawable.menu);
+- L64: this.TVTitle.setText("价签管理");
+- L69: @OnClick({R.id.BT_Back, R.id.BT_Opt, R.id.Btn_modTag, R.id.Btn_modList, R.id.Btn_TagInfo, R.id.Btn_TagError})
+- L75: case R.id.Btn_TagError /* 2131230752 */:
+- L81: case R.id.Btn_TagInfo /* 2131230753 */:
+- L86: startActivity(TagScanActivity.class);
+- L94: startActivity(ShelvesListActivity.class);
+- L97: case R.id.Btn_modTag /* 2131230758 */:
+- L114: new MyDialog(this, MyDialog.Dialog_ShowWarning, "提示", "是否退出程序", new MyDialog.ConfirmOnclickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelActivity.1
+- L115: @Override // com.aliyun.cloudesl.android.utils.ui.MyDialog.ConfirmOnclickListener
+- L124: @Override // com.aliyun.cloudesl.android.view.base.MyBaseActivity, android.support.v7.app.AppCompatActivity, android.support.v4.app.FragmentActivity, android.app.Activity
+
+### sources/com/aliyun/cloudesl/android/view/zmod/SelectModelNewActivity_ViewBinding.java
+- L1: package com.aliyun.cloudesl.android.view.zmod;
+- L6: import android.widget.ImageView;
+- L12: import com.aliyun.cloudesl.android.R;
+- L34: selectModelNewActivity.BTBack = (ImageView) Utils.castView(findRequiredView, R.id.BT_Back, "field 'BTBack'", ImageView.class);
+- L36: findRequiredView.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.1
+- L46: findRequiredView2.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.2
+- L55: findRequiredView3.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.3
+- L64: findRequiredView4.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.4
+- L73: findRequiredView5.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.5
+- L79: View findRequiredView6 = Utils.findRequiredView(view, R.id.ll_tag_detail, "field 'll_tag_detail' and method 'onViewClicked'");
+- L80: selectModelNewActivity.ll_tag_detail = (LinearLayout) Utils.castView(findRequiredView6, R.id.ll_tag_detail, "field 'll_tag_detail'", LinearLayout.class);
+- L82: findRequiredView6.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.6
+- L90: selectModelNewActivity.BTOpt = (ImageView) Utils.castView(findRequiredView7, R.id.BT_Opt, "field 'BTOpt'", ImageView.class);
+- L92: findRequiredView7.setOnClickListener(new DebouncingOnClickListener() { // from class: com.aliyun.cloudesl.android.view.zmod.SelectModelNewActivity_ViewBinding.7
+- L114: selectModelNewActivity.ll_tag_detail = null;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/view/LoginView.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/view/SelectStroeView.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/view/NoScrollGridView.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.view;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/impl/TagInfoPresenterImpl.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.impl;
+- L5: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L6: import com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl;
+- L7: import com.aliyun.cloudesl.android.view.tagmod.view.TagInfoView;
+- L8: import com.aliyun.cloudesl.android.view.zmod.presenter.TagInfoPresenter;
+- L9: import com.aliyuncs.cloudesl.model.v20200201.BatchInsertItemsResponse;
+- L10: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersResponse;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DescribeEslDevicesResponse;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.UpdateEslDeviceLightResponse;
+- L15: public class TagInfoPresenterImpl extends BaseScanPresenterImpl<TagInfoView> implements TagInfoPresenter {
+- L16: public TagInfoPresenterImpl(Context context, TagInfoView tagInfoView) {
+- L17: super(context, tagInfoView);
+- L20: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl$1] */
+- L21: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.TagInfoPresenter
+- L22: public void queryTagInfo(final String str) {
+- L23: new AsyncTask<String, Void, DescribeEslDevicesResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl.1
+- L26: public DescribeEslDevicesResponse doInBackground(String... strArr) {
+- L27: return AliyunOAuth.getInstance(TagInfoPresenterImpl.this.context).getTagItem(str);
+- L33: ((TagInfoView) TagInfoPresenterImpl.this.view).showLoadDialog();
+- L38: public void onPostExecute(DescribeEslDevicesResponse describeEslDevicesResponse) {
+- L39: if (TagInfoPresenterImpl.this.isDestoryed()) {
+- L42: ((TagInfoView) TagInfoPresenterImpl.this.view).dismissLoadDialog();
+- L43: if (!describeEslDevicesResponse.getSuccess().booleanValue()) {
+- L44: ((TagInfoView) TagInfoPresenterImpl.this.view).queryTagEroor(describeEslDevicesResponse.getErrorMessage());
+- L45: } else if (describeEslDevicesResponse.getTotalCount().intValue() > 0) {
+- L46: ((TagInfoView) TagInfoPresenterImpl.this.view).queryTagSuccess(describeEslDevicesResponse);
+- L47: TagInfoPresenterImpl.this.queryTagGoodsInfo(str);
+- L49: ((TagInfoView) TagInfoPresenterImpl.this.view).queryTagEroor("未找到该价签");
+- L55: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl$2] */
+- L56: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.TagInfoPresenter
+- L57: public void queryTagGoodsInfo(final String str) {
+- L58: new AsyncTask<Void, Void, DescribeBindersResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl.2
+- L62: return AliyunOAuth.getInstance(TagInfoPresenterImpl.this.context).getbindTagGoodsInfo(str);
+- L68: ((TagInfoView) TagInfoPresenterImpl.this.view).showLoadDialog();
+- L74: if (TagInfoPresenterImpl.this.isDestoryed()) {
+- L77: ((TagInfoView) TagInfoPresenterImpl.this.view).dismissLoadDialog();
+- L79: ((TagInfoView) TagInfoPresenterImpl.this.view).queryTagGoodsEroor(describeBindersResponse.getErrorMessage());
+- L81: ((TagInfoView) TagInfoPresenterImpl.this.view).queryTagGoodsSuccess(describeBindersResponse);
+- L87: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl$3] */
+- L88: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.TagInfoPresenter
+- L90: new AsyncTask<String, Void, UpdateEslDeviceLightResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl.3
+- L93: public UpdateEslDeviceLightResponse doInBackground(String... strArr) {
+- L94: return AliyunOAuth.getInstance(TagInfoPresenterImpl.this.context).closeLight(str);
+- L100: ((TagInfoView) TagInfoPresenterImpl.this.view).showLoadDialog();
+- L105: public void onPostExecute(UpdateEslDeviceLightResponse updateEslDeviceLightResponse) {
+- L106: if (TagInfoPresenterImpl.this.isDestoryed()) {
+- L109: ((TagInfoView) TagInfoPresenterImpl.this.view).dismissLoadDialog();
+- L110: if (updateEslDeviceLightResponse == null || !updateEslDeviceLightResponse.getSuccess().booleanValue()) {
+- L111: ((TagInfoView) TagInfoPresenterImpl.this.view).closeLightError(updateEslDeviceLightResponse == null ? "关闭闪灯失败" : updateEslDeviceLightResponse.getErrorMessage());
+- L113: ((TagInfoView) TagInfoPresenterImpl.this.view).closeLightSuccess();
+- L119: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl$4] */
+- L120: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.TagInfoPresenter
+- L121: public void setTemplates(final DescribeBindersResponse.EslItemBindInfo eslItemBindInfo, final int i) {
+- L122: new AsyncTask<String, Void, BatchInsertItemsResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.TagInfoPresenterImpl.4
+- L126: return AliyunOAuth.getInstance(TagInfoPresenterImpl.this.context).setTemplates(eslItemBindInfo, i);
+- L132: ((TagInfoView) TagInfoPresenterImpl.this.view).showLoadDialog();
+- L138: if (TagInfoPresenterImpl.this.isDestoryed()) {
+- L141: ((TagInfoView) TagInfoPresenterImpl.this.view).dismissLoadDialog();
+- L143: ((TagInfoView) TagInfoPresenterImpl.this.view).setTemplatesError(batchInsertItemsResponse == null ? "设置模板失败" : batchInsertItemsResponse.getErrorMessage());
+- L145: ((TagInfoView) TagInfoPresenterImpl.this.view).setTemplatesSuccess();
+- ... 另有 3 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/zmod/impl/LoginPresentImpl.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.impl;
+- L4: import android.graphics.Bitmap;
+- L7: import com.aliyun.cloudesl.android.R;
+- L8: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L9: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L10: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L11: import com.aliyun.cloudesl.android.view.base.LoginCallback;
+- L12: import com.aliyun.cloudesl.android.view.base.RefreshTokenCallback;
+- L13: import com.aliyun.cloudesl.android.view.zmod.presenter.LoginPresenter;
+- L14: import com.aliyun.cloudesl.android.view.zmod.view.LoginView;
+- L23: import java.util.UUID;
+- L34: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.LoginPresenter
+- L49: AliyunOAuth.getInstance(this.context).refrushToken(new RefreshTokenCallback() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl.1
+- L50: @Override // com.aliyun.cloudesl.android.view.base.RefreshTokenCallback
+- L56: @Override // com.aliyun.cloudesl.android.view.base.RefreshTokenCallback
+- L65: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.LoginPresenter
+- L67: this.mOAuthStatus = UUID.randomUUID().toString();
+- L68: this.mCodeVerifier = UUID.randomUUID().toString() + this.mOAuthStatus;
+- L73: settings.setUserAgentString(settings.getUserAgentString() + "; AndroidCloudEslClient");
+- L79: x5WebView.setWebViewClient(new X5WebViewClient(x5WebView, this.context) { // from class: com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl.2
+- L81: public void onPageStarted(WebView webView, String str, Bitmap bitmap) {
+- L85: super.onPageStarted(webView, str, bitmap);
+- L118: AliyunOAuth.getInstance(LoginPresentImpl.this.context).setLoginCallback(new LoginCallback() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl.2.1
+- L119: @Override // com.aliyun.cloudesl.android.view.base.LoginCallback
+- L142: AliyunOAuth.getInstance(LoginPresentImpl.this.context).setLoginCallback(new LoginCallback() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl.2.2
+- L143: @Override // com.aliyun.cloudesl.android.view.base.LoginCallback
+- L154: x5WebView.getX5WebChromeClient().setWebListener(new InterWebListener() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.LoginPresentImpl.3
+
+### sources/com/aliyun/cloudesl/android/view/zmod/impl/SelectStroePrrsentImpl.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.impl;
+- L7: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L8: import com.aliyun.cloudesl.android.utils.SPUtils;
+- L9: import com.aliyun.cloudesl.android.view.adapter.Adapter_SelectStroe;
+- L10: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L11: import com.aliyun.cloudesl.android.view.zmod.presenter.SelectStroePresenter;
+- L12: import com.aliyun.cloudesl.android.view.zmod.view.SelectStroeView;
+- L13: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+- L14: import com.aliyuncs.cloudesl.model.v20200201.DescribeStoresResponse;
+- L26: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl$1] */
+- L27: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.SelectStroePresenter
+- L29: new AsyncTask<Void, Void, DescribeStoresResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl.1
+- L64: @Override // com.aliyun.cloudesl.android.view.zmod.presenter.SelectStroePresenter
+- L66: listView.setAdapter((ListAdapter) new Adapter_SelectStroe(this.infoList, this.context, new Adapter_SelectStroe.OnclickCallBack() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl.2
+- L67: @Override // com.aliyun.cloudesl.android.view.adapter.Adapter_SelectStroe.OnclickCallBack
+- L78: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl$3] */
+- L80: new AsyncTask<Void, Void, DescribeClientPackageResponse>() { // from class: com.aliyun.cloudesl.android.view.zmod.impl.SelectStroePrrsentImpl.3
+
+### sources/com/aliyun/cloudesl/android/view/zmod/presenter/TagInfoPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersResponse;
+- L7: public interface TagInfoPresenter extends IBasePresenter {
+- L10: void queryTagGoodsInfo(String str);
+- L12: void queryTagInfo(String str);
+- L14: void setTemplates(DescribeBindersResponse.EslItemBindInfo eslItemBindInfo, int i);
+
+### sources/com/aliyun/cloudesl/android/view/zmod/presenter/SelectStroePresenter.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.presenter;
+- L4: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+
+### sources/com/aliyun/cloudesl/android/view/zmod/presenter/LoginPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.zmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/view/TagInfoView.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribeBindersResponse;
+- L5: import com.aliyuncs.cloudesl.model.v20200201.DescribeEslDevicesResponse;
+- L8: public interface TagInfoView extends IBaseActivity {
+- L13: void queryTagEroor(String str);
+- L15: void queryTagGoodsEroor(String str);
+- L17: void queryTagGoodsSuccess(DescribeBindersResponse describeBindersResponse);
+- L19: void queryTagSuccess(DescribeEslDevicesResponse describeEslDevicesResponse);
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/view/BindingTagView.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+- L8: public interface BindingTagView extends IBaseActivity {
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/view/UnBindTagView.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L6: public interface UnBindTagView extends IBaseActivity {
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/impl/UnBindTagPresenterImpl.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.impl;
+- L5: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L6: import com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl;
+- L7: import com.aliyun.cloudesl.android.view.tagmod.presenter.UnBindTagPresenter;
+- L8: import com.aliyun.cloudesl.android.view.tagmod.view.UnBindTagView;
+- L9: import com.aliyuncs.cloudesl.model.v20200201.UnbindEslDeviceResponse;
+- L12: public class UnBindTagPresenterImpl extends BaseScanPresenterImpl<UnBindTagView> implements UnBindTagPresenter {
+- L13: @Override // com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl
+- L14: protected void onScanResultReceived(String str) {
+- L17: public UnBindTagPresenterImpl(Context context, UnBindTagView unBindTagView) {
+- L18: super(context, unBindTagView);
+- L21: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.tagmod.impl.UnBindTagPresenterImpl$1] */
+- L22: @Override // com.aliyun.cloudesl.android.view.tagmod.presenter.UnBindTagPresenter
+- L23: public void unbindTag(final String str) {
+- L24: new AsyncTask<Void, Void, UnbindEslDeviceResponse>() { // from class: com.aliyun.cloudesl.android.view.tagmod.impl.UnBindTagPresenterImpl.1
+- L27: public UnbindEslDeviceResponse doInBackground(Void... voidArr) {
+- L28: return AliyunOAuth.getInstance(UnBindTagPresenterImpl.this.context).unbindTag(str);
+- L34: ((UnBindTagView) UnBindTagPresenterImpl.this.view).showLoadDialog();
+- L39: public void onPostExecute(UnbindEslDeviceResponse unbindEslDeviceResponse) {
+- L40: if (UnBindTagPresenterImpl.this.isDestoryed()) {
+- L43: ((UnBindTagView) UnBindTagPresenterImpl.this.view).dismissLoadDialog();
+- L44: if (unbindEslDeviceResponse == null) {
+- L45: ((UnBindTagView) UnBindTagPresenterImpl.this.view).unBingEroor(unbindEslDeviceResponse.getErrorMessage());
+- L46: } else if (unbindEslDeviceResponse.getSuccess().booleanValue()) {
+- L47: ((UnBindTagView) UnBindTagPresenterImpl.this.view).unBingSuccess();
+- L49: ((UnBindTagView) UnBindTagPresenterImpl.this.view).unBingEroor(unbindEslDeviceResponse.getErrorMessage());
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/impl/BindingTagPresenterImpl.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.impl;
+- L6: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L7: import com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl;
+- L8: import com.aliyun.cloudesl.android.view.tagmod.presenter.BindingTagPresenter;
+- L9: import com.aliyun.cloudesl.android.view.tagmod.view.BindingTagView;
+- L10: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceResponse;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DescribeItemsResponse;
+- L16: public class BindingTagPresenterImpl extends BaseScanPresenterImpl<BindingTagView> implements BindingTagPresenter {
+- L17: @Override // com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl
+- L18: protected void onScanResultReceived(String str) {
+- L21: public BindingTagPresenterImpl(Context context, BindingTagView bindingTagView) {
+- L22: super(context, bindingTagView);
+- L25: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.tagmod.impl.BindingTagPresenterImpl$1] */
+- L26: @Override // com.aliyun.cloudesl.android.view.tagmod.presenter.BindingTagPresenter
+- L27: public void bindingTag(final String str, final String str2) {
+- L28: new AsyncTask<Void, Void, BindEslDeviceResponse>() { // from class: com.aliyun.cloudesl.android.view.tagmod.impl.BindingTagPresenterImpl.1
+- L31: public BindEslDeviceResponse doInBackground(Void... voidArr) {
+- L32: return AliyunOAuth.getInstance(BindingTagPresenterImpl.this.context).bungTag(str, str2);
+- L38: ((BindingTagView) BindingTagPresenterImpl.this.view).showLoadDialog();
+- L43: public void onPostExecute(BindEslDeviceResponse bindEslDeviceResponse) {
+- L44: if (BindingTagPresenterImpl.this.isDestoryed()) {
+- L47: ((BindingTagView) BindingTagPresenterImpl.this.view).dismissLoadDialog();
+- L48: if (bindEslDeviceResponse == null) {
+- L49: ((BindingTagView) BindingTagPresenterImpl.this.view).bingEroor("绑定失败");
+- L50: } else if (bindEslDeviceResponse.getSuccess() == null || !bindEslDeviceResponse.getSuccess().booleanValue()) {
+- L51: ((BindingTagView) BindingTagPresenterImpl.this.view).bingEroor(bindEslDeviceResponse.getErrorMessage());
+- L53: ((BindingTagView) BindingTagPresenterImpl.this.view).bingSuccess();
+- L59: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.tagmod.impl.BindingTagPresenterImpl$2] */
+- L60: @Override // com.aliyun.cloudesl.android.view.tagmod.presenter.BindingTagPresenter
+- L62: new AsyncTask<Void, Void, DescribeItemsResponse>() { // from class: com.aliyun.cloudesl.android.view.tagmod.impl.BindingTagPresenterImpl.2
+- L66: return AliyunOAuth.getInstance(BindingTagPresenterImpl.this.context).getGoodsItems(str, str2, str3);
+- L72: ((BindingTagView) BindingTagPresenterImpl.this.view).showLoadDialog();
+- L78: if (BindingTagPresenterImpl.this.isDestoryed()) {
+- L81: ((BindingTagView) BindingTagPresenterImpl.this.view).dismissLoadDialog();
+- L83: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsError("查询商品失败");
+- L87: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsError(describeItemsResponse.getErrorMessage());
+- L92: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsError("没有找到对应商品");
+- L97: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsSuccess(items);
+- L106: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsSuccess(arrayList);
+- L108: ((BindingTagView) BindingTagPresenterImpl.this.view).queryGoodsError("没有找到对应商品");
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/presenter/UnBindTagPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L6: public interface UnBindTagPresenter extends IBasePresenter {
+- L7: void unbindTag(String str);
+
+### sources/com/aliyun/cloudesl/android/view/tagmod/presenter/BindingTagPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.tagmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L6: public interface BindingTagPresenter extends IBasePresenter {
+- L7: void bindingTag(String str, String str2);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/ShowPromotionalView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L5: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L6: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L7: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L17: void getShowShelvesInfoSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/ShowShelvesAllInfoView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L5: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L6: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L7: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L17: void getShowShelvesInfoSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/BindRailView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/ShelvesListView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L4: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L7: public interface ShelvesListView extends IBaseActivity {
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/UpdateVersionView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L3: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/view/ScanWithFloorView.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.view;
+- L4: import com.aliyun.cloudesl.android.view.base.IBaseActivity;
+- L5: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L6: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L9: public interface ScanWithFloorView extends IBaseActivity {
+- L14: void updateDataSucces(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/UpdateVersionImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L5: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L6: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L7: import com.aliyun.cloudesl.android.view.listmod.presenter.UpdateVersionPresenter;
+- L8: import com.aliyun.cloudesl.android.view.listmod.view.UpdateVersionView;
+- L9: import com.aliyuncs.cloudesl.model.v20200201.DescribeClientPackageResponse;
+- L17: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.UpdateVersionImpl$1] */
+- L19: new AsyncTask<Void, Void, DescribeClientPackageResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.UpdateVersionImpl.1
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/BindRaiImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L5: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L6: import com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl;
+- L7: import com.aliyun.cloudesl.android.view.listmod.presenter.BindRailPresenter;
+- L8: import com.aliyun.cloudesl.android.view.listmod.view.BindRailView;
+- L9: import com.aliyuncs.cloudesl.model.v20200201.AssociatePlanogramRailResponse;
+- L10: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DissociatePlanogramRailResponse;
+- L14: public class BindRaiImpl extends BaseScanPresenterImpl<BindRailView> implements BindRailPresenter {
+- L17: @Override // com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl
+- L18: protected void onScanResultReceived(String str) {
+- L26: /* JADX WARN: Type inference failed for: r0v1, types: [com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl$1] */
+- L27: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.BindRailPresenter
+- L32: this.mGetPlanogramPositionsAsyncTask = new AsyncTask<Void, Void, DescribePlanogramPositionsResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl.1
+- L47: if (BindRaiImpl.this.isDestoryed() || isCancelled()) {
+- L62: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl$2] */
+- L63: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.BindRailPresenter
+- L65: new AsyncTask<Void, Void, AssociatePlanogramRailResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl.2
+- L95: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl$3] */
+- L96: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.BindRailPresenter
+- L98: new AsyncTask<Void, Void, DissociatePlanogramRailResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.BindRaiImpl.3
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/ShowPromotionImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L7: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L8: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L9: import com.aliyun.cloudesl.android.view.listmod.BindRailActivity;
+- L10: import com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter;
+- L11: import com.aliyun.cloudesl.android.view.listmod.view.ShowPromotionalView;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceResponse;
+- L13: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L14: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L15: import com.aliyuncs.cloudesl.model.v20200201.UnbindEslDeviceResponse;
+- L21: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter
+- L30: /* JADX WARN: Type inference failed for: r0v1, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl$1] */
+- L31: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter
+- L36: this.mCheckPlanogramPositionsTypeAsyncTask = new AsyncTask<Void, Void, Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse>>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl.1
+- L39: public Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> doInBackground(Void... voidArr) {
+- L40: return new Pair<>(AliyunOAuth.getInstance(ShowPromotionImpl.this.context).getPlanogramEslDevices(str), AliyunOAuth.getInstance(ShowPromotionImpl.this.context).getPlanogramPositions(str));
+- L50: public void onPostExecute(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L51: if (ShowPromotionImpl.this.isDestoryed() || isCancelled()) {
+- L55: if (pair.first != null && ((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue() && pair.second != null && ((DescribePlanogramPositionsResponse) pair.second).getSuccess().booleanValue()) {
+- L67: ((ShowPromotionalView) ShowPromotionImpl.this.view).getShowShelvesInfoFail("价签位置信息查询失败");
+- L70: if (!((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue()) {
+- L71: ((ShowPromotionalView) ShowPromotionImpl.this.view).getShowShelvesInfoFail(((DescribePlanogramEslDevicesResponse) pair.first).getErrorMessage());
+- L81: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter
+- L89: /* JADX WARN: Type inference failed for: r6v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl$2] */
+- L90: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter
+- L91: public void bindingTag(final String str, final String str2, final int i, final String str3) {
+- L92: new AsyncTask<Void, Void, BindEslDeviceResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl.2
+- L95: public BindEslDeviceResponse doInBackground(Void... voidArr) {
+- L96: return AliyunOAuth.getInstance(ShowPromotionImpl.this.context).bungTag(str, str2, i, str3);
+- L107: public void onPostExecute(BindEslDeviceResponse bindEslDeviceResponse) {
+- L112: if (bindEslDeviceResponse == null) {
+- L113: ((ShowPromotionalView) ShowPromotionImpl.this.view).bingError(bindEslDeviceResponse.getErrorMessage());
+- L114: } else if (bindEslDeviceResponse.getSuccess().booleanValue()) {
+- L117: ((ShowPromotionalView) ShowPromotionImpl.this.view).bingError(bindEslDeviceResponse.getErrorMessage());
+- L123: /* JADX WARN: Type inference failed for: r6v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl$3] */
+- L124: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowPromitionalPresenter
+- L125: public void unbindTag(final String str, final String str2, final int i, final String str3) {
+- L126: new AsyncTask<Void, Void, UnbindEslDeviceResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShowPromotionImpl.3
+- L129: public UnbindEslDeviceResponse doInBackground(Void... voidArr) {
+- L130: return AliyunOAuth.getInstance(ShowPromotionImpl.this.context).unbindTag(str, str2, i, str3);
+- L141: public void onPostExecute(UnbindEslDeviceResponse unbindEslDeviceResponse) {
+- L146: if (unbindEslDeviceResponse == null) {
+- L147: ((ShowPromotionalView) ShowPromotionImpl.this.view).unBingError(unbindEslDeviceResponse.getErrorMessage());
+- L148: } else if (unbindEslDeviceResponse.getSuccess().booleanValue()) {
+- L151: ((ShowPromotionalView) ShowPromotionImpl.this.view).unBingError(unbindEslDeviceResponse.getErrorMessage());
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/ShelvesListImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L6: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L7: import com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl;
+- L8: import com.aliyun.cloudesl.android.view.listmod.PromotionalshelfActivity;
+- L9: import com.aliyun.cloudesl.android.view.listmod.ShowShelves_All_Info_Activity;
+- L10: import com.aliyun.cloudesl.android.view.listmod.presenter.ShelvesListPresenter;
+- L11: import com.aliyun.cloudesl.android.view.listmod.view.ShelvesListView;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L18: public class ShelvesListImpl extends BaseScanPresenterImpl<ShelvesListView> implements ShelvesListPresenter {
+- L23: @Override // com.aliyun.cloudesl.android.view.base.BaseScanPresenterImpl
+- L24: protected void onScanResultReceived(String str) {
+- L27: static /* synthetic */ int access$008(ShelvesListImpl shelvesListImpl) {
+- L28: int i = shelvesListImpl.mPageNumber;
+- L29: shelvesListImpl.mPageNumber = i + 1;
+- L33: public ShelvesListImpl(Context context, ShelvesListView shelvesListView) {
+- L34: super(context, shelvesListView);
+- L40: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShelvesListPresenter
+- L56: ((ShelvesListView) this.view).querShelvesSucces(intent);
+- L63: ((ShelvesListView) this.view).querShelvesSucces(intent2);
+- L71: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShelvesListPresenter
+- L88: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShelvesListImpl$1] */
+- L89: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShelvesListPresenter
+- L90: public void getShelvesListInfo() {
+- L91: new AsyncTask<Void, Void, DescribePlanogramShelvesResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShelvesListImpl.1
+- L95: return AliyunOAuth.getInstance(ShelvesListImpl.this.context).getDescribePlanogramShelves(ShelvesListImpl.this.mPageNumber, 10);
+- L100: if (ShelvesListImpl.this.mShowGif) {
+- L101: ((ShelvesListView) ShelvesListImpl.this.view).showloadingGIF("加载");
+- L108: if (ShelvesListImpl.this.isDestoryed()) {
+- L112: if (ShelvesListImpl.this.mShowGif) {
+- L113: ((ShelvesListView) ShelvesListImpl.this.view).showloadingGIF("失败");
+- L115: ((ShelvesListView) ShelvesListImpl.this.view).getShelvesInfoFail("请求失败");
+- L117: if (ShelvesListImpl.this.mShowGif) {
+- L118: ((ShelvesListView) ShelvesListImpl.this.view).showloadingGIF("失败");
+- L120: ((ShelvesListView) ShelvesListImpl.this.view).getShelvesInfoFail(describePlanogramShelvesResponse.getErrorMessage());
+- L121: } else if (describePlanogramShelvesResponse.getShelfInfos().size() != 0 || ShelvesListImpl.this.mPageNumber <= 1) {
+- L122: if (ShelvesListImpl.this.mShowGif) {
+- L123: ((ShelvesListView) ShelvesListImpl.this.view).showloadingGIF("成功");
+- L125: ShelvesListImpl.access$008(ShelvesListImpl.this);
+- L126: ShelvesListImpl.this.mShelvesRresponses.add(describePlanogramShelvesResponse);
+- L127: ((ShelvesListView) ShelvesListImpl.this.view).getShelvesInfoSucces();
+- L129: ((ShelvesListView) ShelvesListImpl.this.view).getShelvesInfoFail("没有更多了");
+- L131: ShelvesListImpl.this.mShowGif = false;
+- L136: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShelvesListPresenter
+- L140: getShelvesListInfo();
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/ScanWithFloorImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L6: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L7: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L8: import com.aliyun.cloudesl.android.view.listmod.presenter.ScanWithFloorPresenter;
+- L9: import com.aliyun.cloudesl.android.view.listmod.view.ScanWithFloorView;
+- L10: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceResponse;
+- L11: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L12: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L16: public class ScanWithFloorImpl extends BasePresenter<ScanWithFloorView> implements ScanWithFloorPresenter {
+- L19: public ScanWithFloorImpl(Context context, ScanWithFloorView scanWithFloorView) {
+- L20: super(context, scanWithFloorView);
+- L24: /* JADX WARN: Type inference failed for: r0v1, types: [com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl$1] */
+- L25: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ScanWithFloorPresenter
+- L30: this.mUpdateDataAsyncTask = new AsyncTask<Void, Void, Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse>>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl.1
+- L33: public Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> doInBackground(Void... voidArr) {
+- L34: return new Pair<>(AliyunOAuth.getInstance(ScanWithFloorImpl.this.context).getPlanogramEslDevices(str), AliyunOAuth.getInstance(ScanWithFloorImpl.this.context).getPlanogramPositions(str));
+- L39: ((ScanWithFloorView) ScanWithFloorImpl.this.view).showLoadDialog();
+- L44: public void onPostExecute(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L45: if (ScanWithFloorImpl.this.isDestoryed() || isCancelled()) {
+- L48: ((ScanWithFloorView) ScanWithFloorImpl.this.view).dismissLoadDialog();
+- L49: if (pair.first != null && ((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue() && pair.second != null && ((DescribePlanogramPositionsResponse) pair.second).getSuccess().booleanValue()) {
+- L50: ((ScanWithFloorView) ScanWithFloorImpl.this.view).updateDataSucces(pair);
+- L54: ((ScanWithFloorView) ScanWithFloorImpl.this.view).updateDataFail("价签位置信息查询失败");
+- L57: if (!((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue()) {
+- L58: ((ScanWithFloorView) ScanWithFloorImpl.this.view).updateDataFail(((DescribePlanogramEslDevicesResponse) pair.first).getErrorMessage());
+- L60: ((ScanWithFloorView) ScanWithFloorImpl.this.view).updateDataFail("陈列信息查询失败");
+- L62: ((ScanWithFloorView) ScanWithFloorImpl.this.view).updateDataFail(((DescribePlanogramPositionsResponse) pair.second).getErrorMessage());
+- L68: /* JADX WARN: Type inference failed for: r0v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl$2] */
+- L69: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ScanWithFloorPresenter
+- L70: public void bindingTag(final List<BindParam> list) {
+- L71: new AsyncTask<Void, Void, Pair<Integer, Integer>>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl.2
+- L78: BindEslDeviceResponse bungTag = AliyunOAuth.getInstance(ScanWithFloorImpl.this.context).bungTag(bindParam.tagCode, bindParam.shelf, bindParam.layer, bindParam.column);
+- L79: if (bungTag == null || !bungTag.getSuccess().booleanValue()) {
+- L91: ((ScanWithFloorView) ScanWithFloorImpl.this.view).showLoadDialog();
+- L97: if (ScanWithFloorImpl.this.isDestoryed()) {
+- L100: ((ScanWithFloorView) ScanWithFloorImpl.this.view).dismissLoadDialog();
+- L101: ((ScanWithFloorView) ScanWithFloorImpl.this.view).bingResult(((Integer) pair.first).intValue(), ((Integer) pair.second).intValue());
+- L110: public String tagCode;
+- L113: this.tagCode = str;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/impl/ShowShelvesAllInfoImpl.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.impl;
+- L7: import com.aliyun.cloudesl.android.api.AliyunOAuth;
+- L8: import com.aliyun.cloudesl.android.db.bean.JqGoodsBean;
+- L9: import com.aliyun.cloudesl.android.view.base.BasePresenter;
+- L10: import com.aliyun.cloudesl.android.view.listmod.BindRailActivity;
+- L11: import com.aliyun.cloudesl.android.view.listmod.presenter.ShowShelvesAllInfoPresenter;
+- L12: import com.aliyun.cloudesl.android.view.listmod.view.ShowShelvesAllInfoView;
+- L13: import com.aliyuncs.cloudesl.model.v20200201.BindEslDeviceResponse;
+- L14: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramEslDevicesResponse;
+- L15: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramPositionsResponse;
+- L16: import com.aliyuncs.cloudesl.model.v20200201.UnbindEslDeviceResponse;
+- L30: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowShelvesAllInfoPresenter
+- L37: arrayList.add(new JqGoodsBean("商品1", "20L", "0"));
+- L38: arrayList.add(new JqGoodsBean("商品2", "20L", "1"));
+- L39: arrayList.add(new JqGoodsBean("商品3", "20L", "2"));
+- L40: arrayList.add(new JqGoodsBean("商品4", "20L", "1"));
+- L41: arrayList.add(new JqGoodsBean("商品5", "20L", "2"));
+- L42: arrayList.add(new JqGoodsBean("商品7", "20L", "2"));
+- L43: arrayList2.add(new JqGoodsBean("商品11", "21L", "1"));
+- L44: arrayList2.add(new JqGoodsBean("商品21", "22L", "2"));
+- L45: arrayList2.add(new JqGoodsBean("商品31", "23L", "2"));
+- L46: arrayList2.add(new JqGoodsBean("商品41", "24L", "0"));
+- L47: arrayList2.add(new JqGoodsBean("商品51", "25L", "1"));
+- L48: arrayList2.add(new JqGoodsBean("商品52", "25L", "1"));
+- L49: arrayList2.add(new JqGoodsBean("商品53", "25L", "1"));
+- L50: arrayList2.add(new JqGoodsBean("商品58", "25L", "1"));
+- L51: arrayList3.add(new JqGoodsBean("商品12", "31L", "0"));
+- L52: arrayList3.add(new JqGoodsBean("商品22", "32L", "0"));
+- L53: arrayList3.add(new JqGoodsBean("商品32", "33L", "0"));
+- L54: arrayList3.add(new JqGoodsBean("商品42", "34", "0"));
+- L55: arrayList3.add(new JqGoodsBean("商品52", "35L", "0"));
+- L56: arrayList3.add(new JqGoodsBean("商品62", "35L", "0"));
+- L57: arrayList4.add(new JqGoodsBean("商品13", "45L", "1"));
+- L58: arrayList4.add(new JqGoodsBean("商品23", "46L", "1"));
+- L59: arrayList4.add(new JqGoodsBean("商品33", "47L", "1"));
+- L60: arrayList4.add(new JqGoodsBean("商品43", "48L", "1"));
+- L61: arrayList4.add(new JqGoodsBean("商品53", "49L", "2"));
+- L62: arrayList4.add(new JqGoodsBean("商品54", "49L", "2"));
+- L63: arrayList4.add(new JqGoodsBean("商品56", "49L", "2"));
+- L70: /* JADX WARN: Type inference failed for: r0v1, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShowShelvesAllInfoImpl$1] */
+- L71: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowShelvesAllInfoPresenter
+- L76: this.mCheckPlanogramPositionsTypeAsyncTask = new AsyncTask<Void, Void, Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse>>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShowShelvesAllInfoImpl.1
+- L79: public Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> doInBackground(Void... voidArr) {
+- L80: return new Pair<>(AliyunOAuth.getInstance(ShowShelvesAllInfoImpl.this.context).getPlanogramEslDevices(str), AliyunOAuth.getInstance(ShowShelvesAllInfoImpl.this.context).getPlanogramPositions(str));
+- L90: public void onPostExecute(Pair<DescribePlanogramEslDevicesResponse, DescribePlanogramPositionsResponse> pair) {
+- L91: if (ShowShelvesAllInfoImpl.this.isDestoryed() || isCancelled()) {
+- L95: if (pair.first != null && ((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue() && pair.second != null && ((DescribePlanogramPositionsResponse) pair.second).getSuccess().booleanValue()) {
+- L107: ((ShowShelvesAllInfoView) ShowShelvesAllInfoImpl.this.view).getShowShelvesInfoFail("价签位置信息查询失败");
+- L110: if (!((DescribePlanogramEslDevicesResponse) pair.first).getSuccess().booleanValue()) {
+- L111: ((ShowShelvesAllInfoView) ShowShelvesAllInfoImpl.this.view).getShowShelvesInfoFail(((DescribePlanogramEslDevicesResponse) pair.first).getErrorMessage());
+- L121: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowShelvesAllInfoPresenter
+- L129: /* JADX WARN: Type inference failed for: r6v0, types: [com.aliyun.cloudesl.android.view.listmod.impl.ShowShelvesAllInfoImpl$2] */
+- L130: @Override // com.aliyun.cloudesl.android.view.listmod.presenter.ShowShelvesAllInfoPresenter
+- L131: public void bindingTag(final String str, final String str2, final int i, final String str3) {
+- L132: new AsyncTask<Void, Void, BindEslDeviceResponse>() { // from class: com.aliyun.cloudesl.android.view.listmod.impl.ShowShelvesAllInfoImpl.2
+- L135: public BindEslDeviceResponse doInBackground(Void... voidArr) {
+- L136: return AliyunOAuth.getInstance(ShowShelvesAllInfoImpl.this.context).bungTag(str, str2, i, str3);
+- L147: public void onPostExecute(BindEslDeviceResponse bindEslDeviceResponse) {
+- L152: if (bindEslDeviceResponse == null) {
+- L153: ((ShowShelvesAllInfoView) ShowShelvesAllInfoImpl.this.view).bingError(bindEslDeviceResponse.getErrorMessage());
+- ... 另有 13 条匹配
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/BindRailPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/ShowPromitionalPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L7: void bindingTag(String str, String str2, int i, String str3);
+- L15: void unbindTag(String str, String str2, int i, String str3);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/ScanWithFloorPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L4: import com.aliyun.cloudesl.android.view.listmod.impl.ScanWithFloorImpl;
+- L8: public interface ScanWithFloorPresenter extends IBasePresenter {
+- L9: void bindingTag(List<ScanWithFloorImpl.BindParam> list);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/ShowShelvesAllInfoPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L7: void bindingTag(String str, String str2, int i, String str3);
+- L15: void unbindTag(String str, String str2, int i, String str3);
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/ShelvesListPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
+- L4: import com.aliyuncs.cloudesl.model.v20200201.DescribePlanogramShelvesResponse;
+- L8: public interface ShelvesListPresenter extends IBasePresenter {
+- L11: void getShelvesListInfo();
+
+### sources/com/aliyun/cloudesl/android/view/listmod/presenter/UpdateVersionPresenter.java
+- L1: package com.aliyun.cloudesl.android.view.listmod.presenter;
+- L3: import com.aliyun.cloudesl.android.view.base.IBasePresenter;
