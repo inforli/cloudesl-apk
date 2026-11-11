@@ -1,0 +1,84 @@
+name: Analyze CloudESL APK
+
+on:
+  push:
+    paths:
+      - ".github/workflows/analyze-cloudesl.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download APK and JADX
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work
+          curl -fL --retry 3 "https://github.com/inforli/cloudesl-apk/releases/download/v1.0.23/cloudesl-release-v1.0.23.apk" -o work/cloudesl.apk
+          echo "APK_SHA256=$(sha256sum work/cloudesl.apk | awk '{print $1}')" >> "$GITHUB_ENV"
+          curl -fL --retry 3 "https://github.com/skylot/jadx/releases/download/v1.5.1/jadx-1.5.1.zip" -o work/jadx.zip
+          unzip -q work/jadx.zip -d work/jadx
+          chmod +x work/jadx/bin/jadx
+          work/jadx/bin/jadx --version
+          work/jadx/bin/jadx -d work/decompiled work/cloudesl.apk
+
+      - name: Extract BLE findings
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p analysis
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          root = Path("work/decompiled")
+          out = []
+          out.append("# CloudESL APK v1.0.23 — BLE 静态分析初筛")
+          out.append("")
+          out.append(f"- APK SHA-256: {__import__('os').environ.get('APK_SHA256','unknown')}")
+          out.append("- 工具：JADX 1.5.1")
+          out.append("")
+          patterns = [
+              re.compile(r"Bluetooth|BluetoothGatt|BluetoothGattCharacteristic|BluetoothGattService|BluetoothDevice|BluetoothLeScanner|ScanFilter|ScanSettings|writeCharacteristic|setValue\(|onCharacteristicChanged|onCharacteristicWrite|onServicesDiscovered|connectGatt", re.I),
+              re.compile(r"0000[0-9a-fA-F]{4}-0000-1000-8000-00805[fF]9[bB]34[fF][bB]|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"),
+              re.compile(r"\bUUID\b|GATT|BLE|esl|价签|蓝牙|特征值|服务发现", re.I),
+          ]
+          hits = 0
+          for p in root.rglob("*"):
+              if not p.is_file() or p.suffix.lower() not in {".java", ".kt", ".xml", ".json", ".txt"}:
+                  continue
+              try: lines = p.read_text(errors="ignore").splitlines()
+              except Exception: continue
+              matched = []
+              for i, line in enumerate(lines):
+                  if any(rx.search(line) for rx in patterns):
+                      matched.append((i, line.strip()))
+              if matched:
+                  hits += len(matched)
+                  out.append(f"## {p.relative_to(root)}")
+                  for i, line in matched[:250]:
+                      out.append(f"- L{i+1}: {line[:1000]}")
+                  if len(matched) > 250:
+                      out.append(f"- ... 另有 {len(matched)-250} 条匹配")
+                  out.append("")
+          out.insert(4, f"- 命中行数（初筛，可能含重复/无关项）: {hits}")
+          (Path("analysis") / "ble_report.md").write_text("\n".join(out), encoding="utf-8")
+          print(f"Wrote report with {hits} matching lines")
+          PY
+
+      - name: Commit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/ble_report.md
+          git commit -m "Add CloudESL APK BLE analysis report" || exit 0
+          git push
